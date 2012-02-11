@@ -1,0 +1,15 @@
+name:                  ParsingBench
+version:               0.0.0.1
+synopsis:              Benchmarking Haskell Parsing Libraries
+description:           Benchmarking Haskell Parsing Libraries
+author:                Nikolaos Bezirgiannis <n.bezirgiannis@students.uu.nl>
+maintainer:            NikolaosBezirgiannis <n.bezirgiannis@students.uu.nl>
+stability:             provisional
+build-type:            Simple
+cabal-version:         >= 1.4
+--extra-source-files:    doc/*.md, doc/*.tex, doc/*.pdf
+
+library
+    build-depends: base, text, transformers, QuickCheck, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse
+    exposed-modules: Parsing.Bench.Main
+    hs-source-dirs: src
