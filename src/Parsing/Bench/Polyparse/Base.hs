@@ -67,5 +67,5 @@ skipMany p = many p *> pure ()
 
 skipMany1 p = p *> skipMany1 p
 
-run = runParser
+run' = runParser
 

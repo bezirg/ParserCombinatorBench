@@ -24,3 +24,5 @@ pLet = Let <$ pToks "let" <* pSpaces <*> pIdent <* pSpaces <* pSym '=' <* pSpace
 
 
 pExpr = e1
+
+run = run' pExpr

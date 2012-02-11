@@ -1,5 +1,6 @@
 module Parsing.Bench.Polyparse.Expr where
 
+
 import Parsing.Bench.AST.Expr
 import Parsing.Bench.Polyparse.Base
 import Text.Parse
@@ -19,3 +20,4 @@ pLet = Let <$ string "let" <* spaces <*> pIdent <* spaces <* pSym '=' <* spaces 
 pExpr :: TextParser Expr
 pExpr = spaces *> e1 <* eof
 
+run = run' pExpr

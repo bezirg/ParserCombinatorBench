@@ -50,7 +50,7 @@ optionMaybe p = option Nothing (liftM Just p)
 
 newline = char '\n'
 
-run :: Parser a -> String -> Result a
-run p s = case parse p (T.pack s) of
-            Partial f -> f (T.empty)
-            x -> x
+run' :: Parser a -> String -> Result a
+run' p s = case parse p (T.pack s) of
+             Partial f -> f (T.empty)
+             x -> x

@@ -34,3 +34,5 @@ crlf = (() <$ string (T.pack "\r\n")) <|> (() <$ newline)
 
 notEOL :: Parser Char
 notEOL = noneOf "\r\n"
+
+run = run' pHTTP

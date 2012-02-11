@@ -34,3 +34,5 @@ pLet = do
 
 pExpr :: Parser Expr
 pExpr = spaces *> e1 <* eof
+
+run = run' pExpr

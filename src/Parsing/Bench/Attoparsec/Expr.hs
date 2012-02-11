@@ -22,3 +22,5 @@ pLet = Let <$ string (T.pack "let") <* skipSpace <*> pIdent <* skipSpace <* char
 
 pExpr :: Parser Expr
 pExpr = skipSpace *> e1 <* endOfInput
+
+run = run' pExpr

@@ -73,3 +73,5 @@ p_unicode :: Parser Char
 p_unicode = pSym 'u' *> (decode <$> pExact 4 hexDigit)
     where decode x = toEnum code
               where ((code,_):_) = readHex x
+
+run = run' pJSON

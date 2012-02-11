@@ -8,7 +8,7 @@ module Parsing.Bench.Parsec2.Base
       pExact,
       pCount,
       strip,
-      run
+      run'
     ) where
 
 import Control.Monad
@@ -49,6 +49,6 @@ strip      = f . f
     where f = reverse . dropWhile isSpace
 
 
-run = flip parse ""
+run' = flip parse ""
 
 

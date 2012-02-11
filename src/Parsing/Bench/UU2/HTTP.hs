@@ -36,3 +36,5 @@ crlf = () <$ optional pCR <* pLF
 
 notEOL :: Parser Char
 notEOL = pNoneSym "\r\n"
+
+run = run' pHTTP

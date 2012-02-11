@@ -69,3 +69,5 @@ blocksParser = many blockParser
 
 pCSS :: Parser [(Text, [(Text, Text)])]
 pCSS = blocksParser
+
+run = run' pCSS

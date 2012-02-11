@@ -52,3 +52,5 @@ p_unicode :: TextParser Char
 p_unicode = pSym 'u' *> (decode <$> exactly 4 hexDigit)
     where decode x = toEnum code
               where ((code,_):_) = readHex x
+
+run = run' pJSON

@@ -22,3 +22,5 @@ eol =   try (string "\n\r")
     <|> string "\n"
     <|> string "\r"
     <?> "end of line"
+
+run = run' pCSV

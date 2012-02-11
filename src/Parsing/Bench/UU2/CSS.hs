@@ -53,3 +53,5 @@ pSemi = lexeme $ pSym ';'
 
 
 pUpto cs = pMunch (`notElem` cs)
+
+run = run' pCSS

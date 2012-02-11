@@ -29,3 +29,5 @@ p_hex =
   pSym '%' <*>
   hexDigit <*>
   hexDigit
+
+run = run' pURL

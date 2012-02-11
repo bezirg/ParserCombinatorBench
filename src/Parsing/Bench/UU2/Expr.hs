@@ -23,3 +23,5 @@ pLet = Let <$ pToken "let" <* pSpaces <*> pIdent <* pSpaces <* pSym '=' <* pSpac
 
 pExpr :: Parser Expr
 pExpr = pSpaces *> e1 <* pEnd
+
+run = run' pExpr

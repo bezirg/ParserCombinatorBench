@@ -54,3 +54,5 @@ blocksParser = many blockParser
 
 pCSS :: Parser [(String, [(String, String)])]
 pCSS = blocksParser
+
+run = run' pCSS

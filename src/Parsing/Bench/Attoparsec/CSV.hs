@@ -25,3 +25,5 @@ eol =   try (string (T.pack "\n\r"))
     <|> string (T.pack "\n")
     <|> string (T.pack "\r")
     <?> "end of line"
+
+run = run' pCSV

@@ -31,3 +31,4 @@ eol =   pToks "\n\r"
     <|> pToks "\r"
     <?> "end of line"
 
+run = run' pCSV

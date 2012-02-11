@@ -27,6 +27,6 @@ strip      :: String -> String
 strip      = f . f
     where f = reverse . dropWhile isSpace
 
-run :: Parser a -> String -> Either ParseError a
-run = flip parse ""
+run' :: Parser a -> String -> Either ParseError a
+run' = flip parse ""
 

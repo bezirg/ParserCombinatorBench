@@ -60,6 +60,6 @@ skipMany1 p = p *> skipMany1 p
 -- probably the ErrorCorrection cannot be turned off
 -- returns (ResultAfterMaybeErrorCorrectionApplied, Errors)
 -- to determine if it was an error, simply check if null Errors
-run :: Parser a -> String -> (a, [Error LineColPos])
-run = execParser
+run' :: Parser a -> String -> (a, [Error LineColPos])
+run' = execParser
 

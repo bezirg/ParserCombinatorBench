@@ -49,3 +49,5 @@ blocksParser :: CharParser () [(String, [(String, String)])]
 blocksParser = many blockParser
 
 pCSS = spaces *> blocksParser <* eof
+
+run = run' pCSS

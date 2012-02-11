@@ -35,3 +35,4 @@ eol =   pToken "\n\r"
     <|> pToken "\r"
     <?> "end of line"
 
+run = run' pCSV

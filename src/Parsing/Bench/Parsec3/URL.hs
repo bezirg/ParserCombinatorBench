@@ -33,3 +33,5 @@ p_hex = do
   b <- hexDigit
   let ((d, _):_) = readHex [a,b]
   return . toEnum $ d
+
+run = run' pURL
