@@ -6,10 +6,17 @@ author:                Nikolaos Bezirgiannis <n.bezirgiannis@students.uu.nl>
 maintainer:            NikolaosBezirgiannis <n.bezirgiannis@students.uu.nl>
 stability:             provisional
 build-type:            Simple
-cabal-version:         >= 1.4
+cabal-version:         >= 1.9.2
 --extra-source-files:    doc/*.md, doc/*.tex, doc/*.pdf
 
-library
-    build-depends: base, text, transformers, QuickCheck, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse
-    exposed-modules: Parsing.Bench.Main
+executable bench
+    build-depends: base, text, transformers, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, criterion
+    main-is:    Parsing/Bench/Bench.hs
     hs-source-dirs: src
+
+
+executable test
+    build-depends: base, text, transformers,uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, HUnit, syb
+    main-is:    Parsing/Bench/Test.hs
+    hs-source-dirs: src
+

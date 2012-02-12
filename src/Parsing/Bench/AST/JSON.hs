@@ -6,9 +6,9 @@ data JValue = JString String
             | JArray (JAry JValue)
             | JBool Bool
             | JNull
-              deriving Show
+              deriving (Eq, Show)
 
 newtype JAry a = JAry {fromJary :: [a]}
-    deriving Show
+    deriving (Eq, Show)
 newtype JObj a = JObj { fromJObj :: [(String, a)]}
-    deriving Show
+    deriving (Eq, Show)
