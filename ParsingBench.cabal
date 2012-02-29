@@ -9,14 +9,18 @@ build-type:            Simple
 cabal-version:         >= 1.9.2
 --extra-source-files:    doc/*.md, doc/*.tex, doc/*.pdf
 
-executable bench
-    build-depends: base, text, transformers, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, criterion
-    main-is:    Parsing/Bench/Bench.hs
+executable bench-nf
+    build-depends: base, text, transformers, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, criterion, deepseq, containers
+    main-is:    Parsing/Bench/BenchNF.hs
     hs-source-dirs: src
 
+executable bench-whnf
+    build-depends: base, text, transformers, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, criterion, deepseq, containers
+    main-is:    Parsing/Bench/BenchWHNF.hs
+    hs-source-dirs: src
 
 executable test
-    build-depends: base, text, transformers,uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, HUnit, syb
+    build-depends: base, text, transformers,uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, HUnit, deepseq, containers
     main-is:    Parsing/Bench/Test.hs
     hs-source-dirs: src
 

@@ -8,8 +8,10 @@ import UU.Parsing.CharParser
 
 pCSV :: Parser [[String]]
 pCSV = pEndSep eol line
+
 line :: Parser [String]
 line = pList1Sep (pSym ',') cell
+
 cell :: Parser String
 cell = quotedCell <|> pList1 (pNoneSym ",\n\r")
 
@@ -17,7 +19,7 @@ quotedCell :: Parser String
 quotedCell = 
        pSym '"' *>
        pList quotedChar <*
-       (pSym '"' <?> "quote at end of cell")
+       pSym '"'
 
 quotedChar :: Parser Char
 quotedChar =

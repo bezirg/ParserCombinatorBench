@@ -1,6 +1,7 @@
 {-# LANGUAGE FlexibleContexts #-}
 module Parsing.Bench.UU2.URL where
 
+import Data.Set
 import Parsing.Bench.UU2.Base
 import Text.ParserCombinators.UU
 import Text.ParserCombinators.UU.Derived
@@ -17,7 +18,7 @@ p_pair :: Parser (String, Maybe String)
 p_pair = (,) <$> pList1 p_char <*> optionMaybe (pSym '=' *> pList p_char)
 
 p_char :: Parser Char
-p_char = pAnySym urlBaseChars
+p_char = pAnyOrd urlBaseChars
      <|> (pSym '+' *> pure ' ')
      <|> p_hex
 
@@ -31,3 +32,7 @@ p_hex =
   hexDigit
 
 run = run' pURL
+
+
+pAnyOrd set = let map = fromList set
+              in pSatisfy (`member` map) (Insertion "" 'a' 5)

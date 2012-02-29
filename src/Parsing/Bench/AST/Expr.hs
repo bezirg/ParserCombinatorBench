@@ -4,6 +4,7 @@ import Test.QuickCheck.Arbitrary
 import Test.QuickCheck.Gen
 
 import Control.Monad
+import Control.DeepSeq
 
 -- the Abstract Syntax
 
@@ -14,6 +15,15 @@ data Expr = Add Expr Expr
           | Var String
           | Let String Expr Expr
             deriving (Eq, Show)
+
+instance NFData Expr where
+    rnf (Add e1 e2) = rnf e1 `seq` rnf e2
+    rnf (Sub e1 e2) = rnf e1 `seq` rnf e2
+    rnf (Mul e1 e2) = rnf e1 `seq` rnf e2
+    rnf (Nat e) = rnf e
+    rnf (Var e) = rnf e
+    rnf (Let e1 e2 e3) = rnf e1 `seq` rnf e2 `seq` rnf e3
+
 
 -- instance Show Expr where
 --     show (Add e1 e2) = "(" ++ show e1 ++ " + " ++ show e2 ++ ")"

@@ -19,12 +19,12 @@ import Criterion.Main
 
 main = do
   -- Lazy load the inputs
-  inpCV <- readFile "data/csv/3.csv"
-  inpEX <- readFile "data/expr/9.expr"
-  inpUR <- readFile "data/url/4.url"
-  inpHT <- readFile "data/http/6.http"
-  inpJS <- readFile "data/json/3.json"
-  inpCS <- readFile "data/css/2_nc.css"
+  inpCV <- readFile "data/csv/bench.csv"
+  inpEX <- readFile "data/expr/bench.expr"
+  inpUR <- readFile "data/url/bench.url"
+  inpHT <- readFile "data/http/bench.http"
+  inpJS <- readFile "data/json/bench.json"
+  inpCS <- readFile "data/css/bench.css"
 
   defaultMain $ [
         bgroup "csv" [

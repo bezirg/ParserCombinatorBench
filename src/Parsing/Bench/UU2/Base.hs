@@ -23,7 +23,7 @@ pIdent = (:) <$> pLetter <*> pMany (pLetter <|> pDigit)
 hexDigit :: Parser Char
 hexDigit = pSatisfy isHexDigit (Insertion "" 'a' 5) <?> "hexadecimal digit"
 
-optionMaybe p = opt (liftM Just p) Nothing
+optionMaybe p = opt (Just <$> p) Nothing
 
 spaces :: Parser String
 spaces =  pMunch (`elem` " \r\n\t")  
