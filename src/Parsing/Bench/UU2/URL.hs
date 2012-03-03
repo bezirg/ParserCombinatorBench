@@ -34,5 +34,7 @@ p_hex =
 run = run' pURL
 
 
+-- a fast way to create a parser that recognizes a big number of characters
+-- using BST lookup / Set membership
 pAnyOrd set = let map = fromList set
               in pSatisfy (`member` map) (Insertion "" 'a' 5)

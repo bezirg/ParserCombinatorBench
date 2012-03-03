@@ -12,11 +12,6 @@ import Numeric (readHex)
 pURL :: Parser [(String, Maybe String)]
 pURL = p_pair `sepBy` char '&'
 
--- p_pair :: Parser (String, Maybe String)
--- p_pair = (,) <$> many1 p_char <*> (Just <$
---          char '=' <*>  many1 p_char <|>
---          pure Nothing)
-
 p_pair :: Parser (String, Maybe String)
 p_pair = do
   name <- many1 p_char

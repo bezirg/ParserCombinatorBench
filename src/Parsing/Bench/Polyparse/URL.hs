@@ -1,5 +1,6 @@
 module Parsing.Bench.Polyparse.URL where
 
+import Data.Set
 import Parsing.Bench.Polyparse.Base
 import Text.Parse
 import Numeric (readHex)
@@ -16,7 +17,7 @@ p_pair = do
   return (name, value)
 
 p_char :: TextParser Char
-p_char = pAnySym urlBaseChars
+p_char = pAnyOrd urlBaseChars -- pAnySym urlBaseChars
      <|> (pSym '+' >> return ' ')
      <|> p_hex
 
@@ -29,6 +30,12 @@ p_hex = do
   b <- hexDigit
   let ((d, _):_) = readHex [a,b]
   return . toEnum $ d
+
+
+-- a fast way to create a parser that recognizes a big number of characters
+-- using BST lookup / Set membership
+pAnyOrd set = let map = fromList set
+              in satisfy (`member` map)
 
 
 run = run' pURL
