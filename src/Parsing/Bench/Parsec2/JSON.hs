@@ -37,16 +37,6 @@ p_bool :: CharParser () Bool
 p_bool = True <$ string "true"
      <|> False <$ string "false"
 
-p_value_choice = value <* spaces
-  where value = choice [ JString <$> p_string
-                       , JNumber <$> p_number
-                       , JObject <$> p_object
-                       , JArray <$> p_array
-                       , JBool <$> p_bool
-                       , JNull <$ string "null"
-                       ]
-                <?> "JSON value"
-
 p_number :: CharParser () Double
 p_number = do s <- getInput
               case readSigned readFloat s of

@@ -42,16 +42,6 @@ p_bool :: Parser Bool
 p_bool = True <$ string (T.pack "true")
      <|> False <$ string (T.pack "false")
 
-p_value_choice = value <* spaces
-  where value = choice [ JString <$> p_string
-                       , JNumber <$> p_number
-                       , JObject <$> p_object
-                       , JArray <$> p_array
-                       , JBool <$> p_bool
-                       , JNull <$ string (T.pack "null")
-                       ]
-                <?> "JSON value"
-
 p_number :: Parser Double
 p_number = double
 

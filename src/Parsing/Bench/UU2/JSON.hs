@@ -46,24 +46,13 @@ p_bool :: Parser Bool
 p_bool = True <$ pToken "true"
      <|> False <$ pToken "false"
 
-p_value_choice :: Parser JValue
-p_value_choice = value <* spaces
-  where value = choice [ JString <$> p_string
-                     , JNumber <$> p_number
-                     , JObject <$> p_object
-                     , JArray <$> p_array
-                     , JBool <$> p_bool
-                     , JNull <$ pToken "null"
-                     ]
-                <?> "JSON value"
-
 p_number :: Parser Double
 p_number = pDouble
 
 p_string :: Parser String
 p_string = pPacked (pSym '\"') (pSym '\"') (many jchar)
     where jchar = pSym '\\' *> (p_escape <|> p_unicode)
-              <|> pSatisfy (`notElem` "\"\\") (Insertion "" 'a' 5)
+              <|> pNoneSym "\"\\"
 
 p_escape :: Parser Char
 p_escape = choice (zipWith decode "bnfrt\\\"/" "\b\n\f\r\t\\\"/")
