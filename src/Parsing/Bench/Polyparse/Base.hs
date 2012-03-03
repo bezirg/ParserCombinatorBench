@@ -48,8 +48,11 @@ optionMaybe p = option Nothing (liftM Just p)
 
 between o c p = o *> p <* c 
 
+pSpaces :: TextParser String
+pSpaces = many (pAnySym " \r\n\t")
+
 spaces :: TextParser ()
-spaces = many (pAnySym " \r\n\t") *> pure ()
+spaces = () <$ many (pAnySym " \r\n\t") 
 
 newline = pSym '\n'
 
