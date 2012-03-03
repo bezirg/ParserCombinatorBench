@@ -10,9 +10,8 @@ pCSV = many line
 line = sepBy cell (char ',') <* eol
 cell = many (noneOf ",\n\r")
 
-eol =   string (T.pack "\n\r") <|> 
-        string (T.pack "\r\n") <|>
-        string (T.pack "\n") <|> 
-        string (T.pack "\r")
+eol =   string (T.pack "\r\n") <|> -- MS
+        string (T.pack "\n") <|>   -- Unix
+        string (T.pack "\r")       -- MacOS
 
 run = run' pCSV

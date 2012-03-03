@@ -8,9 +8,8 @@ pCSV = many line
 line = sepBy cell (pSym ',') <* eol
 cell = many (noneOf ",\n\r")
 
-eol =   string ( "\n\r") <|> 
-        string ( "\r\n") <|>
-        string ( "\n") <|>
-        string ( "\r")
+eol =   string ( "\r\n") <|>    -- MS
+        string ( "\n") <|>      -- Unix
+        string ( "\r")          -- MacOS
 
 run = run' pCSV

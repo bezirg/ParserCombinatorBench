@@ -18,9 +18,8 @@ cell = pMunch (`notElem` ",\n\r")
 
 
 eol :: Parser String
-eol = pToken "\n\r" <|>
-      pToken "\r\n" <|>
-      pToken "\n" <|>
-      pToken "\r" 
+eol = pToken "\r\n" <|>         -- MS
+      pToken "\n" <|>           -- Unix
+      pToken "\r"               -- MacOS
 
 run = run' pCSV

@@ -11,9 +11,8 @@ pCSV = endBy line eol
 line = sepBy cell (char ',')
 cell = many (noneOf ",\n\r")
 
-eol =   try (string "\n\r")
-    <|> try (string "\r\n")
-    <|> string "\n"
-    <|> string "\r"
+eol = try (string "\r\n")       -- MS
+      <|> string "\n"           -- Unix
+      <|> string "\r"           -- MacOS
 
 run = run' pCSV

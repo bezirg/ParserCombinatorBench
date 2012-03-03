@@ -16,9 +16,8 @@ cell :: Parser String
 cell = pList (pNoneSym ",\n\r")
 
 eol :: Parser String
-eol =   pToks "\n\r"
-    <|> pToks "\r\n"
-    <|> pToks "\n"
-    <|> pToks "\r"
+eol =   pToks "\r\n"            -- MS
+    <|> pToks "\n"              -- Unix
+    <|> pToks "\r"              -- MacOS
 
 run = run' pCSV
