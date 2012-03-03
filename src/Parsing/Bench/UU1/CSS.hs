@@ -12,7 +12,7 @@ pCSS = pBlocks
 
 -- Blocks -> Block*
 pBlocks :: Parser [(String, [(String, String)])]
-pBlocks = pList (skipWS *> pBlock)
+pBlocks = pList pBlock
 
 -- Block -> Selectors '{' Properties '}'
 pBlock :: Parser (String, [(String, String)])
@@ -24,7 +24,7 @@ pSelectors = strip <$> pUpto "{"
 
 -- Properties -> Prop ';' Properties | ε
 pProps :: Parser [(String, String)]
-pProps = skipWS *> pList (pProp <* skipWS)
+pProps = pList (pProp <* skipWS)
 
 -- Property -> Key ':' Value
 pProp :: Parser (String, String)
@@ -50,7 +50,7 @@ skipWS = pSpaces *>
 pSemi :: Parser Char
 pSemi = lexeme $ pSym ';'
 
-pBraces = pPacked (pSym '{') (pSym '}')
+pBraces = pPacked (pSym '{' *> skipWS) (pSym '}' *> skipWS)
 
 pUpto cs = pList (pNoneSym cs)
 
