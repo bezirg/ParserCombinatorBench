@@ -9,27 +9,35 @@ import Test.HUnit
 import Parsing.Bench.AST.JSON
 import Parsing.Bench.AST.Expr
 import Parsing.Bench.AST.HTTP
+import Data.Attoparsec.Text
+import Data.Text (unpack)
+
+perror = error "Parsing Failed"
+
+fromDone (Done _ x) = x
+fromDone _ = perror
 
 fromRight (Right v) = v
-fromRight _ = error "parsing failed"
+fromRight _ = perror
 
 fromFst (v, []) = v
-fromFst _ = error "parsing failed"
+fromFst _ = perror
 
 main = do
 
 #include "Test.h"
 
-  -- Tested against the outputs of the Attoparsec Parser
+  -- Tested against the outputs of a specific Attoparsec Parser
 
-  runTestTT $ test [-- "ap" ~: test [
-                    --                "csv" ~: outCV ~=? fromDone (APCV.run inpCV)  , 
-                    --                "expr" ~: outEX ~=? fromDone (APEX.run inpEX) ,
-                    --                "url" ~: outUR ~=? fromDone (APUR.run inpUR) ,
-                    --                "http" ~: outHT ~=? fromDone (APHT.run inpHT) ,
-                    --                "json" ~: outJS ~=? fromDone (APJS.run inpJS) ,
-                    --                "css" ~: outCS ~=? fromDone (APCS.run inpCS)
-                    --              ],
+  runTestTT $ test ["ap" ~: test [
+                              -- a not so pretty way to test attoparsec, but works
+                                   "csv" ~: show outCV ~=? show (fromDone (APCV.run inpCV))  , 
+                                   "expr" ~: show outEX ~=? show (fromDone (APEX.run inpEX)) ,
+                                   "url" ~: show outUR ~=? show (fromDone (APUR.run inpUR)) ,
+                                   "http" ~: show outHT ~=? show (fromDone (APHT.run inpHT)) ,
+                                   "json" ~: show outJS ~=? show (fromDone (APJS.run inpJS)) ,
+                                   "css" ~: show outCS ~=? show (fromDone (APCS.run inpCS))
+                                 ],
                         "p2" ~: test [
                                    "csv" ~: outCV ~=? fromRight ( P2CV.run inpCV ) , 
                                    "expr" ~: outEX ~=? fromRight ( P2EX.run inpEX) ,
