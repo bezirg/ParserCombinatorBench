@@ -7,9 +7,7 @@ import Data.Attoparsec.Text
 import Control.Applicative
 import qualified Data.Text as T
 
-import Numeric (readHex)
 import Control.Monad (liftM4)
-import System.IO (Handle)
 
 pHTTP :: Parser HttpRequest
 pHTTP = q "GET" Get (pure Nothing)

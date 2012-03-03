@@ -1,7 +1,7 @@
 module Parsing.Bench.Polyparse.Base where
 
 import Text.Parse
-import Data.Char (isHexDigit)
+import Data.Char
 import Control.Monad (liftM)
 import Data.Char (isSpace)
 
@@ -11,19 +11,19 @@ pParens p = pSym '(' *> p <* pSym ')'
 
 endBy p sep = many (do{ x <- p; sep; return x })
 
-noneOf cs = satisfy (\c -> not (elem c cs))
+noneOf cs = satisfy (`notElem` cs)
 
-pAnySym cs = satisfy (\ c -> elem c cs)
+pAnySym cs = satisfy (`elem` cs)
 
 pSym s = satisfy (== s)
 
-pLower = satisfy (`elem` ['a'..'z'])
+pLower = satisfy isLower
 
-pUpper = satisfy (`elem` ['A'..'Z'])
+pUpper = satisfy isUpper
 
-pLetter = pLower <|> pUpper
+pLetter = satisfy isAlpha
 
-pDigit = satisfy (`elem` "0123456789")
+pDigit = satisfy isDigit
 
 pChainl pe po  =  h <$> pe <*> many (j <$> po <*> pe)
     where j op x  =  (`op` x)

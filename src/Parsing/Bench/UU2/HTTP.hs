@@ -7,9 +7,6 @@ import Text.ParserCombinators.UU
 import Text.ParserCombinators.UU.Utils
 import Text.ParserCombinators.UU.BasicInstances
 
-import Numeric (readHex)
-import System.IO (Handle)
-
 pHTTP :: Parser HttpRequest
 pHTTP = q "GET" Get (pure Nothing)
         <|> q "POST" Post (Just <$> pList anyChar)
@@ -38,3 +35,38 @@ notEOL :: Parser Char
 notEOL = pNoneSym "\r\n"
 
 run = run' pHTTP
+
+
+
+-- pHTTP :: Parser HttpRequest
+-- pHTTP = pReq
+
+-- pReq :: Parser HttpRequest
+-- pReq = -- pReq' (Get <$ pToken "GET ") (pure Nothing) <|>
+--        pReq' (Post <$ pToken "POST ") (Just <$> pBody)
+--     where pReq' pMethod pOptBody = HttpRequest <$>
+--                                    pMethod <*> 
+--                                    pURL <*>
+--                                    pHeaders <*>
+--                                    pOptBody
+
+-- pURL :: Parser String
+-- pURL = optional (pSym '/') *>
+--        notEOL `pManyTill` pHTTPVersion
+--        <* eol
+
+-- pHTTPVersion :: Parser String
+-- pHTTPVersion = pToken " HTTP/1." <* pAnySym "01"
+
+
+-- pHeaders :: Parser [(String, String)]
+-- pHeaders = pHeader `pManyTill` eol 
+
+-- pHeader :: Parser (String, String)
+-- pHeader = (,) <$> 
+--           pMunch (/= ':') <* pSym ':' <* spaces <*>
+--           pMunch (`notElem` "\n\r")
+--           <* eol
+
+-- pBody :: Parser String
+-- pBody = many anyChar

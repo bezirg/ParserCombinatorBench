@@ -5,9 +5,7 @@ import Parsing.Bench.Parsec3.Base
 import Text.Parsec hiding (many, optional, (<|>))
 import Text.Parsec.String (Parser)
 
-import Numeric (readHex)
 import Control.Monad (liftM4)
-import System.IO (Handle)
 import Control.Applicative
 
 

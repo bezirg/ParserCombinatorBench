@@ -6,11 +6,6 @@ import UU.Parsing hiding (Parser)
 import qualified UU.Parsing.Interface
 import UU.Parsing.CharParser
 
-import Numeric (readHex)
-import Control.Monad (liftM4)
-import System.IO (Handle)
-
-
 pHTTP :: Parser HttpRequest
 pHTTP = q "GET" Get (pSucceed Nothing)
         <|> q "POST" Post (Just <$> pList anyChar)

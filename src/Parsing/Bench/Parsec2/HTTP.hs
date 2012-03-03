@@ -4,10 +4,7 @@ import Parsing.Bench.AST.HTTP
 import Parsing.Bench.Parsec2.Base
 
 
-import Numeric (readHex)
 import Control.Monad (liftM4)
-import System.IO (Handle)
-
 
 pHTTP :: CharParser () HttpRequest
 pHTTP = q "GET" Get (pure Nothing)
