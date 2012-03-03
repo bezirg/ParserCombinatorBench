@@ -7,30 +7,18 @@ import qualified UU.Parsing.Interface
 import UU.Parsing.CharParser
 
 pCSV :: Parser [[String]]
-pCSV = pEndSep eol line
+pCSV = pList line
 
 line :: Parser [String]
-line = pList1Sep (pSym ',') cell
+line = pList1Sep (pSym ',') cell <* eol
 
 cell :: Parser String
-cell = quotedCell <|> pList1 (pNoneSym ",\n\r")
-
-quotedCell :: Parser String
-quotedCell = 
-       pSym '"' *>
-       pList quotedChar <*
-       pSym '"'
-
-quotedChar :: Parser Char
-quotedChar =
-        pNoneSym "\""
-    <|> pToks "\"\"" *> pSucceed '"'
+cell = pList (pNoneSym ",\n\r")
 
 eol :: Parser String
 eol =   pToks "\n\r"
     <|> pToks "\r\n"
     <|> pToks "\n"
     <|> pToks "\r"
-    <?> "end of line"
 
 run = run' pCSV

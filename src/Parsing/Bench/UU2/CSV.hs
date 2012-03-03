@@ -8,7 +8,7 @@ import Text.ParserCombinators.UU.BasicInstances
 import Text.ParserCombinators.UU.Utils
 
 pCSV :: Parser [[String]]
-pCSV = pList1 line
+pCSV = pList line
 
 line :: Parser [String]
 line = pList1Sep (pSym ',') cell <* eol
@@ -18,6 +18,9 @@ cell = pMunch (`notElem` ",\n\r")
 
 
 eol :: Parser String
-eol = pToken "\n"
+eol = pToken "\n\r" <|>
+      pToken "\r\n" <|>
+      pToken "\n" <|>
+      pToken "\r" 
 
 run = run' pCSV
