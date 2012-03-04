@@ -1,3 +1,5 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Parsing.Bench.Attoparsec.JSON where
 
 import Parsing.Bench.AST.JSON
@@ -35,12 +37,12 @@ p_value = value <* spaces
             <|> JObject <$> p_object
             <|> JArray <$> p_array
             <|> JBool <$> p_bool
-            <|> JNull <$ string (T.pack "null")
+            <|> JNull <$ string "null"
             <?> "JSON value"
 
 p_bool :: Parser Bool
-p_bool = True <$ string (T.pack "true")
-     <|> False <$ string (T.pack "false")
+p_bool = True <$ string "true"
+     <|> False <$ string "false"
 
 p_number :: Parser Double
 p_number = double
@@ -49,7 +51,7 @@ p_number = double
 p_string :: Parser String
 p_string = between (char '\"') (char '\"') (many jchar)
     where jchar = char '\\' *> (p_escape <|> p_unicode)
-              <|> satisfy (`notElem` "\"\\")
+              <|> noneOf "\"\\"
 
 p_escape = choice (zipWith decode "bnfrt\\\"/" "\b\n\f\r\t\\\"/")
     where decode c r = r <$ char c

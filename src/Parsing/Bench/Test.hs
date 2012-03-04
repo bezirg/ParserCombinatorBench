@@ -10,7 +10,6 @@ import Parsing.Bench.AST.JSON
 import Parsing.Bench.AST.Expr
 import Parsing.Bench.AST.HTTP
 import Data.Attoparsec.Text
-import Data.Text (unpack)
 
 perror = error "Parsing Failed"
 
@@ -31,12 +30,12 @@ main = do
 
   runTestTT $ test ["ap" ~: test [
                               -- a not so pretty way to test attoparsec, but works
-                                   "csv" ~: show outCV ~=? show (fromDone (APCV.run inpCV))  , 
-                                   "expr" ~: show outEX ~=? show (fromDone (APEX.run inpEX)) ,
-                                   "url" ~: show outUR ~=? show (fromDone (APUR.run inpUR)) ,
-                                   "http" ~: show outHT ~=? show (fromDone (APHT.run inpHT)) ,
-                                   "json" ~: show outJS ~=? show (fromDone (APJS.run inpJS)) ,
-                                   "css" ~: show outCS ~=? show (fromDone (APCS.run inpCS))
+                                   "csv" ~: show outCV ~=? show (fromDone (APCV.run tinpCV))  , 
+                                   "expr" ~: show outEX ~=? show (fromDone (APEX.run tinpEX)) ,
+                                   "url" ~: show outUR ~=? show (fromDone (APUR.run tinpUR)) ,
+                                   "http" ~: show outHT ~=? show (fromDone (APHT.run tinpHT)) ,
+                                   "json" ~: show outJS ~=? show (fromDone (APJS.run tinpJS)) ,
+                                   "css" ~: show outCS ~=? show (fromDone (APCS.run tinpCS))
                                  ],
                         "p2" ~: test [
                                    "csv" ~: outCV ~=? fromRight ( P2CV.run inpCV ) , 

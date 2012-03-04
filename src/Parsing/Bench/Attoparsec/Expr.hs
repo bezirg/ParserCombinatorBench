@@ -1,3 +1,5 @@
+{-# LANGUAGE OverloadedStrings #-}
+
 module Parsing.Bench.Attoparsec.Expr where
 
 import Parsing.Bench.AST.Expr
@@ -18,7 +20,7 @@ op2 = Mul <$ char '*' <* skipSpace
 
 
 pLet :: Parser Expr
-pLet = Let <$ string (T.pack "let") <* skipSpace <*> pIdent <* skipSpace <* char '=' <* skipSpace <*> e1 <* string (T.pack "in") <* skipSpace <*> e1
+pLet = Let <$ string "let" <* skipSpace <*> pIdent <* skipSpace <* char '=' <* skipSpace <*> e1 <* string "in" <* skipSpace <*> e1
 
 pExpr :: Parser Expr
 pExpr = skipSpace *> e1 <* endOfInput

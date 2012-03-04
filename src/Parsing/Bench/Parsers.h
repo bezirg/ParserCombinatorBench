@@ -45,3 +45,6 @@ import qualified Parsing.Bench.Parsec3.CSS as P3CS
 import qualified Parsing.Bench.UU1.CSS as U1CS
 import qualified Parsing.Bench.UU2.CSS as U2CS
 import qualified Parsing.Bench.Polyparse.CSS as PPCS
+
+
+import qualified Data.Text.IO as TIO
