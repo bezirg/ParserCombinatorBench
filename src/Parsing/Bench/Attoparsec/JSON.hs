@@ -45,7 +45,7 @@ p_bool = True <$ string "true"
      <|> False <$ string "false"
 
 p_number :: Parser Double
-p_number = double
+p_number = signed double
 
 
 p_string :: Parser String
