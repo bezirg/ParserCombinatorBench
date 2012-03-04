@@ -7,12 +7,12 @@
   inpCS <- readFile "data/css/test.css"
 
   -- Strictly load the Text inputs
-  tinpCV <- TIO.readFile "data/csv/bench.csv"
-  tinpEX <- TIO.readFile "data/expr/bench.expr"
-  tinpUR <- TIO.readFile "data/url/bench.url"
-  tinpHT <- TIO.readFile "data/http/bench.http"
-  tinpJS <- TIO.readFile "data/json/bench.json"
-  tinpCS <- TIO.readFile "data/css/bench.css"
+  tinpCV <- TIO.readFile "data/csv/test.csv"
+  tinpEX <- TIO.readFile "data/expr/test.expr"
+  tinpUR <- TIO.readFile "data/url/test.url"
+  tinpHT <- TIO.readFile "data/http/test.http"
+  tinpJS <- TIO.readFile "data/json/test.json"
+  tinpCS <- TIO.readFile "data/css/test.css"
 
   -- Outputs
 
