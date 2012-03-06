@@ -10,17 +10,17 @@ cabal-version:         >= 1.9.2
 --extra-source-files:    doc/*.md, doc/*.tex, doc/*.pdf
 
 executable bench-nf
-    build-depends: base, text, transformers, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, criterion, deepseq, containers
+    build-depends: base, text, transformers, uulib==0.9.14, uu-parsinglib==2.7.3.3, parsec2==1.0.0, parsec3==1.0.0.4, attoparsec==0.10.1.1, polyparse==1.7, QuickCheck, criterion, deepseq, containers
     main-is:    Parsing/Bench/BenchNF.hs
     hs-source-dirs: src
 
 executable bench-whnf
-    build-depends: base, text, transformers, uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, criterion, deepseq, containers
+    build-depends: base, text, transformers, uulib==0.9.14, uu-parsinglib==2.7.3.3, parsec2==1.0.0, parsec3==1.0.0.4, attoparsec==0.10.1.1, polyparse==1.7, QuickCheck, criterion, deepseq, containers
     main-is:    Parsing/Bench/BenchWHNF.hs
     hs-source-dirs: src
 
 executable test
-    build-depends: base, text, transformers,uulib, uu-parsinglib, parsec2, parsec3, attoparsec, polyparse, QuickCheck, HUnit, deepseq, containers
+    build-depends: base, text, transformers,uulib==0.9.14, uu-parsinglib==2.7.3.3, parsec2==1.0.0, parsec3==1.0.0.4, attoparsec==0.10.1.1, polyparse==1.7, QuickCheck, HUnit, deepseq, containers
     main-is:    Parsing/Bench/Test.hs
     hs-source-dirs: src
 
