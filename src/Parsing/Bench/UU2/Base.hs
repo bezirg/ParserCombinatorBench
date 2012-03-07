@@ -56,6 +56,9 @@ skipMany p = many p *> pure ()
 
 skipMany1 p = p *> skipMany1 p
 
+succeeded (_,[]) = True
+succeeded _ = error "Parsing Failed"
+
 -- the library is Error Correcting by default
 -- probably the ErrorCorrection cannot be turned off
 -- returns (ResultAfterMaybeErrorCorrectionApplied, Errors)

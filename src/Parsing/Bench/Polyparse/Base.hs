@@ -70,5 +70,8 @@ skipMany p = many p *> pure ()
 
 skipMany1 p = p *> skipMany1 p
 
+succeeded (Right _, _) = True
+succeeded _ = error "Parsing Failed"
+
 run' = runParser
 

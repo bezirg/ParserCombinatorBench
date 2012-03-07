@@ -8,6 +8,7 @@ module Parsing.Bench.Parsec2.Base
       pExact,
       pCount,
       strip,
+      succeeded,
       run'
     ) where
 
@@ -48,6 +49,9 @@ strip      :: String -> String
 strip      = f . f
     where f = reverse . dropWhile isSpace
 
+
+succeeded (Right _) = True
+succeeded _ = error "Parsing Failed"
 
 run' = flip parse ""
 

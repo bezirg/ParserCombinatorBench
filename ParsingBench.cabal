@@ -24,3 +24,484 @@ executable test
     main-is:    Parsing/Bench/Test.hs
     hs-source-dirs: src
 
+---- NF
+------
+
+
+
+-- Attoparsec exes
+--
+
+executable csv-ap-nf
+    build-depends: base, text, attoparsec==0.10.1.1 
+    main-is:    Parsing/Bench/Attoparsec/ExeNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-ap-nf
+    build-depends: base, text, attoparsec==0.10.1.1 
+    main-is:    Parsing/Bench/Attoparsec/ExeNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-ap-nf
+    build-depends: base, text, attoparsec==0.10.1.1, deepseq
+    main-is:    Parsing/Bench/Attoparsec/ExeNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-ap-nf
+    build-depends: base, text, attoparsec==0.10.1.1, deepseq
+    main-is:    Parsing/Bench/Attoparsec/ExeNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-ap-nf
+    build-depends: base, text, attoparsec==0.10.1.1 
+    main-is:    Parsing/Bench/Attoparsec/ExeNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-ap-nf
+    build-depends: base, text, attoparsec==0.10.1.1, deepseq
+    main-is:    Parsing/Bench/Attoparsec/ExeNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+
+-- Parsec 2 ExeNFs
+--
+
+executable csv-p2-nf
+    build-depends: base, text, parsec2==1.0.0 
+    main-is:    Parsing/Bench/Parsec2/ExeNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-p2-nf
+    build-depends: base, text, parsec2==1.0.0 
+    main-is:    Parsing/Bench/Parsec2/ExeNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-p2-nf
+    build-depends: base, text, parsec2==1.0.0, deepseq
+    main-is:    Parsing/Bench/Parsec2/ExeNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-p2-nf
+    build-depends: base, text, parsec2==1.0.0, deepseq
+    main-is:    Parsing/Bench/Parsec2/ExeNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-p2-nf
+    build-depends: base, text, parsec2==1.0.0 
+    main-is:    Parsing/Bench/Parsec2/ExeNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-p2-nf
+    build-depends: base, text, parsec2==1.0.0, deepseq
+    main-is:    Parsing/Bench/Parsec2/ExeNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+
+-- Parsec 3 ExeNFs
+--
+
+executable csv-p3-nf
+    build-depends: base, text, parsec3==1.0.0.4, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-p3-nf
+    build-depends: base, text, parsec3==1.0.0.4, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-p3-nf
+    build-depends: base, text, parsec3==1.0.0.4, deepseq, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-p3-nf
+    build-depends: base, text, parsec3==1.0.0.4, deepseq, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-p3-nf
+    build-depends: base, text, parsec3==1.0.0.4, transformers 
+    main-is:    Parsing/Bench/Parsec3/ExeNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-p3-nf
+    build-depends: base, text, parsec3==1.0.0.4, deepseq, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- UU1 ExeNFs
+--
+
+executable csv-u1-nf
+    build-depends: base, text, uulib==0.9.14 
+    main-is:    Parsing/Bench/UU1/ExeNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-u1-nf
+    build-depends: base, text, uulib==0.9.14 
+    main-is:    Parsing/Bench/UU1/ExeNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-u1-nf
+    build-depends: base, text, uulib==0.9.14, deepseq
+    main-is:    Parsing/Bench/UU1/ExeNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-u1-nf
+    build-depends: base, text, uulib==0.9.14, deepseq
+    main-is:    Parsing/Bench/UU1/ExeNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-u1-nf
+    build-depends: base, text, uulib==0.9.14 
+    main-is:    Parsing/Bench/UU1/ExeNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-u1-nf
+    build-depends: base, text, uulib==0.9.14, deepseq
+    main-is:    Parsing/Bench/UU1/ExeNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- UU2 ExeNFs
+--
+
+executable csv-u2-nf
+    build-depends: base, text, uu-parsinglib==2.7.3.3 
+    main-is:    Parsing/Bench/UU2/ExeNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-u2-nf
+    build-depends: base, text, uu-parsinglib==2.7.3.3 
+    main-is:    Parsing/Bench/UU2/ExeNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-u2-nf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, deepseq
+    main-is:    Parsing/Bench/UU2/ExeNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-u2-nf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, deepseq
+    main-is:    Parsing/Bench/UU2/ExeNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-u2-nf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, containers
+    main-is:    Parsing/Bench/UU2/ExeNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-u2-nf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, deepseq
+    main-is:    Parsing/Bench/UU2/ExeNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- PP ExeNFs
+--
+
+executable csv-pp-nf
+    build-depends: base, text, polyparse==1.7 
+    main-is:    Parsing/Bench/Polyparse/ExeNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-pp-nf
+    build-depends: base, text, polyparse==1.7 
+    main-is:    Parsing/Bench/Polyparse/ExeNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-pp-nf
+    build-depends: base, text, polyparse==1.7, deepseq
+    main-is:    Parsing/Bench/Polyparse/ExeNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-pp-nf
+    build-depends: base, text, polyparse==1.7, deepseq
+    main-is:    Parsing/Bench/Polyparse/ExeNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-pp-nf
+    build-depends: base, text, polyparse==1.7, containers 
+    main-is:    Parsing/Bench/Polyparse/ExeNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-pp-nf
+    build-depends: base, text, polyparse==1.7, deepseq
+    main-is:    Parsing/Bench/Polyparse/ExeNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- WHNF
+-------
+
+
+
+-- Attoparsec exes
+--
+
+executable csv-ap-whnf
+    build-depends: base, text, attoparsec==0.10.1.1 
+    main-is:    Parsing/Bench/Attoparsec/ExeWHNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-ap-whnf
+    build-depends: base, text, attoparsec==0.10.1.1 
+    main-is:    Parsing/Bench/Attoparsec/ExeWHNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-ap-whnf
+    build-depends: base, text, attoparsec==0.10.1.1, deepseq
+    main-is:    Parsing/Bench/Attoparsec/ExeWHNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-ap-whnf
+    build-depends: base, text, attoparsec==0.10.1.1, deepseq
+    main-is:    Parsing/Bench/Attoparsec/ExeWHNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-ap-whnf
+    build-depends: base, text, attoparsec==0.10.1.1 
+    main-is:    Parsing/Bench/Attoparsec/ExeWHNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-ap-whnf
+    build-depends: base, text, attoparsec==0.10.1.1, deepseq
+    main-is:    Parsing/Bench/Attoparsec/ExeWHNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+
+-- Parsec 2 ExeWHNFs
+--
+
+executable csv-p2-whnf
+    build-depends: base, text, parsec2==1.0.0 
+    main-is:    Parsing/Bench/Parsec2/ExeWHNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-p2-whnf
+    build-depends: base, text, parsec2==1.0.0 
+    main-is:    Parsing/Bench/Parsec2/ExeWHNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-p2-whnf
+    build-depends: base, text, parsec2==1.0.0, deepseq
+    main-is:    Parsing/Bench/Parsec2/ExeWHNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-p2-whnf
+    build-depends: base, text, parsec2==1.0.0, deepseq
+    main-is:    Parsing/Bench/Parsec2/ExeWHNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-p2-whnf
+    build-depends: base, text, parsec2==1.0.0 
+    main-is:    Parsing/Bench/Parsec2/ExeWHNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-p2-whnf
+    build-depends: base, text, parsec2==1.0.0, deepseq
+    main-is:    Parsing/Bench/Parsec2/ExeWHNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+
+-- Parsec 3 ExeWHNFs
+--
+
+executable csv-p3-whnf
+    build-depends: base, text, parsec3==1.0.0.4, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeWHNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-p3-whnf
+    build-depends: base, text, parsec3==1.0.0.4, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeWHNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-p3-whnf
+    build-depends: base, text, parsec3==1.0.0.4, deepseq, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeWHNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-p3-whnf
+    build-depends: base, text, parsec3==1.0.0.4, deepseq, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeWHNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-p3-whnf
+    build-depends: base, text, parsec3==1.0.0.4, transformers 
+    main-is:    Parsing/Bench/Parsec3/ExeWHNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-p3-whnf
+    build-depends: base, text, parsec3==1.0.0.4, deepseq, transformers
+    main-is:    Parsing/Bench/Parsec3/ExeWHNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- UU1 ExeWHNFs
+--
+
+executable csv-u1-whnf
+    build-depends: base, text, uulib==0.9.14 
+    main-is:    Parsing/Bench/UU1/ExeWHNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-u1-whnf
+    build-depends: base, text, uulib==0.9.14 
+    main-is:    Parsing/Bench/UU1/ExeWHNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-u1-whnf
+    build-depends: base, text, uulib==0.9.14, deepseq
+    main-is:    Parsing/Bench/UU1/ExeWHNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-u1-whnf
+    build-depends: base, text, uulib==0.9.14, deepseq
+    main-is:    Parsing/Bench/UU1/ExeWHNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-u1-whnf
+    build-depends: base, text, uulib==0.9.14 
+    main-is:    Parsing/Bench/UU1/ExeWHNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-u1-whnf
+    build-depends: base, text, uulib==0.9.14, deepseq
+    main-is:    Parsing/Bench/UU1/ExeWHNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- UU2 ExeWHNFs
+--
+
+executable csv-u2-whnf
+    build-depends: base, text, uu-parsinglib==2.7.3.3 
+    main-is:    Parsing/Bench/UU2/ExeWHNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-u2-whnf
+    build-depends: base, text, uu-parsinglib==2.7.3.3 
+    main-is:    Parsing/Bench/UU2/ExeWHNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-u2-whnf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, deepseq
+    main-is:    Parsing/Bench/UU2/ExeWHNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-u2-whnf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, deepseq
+    main-is:    Parsing/Bench/UU2/ExeWHNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-u2-whnf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, containers
+    main-is:    Parsing/Bench/UU2/ExeWHNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-u2-whnf
+    build-depends: base, text, uu-parsinglib==2.7.3.3, deepseq
+    main-is:    Parsing/Bench/UU2/ExeWHNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+-- PP ExeWHNFs
+--
+
+executable csv-pp-whnf
+    build-depends: base, text, polyparse==1.7 
+    main-is:    Parsing/Bench/Polyparse/ExeWHNF/CSV.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable css-pp-whnf
+    build-depends: base, text, polyparse==1.7 
+    main-is:    Parsing/Bench/Polyparse/ExeWHNF/CSS.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable http-pp-whnf
+    build-depends: base, text, polyparse==1.7, deepseq
+    main-is:    Parsing/Bench/Polyparse/ExeWHNF/HTTP.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable json-pp-whnf
+    build-depends: base, text, polyparse==1.7, deepseq
+    main-is:    Parsing/Bench/Polyparse/ExeWHNF/JSON.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable url-pp-whnf
+    build-depends: base, text, polyparse==1.7, containers 
+    main-is:    Parsing/Bench/Polyparse/ExeWHNF/URL.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src
+
+executable expr-pp-whnf
+    build-depends: base, text, polyparse==1.7, deepseq
+    main-is:    Parsing/Bench/Polyparse/ExeWHNF/Expr.hs
+    ghc-options: -prof -auto-all -rtsopts
+    hs-source-dirs: src

@@ -39,6 +39,10 @@ optionMaybe p = option Nothing (liftM Just p)
 
 newline = char '\n'
 
+succeeded (Done _ _) = True
+succeeded _ = error "Parsing Failed"
+
+
 run' :: Parser a -> T.Text -> Result a
 run' p s = case parse p s of
              Partial f -> f (T.empty)

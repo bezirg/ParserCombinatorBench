@@ -121,6 +121,9 @@ skipMany p = pList p *> pSucceed ()
 skipMany1 p = p *> skipMany1 p
 
 
+succeeded (Right _) = True
+succeeded _ = error "Parsing Failed"
+
 run' :: Parser a -> String -> Either [String] a
 run' = execParser
 

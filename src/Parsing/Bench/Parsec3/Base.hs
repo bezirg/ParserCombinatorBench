@@ -27,6 +27,10 @@ strip      :: String -> String
 strip      = f . f
     where f = reverse . dropWhile isSpace
 
+succeeded (Right _) = True
+succeeded _ = error "Parsing Failed"
+
+
 run' :: Parser a -> String -> Either ParseError a
 run' = flip parse ""
 
