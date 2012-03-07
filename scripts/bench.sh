@@ -14,11 +14,11 @@ cabal build &&
 ./dist/build/bench-whnf/bench-whnf -g -s 10 -o bench-whnf.html -u bench-whnf.csv &&
 
 # space
-source prof-nf.sh &&
-source prof-whnf.sh &&
-source hp-nf.sh &&
-source hp-whnf.sh &&
-source gc-nf.sh &&
-source gc-whnf.sh &&
+source ./scripts/prof-nf.sh &&
+source ./scripts/prof-whnf.sh &&
+source ./scripts/hp-nf.sh &&
+source ./scripts/hp-whnf.sh &&
+source ./scripts/gc-nf.sh &&
+source ./scripts/gc-whnf.sh &&
 
 echo "success"
