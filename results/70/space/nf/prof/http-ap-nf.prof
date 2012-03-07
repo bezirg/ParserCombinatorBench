@@ -1,0 +1,66 @@
+	Tue Mar  6 21:13 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-ap-nf +RTS -p -RTS
+
+	total time  =        2.88 secs   (144 ticks @ 20 ms)
+	total alloc = 1,151,396,744 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+p_headers                      Parsing.Bench.Attoparsec.HTTP  49.3   57.9
+noneOf                         Parsing.Bench.Attoparsec.Base  20.1   11.3
+crlf                           Parsing.Bench.Attoparsec.HTTP  10.4    7.6
+main                           Main                   7.6    4.7
+CAF                            Parsing.Bench.AST.HTTP   6.2   11.8
+newline                        Parsing.Bench.Attoparsec.Base   3.5    3.1
+oneOf                          Parsing.Bench.Attoparsec.Base   1.4    2.0
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 360           2   7.6    4.7     8.3    4.8
+  run                    Parsing.Bench.Attoparsec.HTTP                        363           1   0.0    0.0     0.0    0.0
+   run'                  Parsing.Bench.Attoparsec.Base                        364           1   0.0    0.0     0.0    0.0
+    pHTTP                Parsing.Bench.Attoparsec.HTTP                        365           1   0.0    0.0     0.0    0.0
+  readTextDevice         Data.Text.IO.Internal                                362         987   0.7    0.1     0.7    0.1
+ CAF                     Main                                                 354           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 361           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        352           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             350           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     346           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     291           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            275           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              255           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                249           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      246           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Attoparsec.HTTP                        241          28   0.0    0.0    85.4   83.5
+  p_headers              Parsing.Bench.Attoparsec.HTTP                        380      443037  49.3   57.9    85.4   83.5
+   notEOL                Parsing.Bench.Attoparsec.HTTP                        387           0   0.0    0.0    20.1   11.3
+    noneOf               Parsing.Bench.Attoparsec.Base                        388           0  20.1   11.3    20.1   11.3
+   spaces                Parsing.Bench.Attoparsec.Base                        386      110000   0.7    0.8     0.7    0.8
+   crlf                  Parsing.Bench.Attoparsec.HTTP                        384      660000  10.4    7.6    13.9   11.4
+    newline              Parsing.Bench.Attoparsec.Base                        389      220000   3.5    3.1     3.5    3.1
+    pHTTP                Parsing.Bench.Attoparsec.HTTP                        385           1   0.0    0.7     0.0    0.7
+   oneOf                 Parsing.Bench.Attoparsec.Base                        381           2   1.4    2.0     1.4    2.0
+    crlf                 Parsing.Bench.Attoparsec.HTTP                        382           0   0.0    0.0     0.0    0.0
+     pHTTP               Parsing.Bench.Attoparsec.HTTP                        383           0   0.0    0.0     0.0    0.0
+  crlf                   Parsing.Bench.Attoparsec.HTTP                        376           4   0.0    0.0     0.0    0.0
+   newline               Parsing.Bench.Attoparsec.Base                        378           2   0.0    0.0     0.0    0.0
+   pHTTP                 Parsing.Bench.Attoparsec.HTTP                        377           0   0.0    0.0     0.0    0.0
+    p_headers            Parsing.Bench.Attoparsec.HTTP                        379           3   0.0    0.0     0.0    0.0
+  notEOL                 Parsing.Bench.Attoparsec.HTTP                        367           1   0.0    0.0     0.0    0.0
+   noneOf                Parsing.Bench.Attoparsec.Base                        368           1   0.0    0.0     0.0    0.0
+    pHTTP                Parsing.Bench.Attoparsec.HTTP                        369           0   0.0    0.0     0.0    0.0
+  pHTTP                  Parsing.Bench.Attoparsec.HTTP                        366           2   0.0    0.0     0.0    0.0
+   crlf                  Parsing.Bench.Attoparsec.HTTP                        375           2   0.0    0.0     0.0    0.0
+   notEOL                Parsing.Bench.Attoparsec.HTTP                        373           0   0.0    0.0     0.0    0.0
+    noneOf               Parsing.Bench.Attoparsec.Base                        374           0   0.0    0.0     0.0    0.0
+   oneOf                 Parsing.Bench.Attoparsec.Base                        370           1   0.0    0.0     0.0    0.0
+    notEOL               Parsing.Bench.Attoparsec.HTTP                        371           0   0.0    0.0     0.0    0.0
+     noneOf              Parsing.Bench.Attoparsec.Base                        372           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Internal                                   222           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Array                                      218           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Attoparsec.Text.FastSet                         200           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.AST.HTTP                               183           8   6.2   11.8     6.2   11.8

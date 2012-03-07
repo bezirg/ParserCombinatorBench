@@ -1,0 +1,51 @@
+	Tue Mar  6 17:55 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-p2 +RTS -p -RTS
+
+	total time  =        3.05 secs   (3050 ticks @ 1000 us, 1 processor)
+	total alloc = 1,140,666,056 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                     %time %alloc
+
+p_char      Parsing.Bench.Parsec2.URL   64.2   28.5
+main        Main                        17.3   46.5
+p_pair      Parsing.Bench.Parsec2.URL   11.5   12.8
+<*>         Parsing.Bench.Parsec2.Base   2.9    5.8
+pURL        Parsing.Bench.Parsec2.URL    2.2    2.4
+p_hex       Parsing.Bench.Parsec2.URL    1.9    3.9
+
+
+                                                                      individual     inherited
+COST CENTRE    MODULE                               no.     entries  %time %alloc   %time %alloc
+
+MAIN           MAIN                                  57           0    0.0    0.0   100.0  100.0
+ main          Main                                 115           0   17.3   46.5   100.0  100.0
+  run          Parsing.Bench.Parsec2.URL            119           0    0.0    0.0    82.7   53.5
+   run'        Parsing.Bench.Parsec2.Base           120           0    0.0    0.0    82.7   53.5
+    pURL       Parsing.Bench.Parsec2.URL            122           0    2.2    2.4    82.7   53.5
+     p_pair    Parsing.Bench.Parsec2.URL            124           0   11.5   12.8    80.5   51.1
+      <*>      Parsing.Bench.Parsec2.Base           132           0    2.9    5.8     2.9    5.8
+      p_char   Parsing.Bench.Parsec2.URL            127           0   64.2   28.5    66.1   32.4
+       p_hex   Parsing.Bench.Parsec2.URL            130           0    1.9    3.9     1.9    3.9
+ CAF           Main                                 113           0    0.0    0.0     0.0    0.0
+  main         Main                                 114           1    0.0    0.0     0.0    0.0
+ CAF           Parsing.Bench.Parsec2.URL            112           0    0.0    0.0     0.0    0.0
+  p_hex        Parsing.Bench.Parsec2.URL            129           1    0.0    0.0     0.0    0.0
+  urlBaseChars Parsing.Bench.Parsec2.URL            128           1    0.0    0.0     0.0    0.0
+  p_char       Parsing.Bench.Parsec2.URL            125           1    0.0    0.0     0.0    0.0
+  p_pair       Parsing.Bench.Parsec2.URL            123           1    0.0    0.0     0.0    0.0
+  pURL         Parsing.Bench.Parsec2.URL            121           1    0.0    0.0     0.0    0.0
+  run          Parsing.Bench.Parsec2.URL            116           1    0.0    0.0     0.0    0.0
+ CAF           Parsing.Bench.Parsec2.Base           111           0    0.0    0.0     0.0    0.0
+  pure         Parsing.Bench.Parsec2.Base           133           1    0.0    0.0     0.0    0.0
+  <*>          Parsing.Bench.Parsec2.Base           131           1    0.0    0.0     0.0    0.0
+  <|>          Parsing.Bench.Parsec2.Base           126           1    0.0    0.0     0.0    0.0
+  run'         Parsing.Bench.Parsec2.Base           117           1    0.0    0.0     0.0    0.0
+ CAF           Text.ParserCombinators.Parsec.Prim   106           0    0.0    0.0     0.0    0.0
+ CAF           GHC.IO.Handle.FD                     104           0    0.0    0.0     0.0    0.0
+ CAF           GHC.Show                             103           0    0.0    0.0     0.0    0.0
+ CAF           GHC.Conc.Signal                      101           0    0.0    0.0     0.0    0.0
+ CAF           GHC.IO.Encoding                       97           0    0.0    0.0     0.0    0.0
+ CAF           Data.Either                           92           0    0.0    0.0     0.0    0.0
+ CAF           GHC.IO.Encoding.Iconv                 86           0    0.0    0.0     0.0    0.0
+ CAF           GHC.IO.FD                             85           0    0.0    0.0     0.0    0.0

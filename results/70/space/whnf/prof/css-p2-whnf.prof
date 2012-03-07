@@ -1,0 +1,50 @@
+	Tue Mar  6 21:16 2012 Time and Allocation Profiling Report  (Final)
+
+	   css-p2-whnf +RTS -p -RTS
+
+	total time  =        2.02 secs   (101 ticks @ 20 ms)
+	total alloc = 945,835,480 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+attrParser                     Parsing.Bench.Parsec2.CSS  44.6   40.1
+skipWS                         Parsing.Bench.Parsec2.CSS  30.7   24.6
+blockParser                    Parsing.Bench.Parsec2.CSS   9.9   22.7
+attrsParser                    Parsing.Bench.Parsec2.CSS   9.9    4.6
+main                           Main                   4.0    7.6
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 274           3   4.0    7.6     4.0    7.6
+  run                    Parsing.Bench.Parsec2.CSS                            277           0   0.0    0.0     0.0    0.0
+   run'                  Parsing.Bench.Parsec2.Base                           278           1   0.0    0.0     0.0    0.0
+  succeeded              Parsing.Bench.Parsec2.Base                           276           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 268           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 275           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        266           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             264           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     260           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     205           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            189           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              169           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                163           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      160           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Parsec2.CSS                            138          17   0.0    0.0    96.0   92.4
+  attrParser             Parsing.Bench.Parsec2.CSS                            288           0   0.0    0.0     0.0    0.0
+  attrsParser            Parsing.Bench.Parsec2.CSS                            285           1   0.0    0.0     0.0    0.0
+   skipWS                Parsing.Bench.Parsec2.CSS                            289          18   0.0    0.0     0.0    0.0
+   attrParser            Parsing.Bench.Parsec2.CSS                            286          11   0.0    0.0     0.0    0.0
+    skipWS               Parsing.Bench.Parsec2.CSS                            287          15   0.0    0.0     0.0    0.0
+  blockParser            Parsing.Bench.Parsec2.CSS                            284           0   0.0    0.0     0.0    0.0
+  skipWS                 Parsing.Bench.Parsec2.CSS                            283           0   0.0    0.0     0.0    0.0
+  blocksParser           Parsing.Bench.Parsec2.CSS                            280           1   1.0    0.3    96.0   92.4
+   blockParser           Parsing.Bench.Parsec2.CSS                            281       40790   9.9   22.7    95.0   92.1
+    attrsParser          Parsing.Bench.Parsec2.CSS                            290           0   9.9    4.6    79.2   63.8
+     skipWS              Parsing.Bench.Parsec2.CSS                            293      311139  18.8   10.8    18.8   10.8
+     attrParser          Parsing.Bench.Parsec2.CSS                            291      204853  44.6   40.1    50.5   48.4
+      skipWS             Parsing.Bench.Parsec2.CSS                            292      278472   5.9    8.3     5.9    8.3
+    skipWS               Parsing.Bench.Parsec2.CSS                            282      181701   5.9    5.6     5.9    5.6
+  pCSS                   Parsing.Bench.Parsec2.CSS                            279           1   0.0    0.0     0.0    0.0

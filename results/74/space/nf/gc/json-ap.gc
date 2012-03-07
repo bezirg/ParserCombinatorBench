@@ -1,0 +1,25 @@
+./dist/build/json-ap/json-ap +RTS -sjson-ap.gc 
+     949,715,160 bytes allocated in the heap
+     145,937,056 bytes copied during GC
+      19,793,208 bytes maximum residency (12 sample(s))
+       1,770,048 bytes maximum slop
+              53 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      1845 colls,     0 par    0.18s    0.23s     0.0001s    0.0006s
+  Gen  1        12 colls,     0 par    0.10s    0.17s     0.0145s    0.0569s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    1.21s  (  1.19s elapsed)
+  GC      time    0.29s  (  0.41s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    1.49s  (  1.60s elapsed)
+
+  %GC     time      19.2%  (25.5% elapsed)
+
+  Alloc rate    787,108,729 bytes per MUT second
+
+  Productivity  80.8% of total user, 75.5% of total elapsed
+

@@ -1,0 +1,24 @@
+./dist/build/css-ap-nf/css-ap-nf +RTS -scss-ap-nf.gc 
+   1,248,497,944 bytes allocated in the heap
+     110,115,992 bytes copied during GC
+      27,242,736 bytes maximum residency (7 sample(s))
+       3,332,792 bytes maximum slop
+              58 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  2364 collections,     0 parallel,  0.18s,  0.18s elapsed
+  Generation 1:     7 collections,     0 parallel,  0.16s,  0.16s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.96s  (  1.96s elapsed)
+  GC    time    0.34s  (  0.34s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    2.30s  (  2.30s elapsed)
+
+  %GC time      14.9%  (15.0% elapsed)
+
+  Alloc rate    636,906,209 bytes per MUT second
+
+  Productivity  85.0% of total user, 85.0% of total elapsed
+

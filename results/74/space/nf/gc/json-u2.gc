@@ -1,0 +1,25 @@
+./dist/build/json-u2/json-u2 +RTS -sjson-u2.gc 
+   1,788,596,072 bytes allocated in the heap
+     497,811,888 bytes copied during GC
+      53,783,656 bytes maximum residency (14 sample(s))
+       2,420,288 bytes maximum slop
+             146 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      3463 colls,     0 par    0.65s    0.69s     0.0002s    0.0007s
+  Gen  1        14 colls,     0 par    0.47s    0.63s     0.0450s    0.1657s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    3.96s  (  3.97s elapsed)
+  GC      time    1.12s  (  1.32s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    5.07s  (  5.29s elapsed)
+
+  %GC     time      22.0%  (25.0% elapsed)
+
+  Alloc rate    452,075,739 bytes per MUT second
+
+  Productivity  78.0% of total user, 74.7% of total elapsed
+

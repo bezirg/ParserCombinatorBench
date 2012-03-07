@@ -1,0 +1,25 @@
+./dist/build/json-p3-whnf/json-p3-whnf +RTS -sjson-p3-whnf.gc 
+   1,905,406,208 bytes allocated in the heap
+     253,898,152 bytes copied during GC
+      41,787,368 bytes maximum residency (10 sample(s))
+         669,976 bytes maximum slop
+              92 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      3709 colls,     0 par    0.32s    0.34s     0.0001s    0.0003s
+  Gen  1        10 colls,     0 par    0.23s    0.31s     0.0313s    0.1208s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    2.05s  (  2.07s elapsed)
+  GC      time    0.55s  (  0.65s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    2.60s  (  2.72s elapsed)
+
+  %GC     time      21.1%  (23.8% elapsed)
+
+  Alloc rate    928,018,733 bytes per MUT second
+
+  Productivity  78.9% of total user, 75.4% of total elapsed
+

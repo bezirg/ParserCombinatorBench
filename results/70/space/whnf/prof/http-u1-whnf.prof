@@ -1,0 +1,95 @@
+	Tue Mar  6 21:17 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-u1-whnf +RTS -p -RTS
+
+	total time  =        3.92 secs   (196 ticks @ 20 ms)
+	total alloc = 934,464,928 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+machine                        UU.Parsing.Machine    44.4   54.2
+p_headers                      Parsing.Bench.UU1.HTTP  34.7   27.0
+execParser                     Parsing.Bench.UU1.Base   6.1    4.8
+Locating                       UU.Parsing.Machine     5.1    1.7
+pSpaces                        Parsing.Bench.UU1.Base   4.6    1.7
+pManyTill                      Parsing.Bench.UU1.Base   2.0    0.2
+spaces                         Parsing.Bench.UU1.Base   1.5    0.6
+main                           Main                   1.0    8.7
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 282           2   1.0    8.7     1.0    8.7
+  succeeded              Parsing.Bench.UU1.Base                               284           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 276           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 283           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        274           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             272           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     268           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     213           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            197           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              177           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                171           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      168           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.Base                               163          26   0.0    0.0     0.0    0.0
+  pAscii                 Parsing.Bench.UU1.Base                               335           1   0.0    0.0     0.0    0.0
+   pNoneSym              Parsing.Bench.UU1.Base                               336           1   0.0    0.0     0.0    0.0
+  pSpaces                Parsing.Bench.UU1.Base                               322           2   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   325           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   324           0   0.0    0.0     0.0    0.0
+  spaces                 Parsing.Bench.UU1.Base                               321           2   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   323           0   0.0    0.0     0.0    0.0
+  pDigit                 Parsing.Bench.UU1.Base                               305           1   0.0    0.0     0.0    0.0
+  pUpper                 Parsing.Bench.UU1.Base                               304           1   0.0    0.0     0.0    0.0
+  pLower                 Parsing.Bench.UU1.Base                               303           1   0.0    0.0     0.0    0.0
+  pLetter                Parsing.Bench.UU1.Base                               302           1   0.0    0.0     0.0    0.0
+  pLF                    Parsing.Bench.UU1.Base                               299           1   0.0    0.0     0.0    0.0
+  pCR                    Parsing.Bench.UU1.Base                               298           1   0.0    0.0     0.0    0.0
+  pManyTill              Parsing.Bench.UU1.Base                               295           0   0.0    0.0     0.0    0.0
+  allChars               Parsing.Bench.UU1.Base                               294           1   0.0    0.0     0.0    0.0
+  optional               Parsing.Bench.UU1.Base                               290           0   0.0    0.0     0.0    0.0
+ CAF                     UU.Parsing.CharParser                                153           2   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.HTTP                               151          58   0.0    0.0    99.0   91.3
+  machine                UU.Parsing.Machine                                   332           1   0.0    0.0     0.0    0.0
+  mkParser2              UU.Parsing.Machine                                   317           0   0.0    0.0     0.0    0.0
+  p_headers              Parsing.Bench.UU1.HTTP                               300      220007  34.7   26.5    92.3   84.8
+   spaces                Parsing.Bench.UU1.Base                               330           0   1.5    0.6     6.1    2.3
+    pSpaces              Parsing.Bench.UU1.Base                               331      109999   4.6    1.7     4.6    1.7
+   mkParser3             UU.Parsing.Machine                                   329           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   320     1071477   4.1    1.5     4.1    1.5
+   mkParser1             UU.Parsing.Machine                                   319      110000   0.5    0.3     0.5    0.3
+   mkParser2             UU.Parsing.Machine                                   318           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   315     4286599  39.8   51.4    40.3   52.2
+    pLF                  Parsing.Bench.UU1.Base                               328           0   0.0    0.6     0.0    0.6
+    crlf                 Parsing.Bench.UU1.HTTP                               326           0   0.0    0.0     0.5    0.2
+     Locating            UU.Parsing.Machine                                   327      110000   0.5    0.2     0.5    0.2
+   pManyTill             Parsing.Bench.UU1.Base                               301           3   2.0    0.2     6.6    2.2
+    machine              UU.Parsing.Machine                                   316      223628   4.6    2.0     4.6    2.0
+     pLF                 Parsing.Bench.UU1.Base                               333           0   0.0    0.0     0.0    0.0
+    mkParser1            UU.Parsing.Machine                                   314           0   0.0    0.0     0.0    0.0
+  crlf                   Parsing.Bench.UU1.HTTP                               296           2   0.0    0.0     0.0    0.0
+   pLF                   Parsing.Bench.UU1.Base                               313           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   312           1   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   311           0   0.0    0.0     0.0    0.0
+   optional              Parsing.Bench.UU1.Base                               297           1   0.0    0.0     0.0    0.0
+  notEOL                 Parsing.Bench.UU1.HTTP                               292           1   0.0    0.0     0.0    0.0
+   pNoneSym              Parsing.Bench.UU1.Base                               293           1   0.0    0.0     0.0    0.0
+  pHTTP                  Parsing.Bench.UU1.HTTP                               288          17   0.0    0.3     0.5    1.1
+   mkParser2             UU.Parsing.Machine                                   337           0   0.0    0.0     0.0    0.0
+   anyChar               Parsing.Bench.UU1.Base                               334           1   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   308       57080   0.0    0.8     0.0    0.8
+    run                  Parsing.Bench.UU1.HTTP                               338           0   0.0    0.0     0.0    0.0
+     run'                Parsing.Bench.UU1.Base                               339           0   0.0    0.0     0.0    0.0
+      execParser         Parsing.Bench.UU1.Base                               340           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   307       28548   0.5    0.0     0.5    0.0
+   mkParser1             UU.Parsing.Machine                                   306           2   0.0    0.0     0.0    0.0
+   pManyTill             Parsing.Bench.UU1.Base                               291           3   0.0    0.0     0.0    0.0
+    mkParser1            UU.Parsing.Machine                                   310           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   309         151   0.0    0.0     0.0    0.0
+   optional              Parsing.Bench.UU1.Base                               289           1   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU1.HTTP                               285           1   0.0    0.0     6.1    5.4
+   run'                  Parsing.Bench.UU1.Base                               286           1   0.0    0.0     6.1    5.4
+    execParser           Parsing.Bench.UU1.Base                               287           1   6.1    4.8     6.1    5.4
+     p_headers           Parsing.Bench.UU1.HTTP                               341           0   0.0    0.6     0.0    0.6

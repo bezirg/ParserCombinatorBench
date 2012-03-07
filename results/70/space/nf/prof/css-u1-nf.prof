@@ -1,0 +1,162 @@
+	Tue Mar  6 21:12 2012 Time and Allocation Profiling Report  (Final)
+
+	   css-u1-nf +RTS -p -RTS
+
+	total time  =        4.42 secs   (221 ticks @ 20 ms)
+	total alloc = 1,108,505,368 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+machine                        UU.Parsing.Machine    62.4   44.2
+Locating                       UU.Parsing.Machine     7.2    6.1
+pUpto                          Parsing.Bench.UU1.CSS   6.8   13.5
+pSpaces                        Parsing.Bench.UU1.Base   5.0    2.3
+strip                          Parsing.Bench.UU1.Base   4.5    6.4
+CAF                            Main                   4.5   13.1
+execParser                     Parsing.Bench.UU1.Base   3.6    3.5
+main                           Main                   2.7    6.6
+pBraces                        Parsing.Bench.UU1.CSS   1.4    0.5
+skipWS                         Parsing.Bench.UU1.CSS   0.9    1.8
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 266           3   2.7    6.6     2.7    6.6
+ CAF                     Main                                                 260           7   4.5   13.1     4.5   13.1
+  main                   Main                                                 267           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        258           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             256           3   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     252           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     197           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            181           2   0.0    0.0     0.0    0.0
+ CAF                     Data.Either                                          164           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              161           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                155           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      152           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.CSS                                147          44   0.0    0.0    92.8   80.3
+  pSemi                  Parsing.Bench.UU1.CSS                                329           1   0.0    0.0     0.0    0.0
+   lexeme                Parsing.Bench.UU1.Base                               330           1   0.0    0.0     0.0    0.0
+  pValue                 Parsing.Bench.UU1.CSS                                323           1   0.0    0.0     0.0    0.0
+   pUpto                 Parsing.Bench.UU1.CSS                                324           3   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   328          27   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   327          12   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   326           0   0.0    0.0     0.0    0.0
+    pNoneSym             Parsing.Bench.UU1.Base                               325           1   0.0    0.0     0.0    0.0
+  pKey                   Parsing.Bench.UU1.CSS                                304           1   0.0    0.0     0.0    0.0
+   pUpto                 Parsing.Bench.UU1.CSS                                316           3   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   320          44   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   319          20   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   318           0   0.0    0.0     0.0    0.0
+    pNoneSym             Parsing.Bench.UU1.Base                               317           1   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   309           0   0.0    0.0     0.0    0.0
+   pNoneSym              Parsing.Bench.UU1.Base                               305           1   0.0    0.0     0.0    0.0
+  pProp                  Parsing.Bench.UU1.CSS                                303           3   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   331           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   322           2   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   321           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   310           0   0.0    0.0     0.0    0.0
+  pProps                 Parsing.Bench.UU1.CSS                                302           2   0.0    0.0     0.0    0.0
+   pProp                 Parsing.Bench.UU1.CSS                                335           0   0.0    0.0     0.0    0.0
+    strip                Parsing.Bench.UU1.Base                               389          12   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   340           4   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   336          77   0.0    0.0     0.0    0.0
+     pSemi               Parsing.Bench.UU1.CSS                                344           0   0.0    0.0     0.0    0.0
+      lexeme             Parsing.Bench.UU1.Base                               345           2   0.0    0.0     0.0    0.0
+       pSpaces           Parsing.Bench.UU1.Base                               346           4   0.0    0.0     0.0    0.0
+     pValue              Parsing.Bench.UU1.CSS                                341           0   0.0    0.0     0.0    0.0
+      pUpto              Parsing.Bench.UU1.CSS                                342           0   0.0    0.0     0.0    0.0
+       Locating          UU.Parsing.Machine                                   343          10   0.0    0.0     0.0    0.0
+     pKey                Parsing.Bench.UU1.CSS                                337           0   0.0    0.0     0.0    0.0
+      pUpto              Parsing.Bench.UU1.CSS                                338           0   0.0    0.0     0.0    0.0
+       Locating          UU.Parsing.Machine                                   339          21   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   334           3   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   333           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   311          10   0.0    0.0     0.0    0.0
+    skipWS               Parsing.Bench.UU1.CSS                                347           0   0.0    0.0     0.0    0.0
+  skipWS                 Parsing.Bench.UU1.CSS                                295           5   0.0    0.0     0.0    0.0
+   pSpaces               Parsing.Bench.UU1.Base                               375           8   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   301           3   0.0    0.0     0.0    0.0
+   mkParser3             UU.Parsing.Machine                                   300           0   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   297           0   0.0    0.0     0.0    0.0
+  machine                UU.Parsing.Machine                                   291           1   0.0    0.0     0.0    0.0
+  Locating               UU.Parsing.Machine                                   289           1   0.0    0.0     0.0    0.0
+  mkParser2              UU.Parsing.Machine                                   288           0   0.0    0.0     0.0    0.0
+  pBraces                Parsing.Bench.UU1.CSS                                278           5   0.0    0.0     0.0    0.0
+   skipWS                Parsing.Bench.UU1.CSS                                348           1   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   350           1   0.0    0.0     0.0    0.0
+    pSpaces              Parsing.Bench.UU1.Base                               349           1   0.0    0.0     0.0    0.0
+   pProps                Parsing.Bench.UU1.CSS                                306           1   0.0    0.0     0.0    0.0
+    pProp                Parsing.Bench.UU1.CSS                                313           0   0.0    0.0     0.0    0.0
+     strip               Parsing.Bench.UU1.Base                               388           6   0.0    0.0     0.0    0.0
+     machine             UU.Parsing.Machine                                   314           6   0.0    0.0     0.0    0.0
+      pKey               Parsing.Bench.UU1.CSS                                315           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   312           5   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   308           1   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   307           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   294           2   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   293           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   292           1   0.0    0.0     0.0    0.0
+  pSelectors             Parsing.Bench.UU1.CSS                                274           1   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   282           0   0.0    0.0     0.0    0.0
+   pUpto                 Parsing.Bench.UU1.CSS                                275           1   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   281          11   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   290           5   0.0    0.0     0.0    0.0
+    pNoneSym             Parsing.Bench.UU1.Base                               276           1   0.0    0.0     0.0    0.0
+  pBlock                 Parsing.Bench.UU1.CSS                                273           1   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   283           0   0.0    0.0     0.0    0.0
+  pBlocks                Parsing.Bench.UU1.CSS                                272           2   0.0    0.1    88.7   76.5
+   machine               UU.Parsing.Machine                                   284     3719377  62.4   44.2    88.7   76.3
+    strip                Parsing.Bench.UU1.Base                               387       61182   0.9    2.2     0.9    2.2
+    run                  Parsing.Bench.UU1.CSS                                376           0   0.0    0.0     0.0    0.0
+     run'                Parsing.Bench.UU1.Base                               377           0   0.0    0.0     0.0    0.0
+      execParser         Parsing.Bench.UU1.Base                               378           0   0.0    0.0     0.0    0.0
+    pProps               Parsing.Bench.UU1.CSS                                372           0   0.0    0.6     0.5    0.6
+     pProp               Parsing.Bench.UU1.CSS                                374           0   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   373       54689   0.5    0.0     0.5    0.0
+    skipWS               Parsing.Bench.UU1.CSS                                371           0   0.0    0.8     0.0    0.8
+    pSemi                Parsing.Bench.UU1.CSS                                368           0   0.0    0.0     3.2    1.9
+     lexeme              Parsing.Bench.UU1.Base                               369       53611   0.0    0.5     3.2    1.9
+      pSpaces            Parsing.Bench.UU1.Base                               370      107544   3.2    1.3     3.2    1.3
+    pValue               Parsing.Bench.UU1.CSS                                365           0   0.0    0.0     5.0    7.2
+     pUpto               Parsing.Bench.UU1.CSS                                366           0   2.7    6.5     5.0    7.2
+      pProps             Parsing.Bench.UU1.CSS                                384           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   367      510774   2.3    0.7     2.3    0.7
+    pProp                Parsing.Bench.UU1.CSS                                363           0   0.5    0.6     4.1    4.9
+     strip               Parsing.Bench.UU1.Base                               390      328134   3.6    4.1     3.6    4.1
+     Locating            UU.Parsing.Machine                                   364      109378   0.0    0.2     0.0    0.2
+    pKey                 Parsing.Bench.UU1.CSS                                360           0   0.0    0.0     5.0    7.3
+     pUpto               Parsing.Bench.UU1.CSS                                361           0   3.6    6.7     5.0    7.3
+      Locating           UU.Parsing.Machine                                   362      471100   1.4    0.6     1.4    0.6
+    pBraces              Parsing.Bench.UU1.CSS                                352       81572   1.4    0.5     5.0    2.7
+     pProps              Parsing.Bench.UU1.CSS                                357           0   0.5    0.1     0.9    0.2
+      pProp              Parsing.Bench.UU1.CSS                                359           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   358       20393   0.5    0.0     0.5    0.0
+     skipWS              Parsing.Bench.UU1.CSS                                354       37517   0.9    1.0     2.7    2.0
+      Locating           UU.Parsing.Machine                                   356       37517   0.0    0.0     0.0    0.0
+      pSpaces            Parsing.Bench.UU1.Base                               355       83542   1.8    1.0     1.8    1.0
+     Locating            UU.Parsing.Machine                                   353       40786   0.0    0.1     0.0    0.1
+    Locating             UU.Parsing.Machine                                   351      512429   2.7    4.6     2.7    4.6
+    pSelectors           Parsing.Bench.UU1.CSS                                286           0   0.0    0.0     0.0    0.0
+     pUpto               Parsing.Bench.UU1.CSS                                287           0   0.0    0.0     0.0    0.0
+    pBlock               Parsing.Bench.UU1.CSS                                285           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   280       20394   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   279           1   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU1.CSS                                268           1   0.0    0.0     4.1    3.8
+   run'                  Parsing.Bench.UU1.Base                               270           1   0.0    0.0     4.1    3.8
+    execParser           Parsing.Bench.UU1.Base                               271           1   3.6    3.5     4.1    3.8
+     pBraces             Parsing.Bench.UU1.CSS                                385           0   0.0    0.0     0.0    0.0
+      pProps             Parsing.Bench.UU1.CSS                                386           0   0.0    0.0     0.0    0.0
+     pProps              Parsing.Bench.UU1.CSS                                383           0   0.0    0.0     0.0    0.0
+     pValue              Parsing.Bench.UU1.CSS                                381           0   0.0    0.0     0.0    0.1
+      pUpto              Parsing.Bench.UU1.CSS                                382           0   0.0    0.1     0.0    0.1
+     pKey                Parsing.Bench.UU1.CSS                                379           0   0.0    0.0     0.5    0.1
+      pUpto              Parsing.Bench.UU1.CSS                                380           0   0.5    0.1     0.5    0.1
+   pCSS                  Parsing.Bench.UU1.CSS                                269           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.Base                               146          11   0.0    0.0     0.0    0.0
+  machine                UU.Parsing.Machine                                   298           0   0.0    0.0     0.0    0.0
+  pSpaces                Parsing.Bench.UU1.Base                               296          17   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   299           0   0.0    0.0     0.0    0.0
+  allChars               Parsing.Bench.UU1.Base                               277           1   0.0    0.0     0.0    0.0
+ CAF                     UU.Parsing.CharParser                                136           2   0.0    0.0     0.0    0.0

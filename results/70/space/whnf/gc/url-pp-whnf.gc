@@ -1,0 +1,24 @@
+./dist/build/url-pp-whnf/url-pp-whnf +RTS -surl-pp-whnf.gc 
+     934,949,544 bytes allocated in the heap
+     768,968,656 bytes copied during GC
+     167,124,624 bytes maximum residency (9 sample(s))
+       8,728,088 bytes maximum slop
+             325 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1743 collections,     0 parallel,  7.12s,  7.12s elapsed
+  Generation 1:     9 collections,     0 parallel,  0.95s,  0.95s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    5.60s  (  5.60s elapsed)
+  GC    time    8.07s  (  8.07s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time   13.67s  ( 13.67s elapsed)
+
+  %GC time      59.0%  (59.1% elapsed)
+
+  Alloc rate    167,027,783 bytes per MUT second
+
+  Productivity  40.9% of total user, 40.9% of total elapsed
+

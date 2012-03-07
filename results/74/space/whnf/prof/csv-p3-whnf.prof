@@ -1,0 +1,43 @@
+	Tue Mar  6 19:59 2012 Time and Allocation Profiling Report  (Final)
+
+	   csv-p3-whnf +RTS -p -RTS
+
+	total time  =        0.43 secs   (431 ticks @ 1000 us, 1 processor)
+	total alloc = 443,769,176 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                    %time %alloc
+
+cell        Parsing.Bench.Parsec3.CSV  77.5   59.8
+main        Main                        9.7   23.5
+eol         Parsing.Bench.Parsec3.CSV   9.3   11.1
+line        Parsing.Bench.Parsec3.CSV   3.5    5.5
+
+
+                                                            individual     inherited
+COST CENTRE  MODULE                       no.     entries  %time %alloc   %time %alloc
+
+MAIN         MAIN                          76           0    0.0    0.0   100.0  100.0
+ main        Main                         153           0    9.7   23.5   100.0  100.0
+  run        Parsing.Bench.Parsec3.CSV    157           0    0.0    0.0    90.3   76.5
+   run'      Parsing.Bench.Parsec3.Base   158           0    0.0    0.0    90.3   76.5
+    pCSV     Parsing.Bench.Parsec3.CSV    160           0    0.0    0.0    90.3   76.5
+     line    Parsing.Bench.Parsec3.CSV    162           0    3.5    5.5    90.3   76.5
+      cell   Parsing.Bench.Parsec3.CSV    164           0   77.5   59.8    86.8   70.9
+       eol   Parsing.Bench.Parsec3.CSV    166           0    9.3   11.1     9.3   11.1
+  succeeded  Parsing.Bench.Parsec3.Base   154           1    0.0    0.0     0.0    0.0
+ CAF         Main                         151           0    0.0    0.0     0.0    0.0
+  main       Main                         152           1    0.0    0.0     0.0    0.0
+ CAF         Parsing.Bench.Parsec3.CSV    150           0    0.0    0.0     0.0    0.0
+  eol        Parsing.Bench.Parsec3.CSV    165           1    0.0    0.0     0.0    0.0
+  cell       Parsing.Bench.Parsec3.CSV    163           1    0.0    0.0     0.0    0.0
+  line       Parsing.Bench.Parsec3.CSV    161           1    0.0    0.0     0.0    0.0
+  pCSV       Parsing.Bench.Parsec3.CSV    159           1    0.0    0.0     0.0    0.0
+  run        Parsing.Bench.Parsec3.CSV    155           1    0.0    0.0     0.0    0.0
+ CAF         Parsing.Bench.Parsec3.Base   149           0    0.0    0.0     0.0    0.0
+  run'       Parsing.Bench.Parsec3.Base   156           1    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Handle.FD             123           0    0.0    0.0     0.0    0.0
+ CAF         GHC.Show                     122           0    0.0    0.0     0.0    0.0
+ CAF         GHC.Conc.Signal              119           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding              115           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding.Iconv        104           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.FD                    103           0    0.0    0.0     0.0    0.0

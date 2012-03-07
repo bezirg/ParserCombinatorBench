@@ -1,0 +1,24 @@
+./dist/build/http-p3-nf/http-p3-nf +RTS -shttp-p3-nf.gc 
+   4,154,037,632 bytes allocated in the heap
+   1,225,464,184 bytes copied during GC
+     169,073,968 bytes maximum residency (13 sample(s))
+       2,548,712 bytes maximum slop
+             412 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  7911 collections,     0 parallel,  1.59s,  1.59s elapsed
+  Generation 1:    13 collections,     0 parallel,  1.41s,  1.41s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    4.21s  (  4.21s elapsed)
+  GC    time    3.00s  (  3.00s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    7.21s  (  7.21s elapsed)
+
+  %GC time      41.6%  (41.5% elapsed)
+
+  Alloc rate    985,740,267 bytes per MUT second
+
+  Productivity  58.4% of total user, 58.4% of total elapsed
+

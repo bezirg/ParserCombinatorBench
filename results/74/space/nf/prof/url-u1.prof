@@ -1,0 +1,129 @@
+	Tue Mar  6 17:55 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-u1 +RTS -p -RTS
+
+	total time  =        3.71 secs   (3713 ticks @ 1000 us, 1 processor)
+	total alloc = 1,119,241,416 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                 %time %alloc
+
+p_pair           Parsing.Bench.UU1.URL   30.9    3.4
+machine          UU.Parsing.Machine      29.9   23.1
+main             Main                    14.4   47.4
+p_char           Parsing.Bench.UU1.URL    6.8   11.7
+machine          UU.Parsing.Machine       5.8    4.7
+mkParser2        UU.Parsing.Machine       5.1    3.7
+execParser.(...) Parsing.Bench.UU1.Base   2.8    3.4
+pURL             Parsing.Bench.UU1.URL    1.2    0.5
+
+
+                                                                  individual     inherited
+COST CENTRE            MODULE                   no.     entries  %time %alloc   %time %alloc
+
+MAIN                   MAIN                      59           0    0.0    0.0   100.0  100.0
+ main                  Main                     119           0   14.4   47.4    99.8   99.8
+  run                  Parsing.Bench.UU1.URL    122           0    0.0    0.0    85.4   52.4
+   execParser          Parsing.Bench.UU1.Base   123           1    0.0    0.0    85.4   52.4
+    execParser.v       Parsing.Bench.UU1.Base   213           1    0.0    0.0     0.0    0.0
+    execParser.(...)   Parsing.Bench.UU1.Base   200           1    2.8    3.4    22.0   23.4
+     p_pair            Parsing.Bench.UU1.URL    207           0    0.2    0.3     0.2    0.3
+     execParser.steps  Parsing.Bench.UU1.Base   201           0    0.0    0.0    18.9   19.7
+      pURL             Parsing.Bench.UU1.URL    202           0    0.0    0.0    18.9   19.7
+       machine         UU.Parsing.Machine       203           0   18.2   19.0    18.9   19.7
+        p_pair         Parsing.Bench.UU1.URL    208           0    0.0    0.0     0.0    0.0
+         optionMaybe   Parsing.Bench.UU1.Base   209           0    0.0    0.0     0.0    0.0
+        p_char         Parsing.Bench.UU1.URL    204           0    0.5    0.4     0.7    0.7
+         machine       UU.Parsing.Machine       210           0    0.0    0.0     0.1    0.1
+          p_pair       Parsing.Bench.UU1.URL    211           0    0.1    0.0     0.1    0.1
+           optionMaybe Parsing.Bench.UU1.Base   212           0    0.1    0.0     0.1    0.0
+         p_pair        Parsing.Bench.UU1.URL    205           0    0.1    0.1     0.2    0.2
+          optionMaybe  Parsing.Bench.UU1.Base   206           0    0.1    0.1     0.1    0.1
+    execParser.final   Parsing.Bench.UU1.Base   199           1    0.0    0.0     0.0    0.0
+    execParser.steps   Parsing.Bench.UU1.Base   125           1    0.0    0.0    63.0   29.0
+     pURL              Parsing.Bench.UU1.URL    133           0    1.1    0.5    63.0   29.0
+      machine          UU.Parsing.Machine       198           0    0.0    0.0     0.0    0.0
+      Locating         UU.Parsing.Machine       162           0    0.0    0.2     0.0    0.2
+      machine          UU.Parsing.Machine       140           0   11.8    4.1    61.4   27.8
+       machine         UU.Parsing.Machine       177           0    0.2    0.2     0.2    0.2
+        p_pair         Parsing.Bench.UU1.URL    178           0    0.0    0.0     0.0    0.0
+         optionMaybe   Parsing.Bench.UU1.Base   179           0    0.0    0.0     0.0    0.0
+       mkParser2       UU.Parsing.Machine       172           0    0.3    0.2     0.3    0.2
+        p_pair         Parsing.Bench.UU1.URL    173           0    0.0    0.0     0.0    0.0
+         optionMaybe   Parsing.Bench.UU1.Base   174           0    0.0    0.0     0.0    0.0
+       machine         UU.Parsing.Machine       164           0    0.8    0.5     1.3    0.8
+        p_pair         Parsing.Bench.UU1.URL    169           0    0.6    0.3     0.6    0.3
+         optionMaybe   Parsing.Bench.UU1.Base   171           0    0.0    0.0     0.0    0.0
+       p_char          Parsing.Bench.UU1.URL    143           0    6.3   11.3    44.3   21.4
+        machine        UU.Parsing.Machine       189           0    0.1    0.2     4.7    1.5
+         machine       UU.Parsing.Machine       196           0    0.0    0.0     0.0    0.0
+         p_pair        Parsing.Bench.UU1.URL    190           0    3.4    0.3     4.7    1.3
+          optionMaybe  Parsing.Bench.UU1.Base   193           0    0.2    0.0     0.2    0.1
+           Locating    UU.Parsing.Machine       195           0    0.0    0.0     0.0    0.0
+           mkParser2   UU.Parsing.Machine       194           0    0.1    0.1     0.1    0.1
+          mkParser2    UU.Parsing.Machine       192           0    0.3    0.4     0.3    0.4
+          machine      UU.Parsing.Machine       191           0    0.7    0.5     0.7    0.5
+        machine        UU.Parsing.Machine       186           0    0.1    0.1     0.1    0.1
+         p_pair        Parsing.Bench.UU1.URL    188           0    0.0    0.0     0.0    0.0
+        machine        UU.Parsing.Machine       180           0    1.8    1.2    12.4    3.3
+         p_pair        Parsing.Bench.UU1.URL    181           0    8.9    0.8    10.5    2.0
+          machine      UU.Parsing.Machine       183           0    0.2    0.2     0.2    0.2
+          mkParser2    UU.Parsing.Machine       182           0    1.5    1.1     1.5    1.1
+        p_pair         Parsing.Bench.UU1.URL    145           0   14.9    1.2    20.7    5.3
+         optionMaybe   Parsing.Bench.UU1.Base   154           0    0.4    0.1     0.9    0.4
+          machine      UU.Parsing.Machine       159           0    0.0    0.1     0.0    0.1
+           machine     UU.Parsing.Machine       160           0    0.0    0.0     0.0    0.0
+          Locating     UU.Parsing.Machine       157           0    0.2    0.1     0.2    0.1
+          mkParser2    UU.Parsing.Machine       155           0    0.3    0.2     0.3    0.2
+         machine       UU.Parsing.Machine       151           0    0.2    0.2     0.2    0.2
+         mkParser2     UU.Parsing.Machine       147           0    2.5    1.6     2.5    1.6
+         machine       UU.Parsing.Machine       146           0    2.2    1.9     2.2    1.9
+       p_pair          Parsing.Bench.UU1.URL    141           0    2.6    0.2     3.5    1.0
+        optionMaybe    Parsing.Bench.UU1.Base   175           0    0.0    0.0     0.0    0.0
+        mkParser1      UU.Parsing.Machine       166           0    0.4    0.2     0.4    0.2
+        machine        UU.Parsing.Machine       142           0    0.6    0.6     0.6    0.6
+      machine          UU.Parsing.Machine       136           0    0.3    0.3     0.3    0.3
+      mkParser2        UU.Parsing.Machine       134           0    0.2    0.2     0.2    0.2
+    execParser.msgs    Parsing.Bench.UU1.Base   124           1    0.5    0.0     0.5    0.0
+ CAF                   Main                     117           0    0.0    0.0     0.0    0.0
+  main                 Main                     118           1    0.0    0.0     0.0    0.0
+ CAF                   Parsing.Bench.UU1.URL    116           0    0.0    0.0     0.1    0.2
+  p_hex                Parsing.Bench.UU1.URL    130           1    0.0    0.0     0.0    0.0
+  urlBaseChars         Parsing.Bench.UU1.URL    129           1    0.0    0.0     0.0    0.0
+  p_char               Parsing.Bench.UU1.URL    128           1    0.0    0.0     0.0    0.0
+  p_pair               Parsing.Bench.UU1.URL    127           1    0.1    0.1     0.1    0.1
+   optionMaybe         Parsing.Bench.UU1.Base   152           1    0.0    0.0     0.0    0.0
+    machine            UU.Parsing.Machine       167           4    0.0    0.0     0.0    0.0
+     machine           UU.Parsing.Machine       176           3    0.0    0.0     0.0    0.0
+     mkParser2         UU.Parsing.Machine       170           1    0.0    0.0     0.0    0.0
+     machine           UU.Parsing.Machine       168           1    0.0    0.0     0.0    0.0
+    machine            UU.Parsing.Machine       158           1    0.0    0.0     0.0    0.0
+    Locating           UU.Parsing.Machine       156           1    0.0    0.0     0.0    0.0
+    mkParser2          UU.Parsing.Machine       153           1    0.0    0.0     0.0    0.0
+   machine             UU.Parsing.Machine       150           3    0.0    0.0     0.0    0.0
+   machine             UU.Parsing.Machine       149         136    0.0    0.0     0.0    0.0
+    p_char             Parsing.Bench.UU1.URL    184           0    0.0    0.0     0.0    0.0
+     machine           UU.Parsing.Machine       187           2    0.0    0.0     0.0    0.0
+     machine           UU.Parsing.Machine       185           2    0.0    0.0     0.0    0.0
+   machine             UU.Parsing.Machine       148         136    0.0    0.0     0.0    0.0
+   mkParser2           UU.Parsing.Machine       144           3    0.0    0.0     0.0    0.0
+  pURL                 Parsing.Bench.UU1.URL    126           1    0.0    0.0     0.1    0.0
+   machine             UU.Parsing.Machine       197           1    0.0    0.0     0.0    0.0
+   Locating            UU.Parsing.Machine       161           2    0.0    0.0     0.0    0.0
+   machine             UU.Parsing.Machine       137          39    0.0    0.0     0.0    0.0
+    machine            UU.Parsing.Machine       163           2    0.0    0.0     0.0    0.0
+    p_pair             Parsing.Bench.UU1.URL    138           0    0.0    0.0     0.0    0.0
+     mkParser1         UU.Parsing.Machine       165           2    0.0    0.0     0.0    0.0
+     machine           UU.Parsing.Machine       139          21    0.0    0.0     0.0    0.0
+   machine             UU.Parsing.Machine       135           3    0.0    0.0     0.0    0.0
+   mkParser2           UU.Parsing.Machine       132           3    0.0    0.0     0.0    0.0
+  run                  Parsing.Bench.UU1.URL    120           1    0.0    0.0     0.0    0.0
+ CAF                   Parsing.Bench.UU1.Base   115           0    0.0    0.0     0.0    0.0
+  hexDigit             Parsing.Bench.UU1.Base   131           1    0.0    0.0     0.0    0.0
+  run'                 Parsing.Bench.UU1.Base   121           1    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Handle.FD         106           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.Conc.Signal          104           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding          100           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.Show                  96           0    0.0    0.0     0.0    0.0
+ CAF                   Data.Either               93           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding.Iconv     86           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.FD                 85           0    0.0    0.0     0.0    0.0

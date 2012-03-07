@@ -1,0 +1,50 @@
+	Tue Mar  6 21:18 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-ap-whnf +RTS -p -RTS
+
+	total time  =        2.16 secs   (108 ticks @ 20 ms)
+	total alloc = 812,887,504 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+oneOf                          Parsing.Bench.Attoparsec.Base  44.4   30.3
+p_char                         Parsing.Bench.Attoparsec.URL  24.1   28.9
+p_pair                         Parsing.Bench.Attoparsec.URL  18.5   30.3
+p_hex                          Parsing.Bench.Attoparsec.URL   3.7    3.8
+pURL                           Parsing.Bench.Attoparsec.URL   3.7    5.1
+optionMaybe                    Parsing.Bench.Attoparsec.Base   2.8    1.4
+main                           Main                   2.8    0.1
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 358           3   2.8    0.1   100.0  100.0
+  run                    Parsing.Bench.Attoparsec.URL                         362           1   0.0    0.0    97.2   99.9
+   run'                  Parsing.Bench.Attoparsec.Base                        363           1   0.0    0.0    97.2   99.9
+    pURL                 Parsing.Bench.Attoparsec.URL                         364           1   3.7    5.1    97.2   99.9
+     p_pair              Parsing.Bench.Attoparsec.URL                         365      183909  18.5   30.3    93.5   94.8
+      optionMaybe        Parsing.Bench.Attoparsec.Base                        372      183909   2.8    1.4     2.8    1.4
+      p_char             Parsing.Bench.Attoparsec.URL                         366     1645985  24.1   28.9    72.2   63.0
+       p_hex             Parsing.Bench.Attoparsec.URL                         371      183909   3.7    3.8     3.7    3.8
+       oneOf             Parsing.Bench.Attoparsec.Base                        370           0  44.4   30.3    44.4   30.3
+  succeeded              Parsing.Bench.Attoparsec.Base                        361           1   0.0    0.0     0.0    0.0
+  readTextDevice         Data.Text.IO.Internal                                360         800   0.0    0.1     0.0    0.1
+ CAF                     Main                                                 352           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 359           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        350           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             348           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     344           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     289           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            273           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              253           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                247           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      244           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Internal                                   221           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Array                                      217           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Attoparsec.Text.FastSet                         199           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Attoparsec.URL                         182           5   0.0    0.0     0.0    0.0
+  urlBaseChars           Parsing.Bench.Attoparsec.URL                         369           1   0.0    0.0     0.0    0.0
+  p_char                 Parsing.Bench.Attoparsec.URL                         367           0   0.0    0.0     0.0    0.0
+   oneOf                 Parsing.Bench.Attoparsec.Base                        368           1   0.0    0.0     0.0    0.0

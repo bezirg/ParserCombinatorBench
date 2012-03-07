@@ -1,0 +1,25 @@
+./dist/build/json-ap-whnf/json-ap-whnf +RTS -sjson-ap-whnf.gc 
+     780,660,416 bytes allocated in the heap
+      73,081,872 bytes copied during GC
+      16,261,912 bytes maximum residency (7 sample(s))
+       1,770,048 bytes maximum slop
+              33 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      1522 colls,     0 par    0.15s    0.13s     0.0001s    0.0002s
+  Gen  1         7 colls,     0 par    0.05s    0.08s     0.0113s    0.0490s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    0.91s  (  0.93s elapsed)
+  GC      time    0.19s  (  0.21s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    1.10s  (  1.14s elapsed)
+
+  %GC     time      17.6%  (18.6% elapsed)
+
+  Alloc rate    861,076,334 bytes per MUT second
+
+  Productivity  82.4% of total user, 79.4% of total elapsed
+

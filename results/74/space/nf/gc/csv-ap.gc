@@ -1,0 +1,25 @@
+./dist/build/csv-ap/csv-ap +RTS -scsv-ap.gc 
+     516,946,344 bytes allocated in the heap
+      94,683,976 bytes copied during GC
+      16,861,440 bytes maximum residency (7 sample(s))
+       1,853,680 bytes maximum slop
+              49 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      1002 colls,     0 par    0.13s    0.14s     0.0001s    0.0016s
+  Gen  1         7 colls,     0 par    0.10s    0.12s     0.0167s    0.0453s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    0.50s  (  0.51s elapsed)
+  GC      time    0.23s  (  0.25s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    0.73s  (  0.77s elapsed)
+
+  %GC     time      31.0%  (32.9% elapsed)
+
+  Alloc rate    1,027,109,655 bytes per MUT second
+
+  Productivity  69.0% of total user, 65.7% of total elapsed
+

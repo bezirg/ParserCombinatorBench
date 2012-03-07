@@ -1,0 +1,24 @@
+./dist/build/url-u2-whnf/url-u2-whnf +RTS -surl-u2-whnf.gc 
+   3,555,505,024 bytes allocated in the heap
+   1,045,711,680 bytes copied during GC
+     196,803,016 bytes maximum residency (11 sample(s))
+       3,532,104 bytes maximum slop
+             409 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  6771 collections,     0 parallel,  1.18s,  1.18s elapsed
+  Generation 1:    11 collections,     0 parallel,  1.23s,  1.23s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    4.94s  (  4.94s elapsed)
+  GC    time    2.41s  (  2.41s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    7.36s  (  7.36s elapsed)
+
+  %GC time      32.8%  (32.8% elapsed)
+
+  Alloc rate    718,802,978 bytes per MUT second
+
+  Productivity  67.2% of total user, 67.2% of total elapsed
+

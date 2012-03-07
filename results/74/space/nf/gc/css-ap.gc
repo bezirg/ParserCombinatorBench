@@ -1,0 +1,25 @@
+./dist/build/css-ap/css-ap +RTS -scss-ap.gc 
+   1,546,386,232 bytes allocated in the heap
+     110,952,472 bytes copied during GC
+      27,213,896 bytes maximum residency (8 sample(s))
+       3,354,008 bytes maximum slop
+              58 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      3023 colls,     0 par    0.16s    0.21s     0.0001s    0.0018s
+  Gen  1         8 colls,     0 par    0.12s    0.15s     0.0183s    0.0904s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    1.56s  (  1.54s elapsed)
+  GC      time    0.28s  (  0.36s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    1.84s  (  1.89s elapsed)
+
+  %GC     time      15.2%  (18.8% elapsed)
+
+  Alloc rate    991,337,408 bytes per MUT second
+
+  Productivity  84.8% of total user, 82.4% of total elapsed
+

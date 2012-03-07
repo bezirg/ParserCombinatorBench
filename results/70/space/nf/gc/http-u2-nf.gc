@@ -1,0 +1,24 @@
+./dist/build/http-u2-nf/http-u2-nf +RTS -shttp-u2-nf.gc 
+   4,912,601,672 bytes allocated in the heap
+   1,515,526,496 bytes copied during GC
+     189,422,408 bytes maximum residency (12 sample(s))
+       5,837,840 bytes maximum slop
+             530 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  9359 collections,     0 parallel,  2.01s,  2.01s elapsed
+  Generation 1:    12 collections,     0 parallel,  1.68s,  1.68s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    6.71s  (  6.71s elapsed)
+  GC    time    3.70s  (  3.69s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time   10.40s  ( 10.40s elapsed)
+
+  %GC time      35.5%  (35.5% elapsed)
+
+  Alloc rate    732,179,081 bytes per MUT second
+
+  Productivity  64.5% of total user, 64.5% of total elapsed
+

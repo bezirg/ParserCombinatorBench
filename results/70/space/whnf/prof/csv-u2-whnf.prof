@@ -1,0 +1,45 @@
+	Tue Mar  6 21:16 2012 Time and Allocation Profiling Report  (Final)
+
+	   csv-u2-whnf +RTS -p -RTS
+
+	total time  =        0.38 secs   (19 ticks @ 20 ms)
+	total alloc = 153,276,160 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+cell                           Parsing.Bench.UU2.CSV  52.6   49.9
+line                           Parsing.Bench.UU2.CSV  31.6   20.2
+pCSV                           Parsing.Bench.UU2.CSV   5.3    2.4
+eol                            Parsing.Bench.UU2.CSV   5.3   13.7
+main                           Main                   5.3   13.8
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 380           3   5.3   13.8     5.3   13.8
+  succeeded              Parsing.Bench.UU2.Base                               382           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 374           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 381           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        372           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             370           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     366           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     311           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            295           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              275           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                269           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      266           1   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.Utils                      257           3   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.BasicInstances             220           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU2.CSV                                191          13   0.0    0.0    94.7   86.2
+  cell                   Parsing.Bench.UU2.CSV                                392           0   0.0    0.0     0.0    0.0
+  eol                    Parsing.Bench.UU2.CSV                                391           0   0.0    0.0     0.0    0.0
+  line                   Parsing.Bench.UU2.CSV                                388           0   0.0    0.0     0.0    0.0
+  pCSV                   Parsing.Bench.UU2.CSV                                386           0   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU2.CSV                                383           1   0.0    0.0    94.7   86.2
+   run'                  Parsing.Bench.UU2.Base                               384           1   0.0    0.0    94.7   86.2
+    pCSV                 Parsing.Bench.UU2.CSV                                385           1   5.3    2.4    94.7   86.2
+     line                Parsing.Bench.UU2.CSV                                387           1  31.6   20.2    89.5   83.9
+      eol                Parsing.Bench.UU2.CSV                                390           1   5.3   13.7     5.3   13.7
+      cell               Parsing.Bench.UU2.CSV                                389           1  52.6   49.9    52.6   49.9

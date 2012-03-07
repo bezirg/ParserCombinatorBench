@@ -1,0 +1,25 @@
+./dist/build/http-pp/http-pp +RTS -shttp-pp.gc 
+   2,091,337,464 bytes allocated in the heap
+   1,596,055,384 bytes copied during GC
+     321,330,384 bytes maximum residency (12 sample(s))
+       3,385,000 bytes maximum slop
+             630 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      4063 colls,     0 par    2.00s    2.04s     0.0005s    0.0011s
+  Gen  1        12 colls,     0 par    1.43s    2.15s     0.1793s    0.9861s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    2.82s  (  2.84s elapsed)
+  GC      time    3.43s  (  4.19s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    6.25s  (  7.03s elapsed)
+
+  %GC     time      54.8%  (59.6% elapsed)
+
+  Alloc rate    740,780,511 bytes per MUT second
+
+  Productivity  45.2% of total user, 40.1% of total elapsed
+

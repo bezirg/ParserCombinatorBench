@@ -1,0 +1,190 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   json-pp +RTS -p -RTS
+
+	total time  =        1.30 secs   (1296 ticks @ 1000 us, 1 processor)
+	total alloc = 596,952,912 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                       %time %alloc
+
+between          Parsing.Bench.Polyparse.Base  27.1   22.5
+p_number         Parsing.Bench.Polyparse.JSON  12.2    8.0
+showsPrec        Parsing.Bench.AST.JSON         9.8   12.0
+showsPrec        Parsing.Bench.AST.JSON         9.1    4.6
+main             Main                           7.2   23.2
+pSym             Parsing.Bench.Polyparse.Base   6.6    6.6
+pAnySym          Parsing.Bench.Polyparse.Base   5.5    2.9
+spaces           Parsing.Bench.Polyparse.Base   5.2    8.5
+p_object.p_field Parsing.Bench.Polyparse.JSON   3.9    2.5
+p_series         Parsing.Bench.Polyparse.JSON   3.6    2.9
+p_string         Parsing.Bench.Polyparse.JSON   2.7    1.9
+p_object         Parsing.Bench.Polyparse.JSON   2.3    1.5
+p_value          Parsing.Bench.Polyparse.JSON   2.2    1.1
+p_value.value    Parsing.Bench.Polyparse.JSON   1.3    0.6
+
+
+                                                                                individual     inherited
+COST CENTRE                MODULE                             no.     entries  %time %alloc   %time %alloc
+
+MAIN                       MAIN                                60           0    0.0    0.0   100.0  100.0
+ main                      Main                               121           0    7.2   23.2   100.0  100.0
+  showsPrec                Parsing.Bench.AST.JSON             258       41855    9.1    4.6    19.3   17.0
+   showsPrec               Parsing.Bench.AST.JSON             264        3097    0.0    0.0     0.0    0.0
+   showsPrec               Parsing.Bench.AST.JSON             260         107    0.0    0.0    10.2   12.3
+    showList               Parsing.Bench.AST.JSON             263           0    0.4    0.3    10.2   12.3
+     showsPrec             Parsing.Bench.AST.JSON             265           0    9.8   12.0     9.8   12.0
+  run                      Parsing.Bench.Polyparse.JSON       124           0    0.0    0.0    73.5   59.8
+   pJSON                   Parsing.Bench.Polyparse.JSON       126           0    0.0    0.0    73.5   59.8
+    pJSON.text             Parsing.Bench.Polyparse.JSON       132           0    0.0    0.0    73.5   59.8
+     p_array               Parsing.Bench.Polyparse.JSON       142           0    0.2    0.1    73.5   59.8
+      spaces               Parsing.Bench.Polyparse.Base       248           0    0.2    0.1     0.2    0.1
+       pAnySym             Parsing.Bench.Polyparse.Base       249           0    0.1    0.0     0.1    0.0
+      p_value              Parsing.Bench.Polyparse.JSON       183           0    1.6    0.6    36.1   26.9
+       <?>                 Parsing.Bench.Polyparse.Base       243           0    0.1    0.0     1.1    0.8
+        spaces             Parsing.Bench.Polyparse.Base       244           0    0.2    0.6     1.0    0.8
+         pAnySym           Parsing.Bench.Polyparse.Base       245           0    0.8    0.2     0.8    0.2
+       p_value.value       Parsing.Bench.Polyparse.JSON       184           0    1.1    0.4    33.4   25.5
+        string             Parsing.Bench.Polyparse.Base       241           0    0.3    0.6     0.5    0.8
+         pSym              Parsing.Bench.Polyparse.Base       242           0    0.2    0.2     0.2    0.2
+        p_bool             Parsing.Bench.Polyparse.JSON       238           0    0.1    0.0     0.2    0.3
+         string            Parsing.Bench.Polyparse.Base       239           0    0.1    0.1     0.2    0.3
+          pSym             Parsing.Bench.Polyparse.Base       240           0    0.1    0.1     0.1    0.1
+        p_object           Parsing.Bench.Polyparse.JSON       189           0    0.8    0.7    18.5   15.2
+         spaces            Parsing.Bench.Polyparse.Base       246           0    0.1    0.4     0.3    0.6
+          pAnySym          Parsing.Bench.Polyparse.Base       247           0    0.2    0.2     0.2    0.2
+         p_object.p_field  Parsing.Bench.Polyparse.JSON       227           0    2.0    1.1    13.9   10.8
+          spaces           Parsing.Bench.Polyparse.Base       236           0    0.6    1.0     1.2    1.3
+           pAnySym         Parsing.Bench.Polyparse.Base       237           0    0.6    0.3     0.6    0.3
+          pSym             Parsing.Bench.Polyparse.Base       235           0    0.2    0.1     0.2    0.1
+          p_string         Parsing.Bench.Polyparse.JSON       228           0    0.8    0.5    10.5    8.3
+           spaces          Parsing.Bench.Polyparse.Base       233           0    0.3    0.5     0.8    0.7
+            pAnySym        Parsing.Bench.Polyparse.Base       234           0    0.5    0.2     0.5    0.2
+           p_string.jchar  Parsing.Bench.Polyparse.JSON       231           0    0.0    0.0     0.9    1.2
+            pSym           Parsing.Bench.Polyparse.Base       232           0    0.9    1.2     0.9    1.2
+           pSym            Parsing.Bench.Polyparse.Base       230           0    0.5    0.2     0.5    0.2
+           between         Parsing.Bench.Polyparse.Base       229           0    7.5    5.7     7.5    5.7
+         p_series          Parsing.Bench.Polyparse.JSON       190           0    1.7    1.5     3.5    3.1
+          p_object.p_field Parsing.Bench.Polyparse.JSON       267           0    0.0    0.0     0.0    0.0
+          spaces           Parsing.Bench.Polyparse.Base       225           0    0.8    1.0     1.5    1.3
+           pAnySym         Parsing.Bench.Polyparse.Base       226           0    0.6    0.3     0.6    0.3
+          pSym             Parsing.Bench.Polyparse.Base       192           0    0.2    0.2     0.2    0.2
+          between          Parsing.Bench.Polyparse.Base       191           0    0.2    0.1     0.2    0.1
+        p_number           Parsing.Bench.Polyparse.JSON       188           0   12.0    7.8    12.0    7.8
+        p_string           Parsing.Bench.Polyparse.JSON       185           0    0.3    0.3     1.2    1.0
+         pSym              Parsing.Bench.Polyparse.Base       187           0    0.4    0.2     0.4    0.2
+         between           Parsing.Bench.Polyparse.Base       186           0    0.5    0.5     0.5    0.5
+      p_series             Parsing.Bench.Polyparse.JSON       145           0    1.9    1.5    37.0   32.7
+       p_object            Parsing.Bench.Polyparse.JSON       165           0    1.5    0.9    33.3   29.1
+        spaces             Parsing.Bench.Polyparse.Base       223           0    0.3    0.6     0.6    0.8
+         pAnySym           Parsing.Bench.Polyparse.Base       224           0    0.3    0.2     0.3    0.2
+        p_value            Parsing.Bench.Polyparse.JSON       209           0    0.6    0.5     8.5    6.9
+         <?>               Parsing.Bench.Polyparse.Base       220           0    0.2    0.0     0.9    0.8
+          spaces           Parsing.Bench.Polyparse.Base       221           0    0.2    0.6     0.8    0.8
+           pAnySym         Parsing.Bench.Polyparse.Base       222           0    0.5    0.2     0.5    0.2
+         p_value.value     Parsing.Bench.Polyparse.JSON       210           0    0.2    0.2     6.9    5.6
+          string           Parsing.Bench.Polyparse.Base       218           0    0.0    0.0     0.0    0.0
+           pSym            Parsing.Bench.Polyparse.Base       219           0    0.0    0.0     0.0    0.0
+          p_bool           Parsing.Bench.Polyparse.JSON       215           0    0.0    0.0     0.0    0.0
+           string          Parsing.Bench.Polyparse.Base       216           0    0.0    0.0     0.0    0.0
+            pSym           Parsing.Bench.Polyparse.Base       217           0    0.0    0.0     0.0    0.0
+          p_number         Parsing.Bench.Polyparse.JSON       214           0    0.2    0.1     0.2    0.1
+          p_string         Parsing.Bench.Polyparse.JSON       211           0    0.7    0.5     6.6    5.2
+           spaces          Parsing.Bench.Polyparse.Base       256           0    0.2    0.6     0.6    0.8
+            pAnySym        Parsing.Bench.Polyparse.Base       257           0    0.4    0.2     0.4    0.2
+           p_string.jchar  Parsing.Bench.Polyparse.JSON       254           0    0.0    0.0     0.6    0.5
+            pSym           Parsing.Bench.Polyparse.Base       255           0    0.6    0.5     0.6    0.5
+           pSym            Parsing.Bench.Polyparse.Base       213           0    0.6    0.3     0.6    0.3
+           between         Parsing.Bench.Polyparse.Base       212           0    4.0    3.1     4.0    3.1
+        p_object.p_field   Parsing.Bench.Polyparse.JSON       194           0    1.9    1.3    22.7   20.6
+         spaces            Parsing.Bench.Polyparse.Base       207           0    0.8    1.1     1.2    1.5
+          pAnySym          Parsing.Bench.Polyparse.Base       208           0    0.3    0.4     0.3    0.4
+         pSym              Parsing.Bench.Polyparse.Base       206           0    0.2    0.1     0.2    0.1
+         p_string          Parsing.Bench.Polyparse.JSON       195           0    0.9    0.6    19.4   17.6
+          spaces           Parsing.Bench.Polyparse.Base       203           0    0.5    0.6     0.9    0.8
+           pAnySym         Parsing.Bench.Polyparse.Base       204           0    0.4    0.2     0.4    0.2
+          p_string.jchar   Parsing.Bench.Polyparse.JSON       201           0    0.0    0.0     2.3    2.9
+           pSym            Parsing.Bench.Polyparse.Base       202           0    2.3    2.9     2.3    2.9
+          pSym             Parsing.Bench.Polyparse.Base       197           0    0.3    0.3     0.3    0.3
+          between          Parsing.Bench.Polyparse.Base       196           0   15.0   13.1    15.0   13.1
+       p_value             Parsing.Bench.Polyparse.JSON       152           0    0.0    0.0     0.1    0.1
+        <?>                Parsing.Bench.Polyparse.Base       178           0    0.0    0.0     0.0    0.0
+         spaces            Parsing.Bench.Polyparse.Base       179           0    0.0    0.0     0.0    0.0
+          pAnySym          Parsing.Bench.Polyparse.Base       180           0    0.0    0.0     0.0    0.0
+        p_value.value      Parsing.Bench.Polyparse.JSON       154           0    0.0    0.0     0.1    0.1
+         string            Parsing.Bench.Polyparse.Base       174           0    0.0    0.0     0.0    0.0
+          pSym             Parsing.Bench.Polyparse.Base       176           0    0.0    0.0     0.0    0.0
+         p_bool            Parsing.Bench.Polyparse.JSON       168           0    0.0    0.0     0.0    0.0
+          string           Parsing.Bench.Polyparse.Base       170           0    0.0    0.0     0.0    0.0
+           pSym            Parsing.Bench.Polyparse.Base       172           0    0.0    0.0     0.0    0.0
+         p_object          Parsing.Bench.Polyparse.JSON       163           0    0.0    0.0     0.0    0.0
+         p_number          Parsing.Bench.Polyparse.JSON       162           0    0.1    0.1     0.1    0.1
+         p_string          Parsing.Bench.Polyparse.JSON       156           0    0.0    0.0     0.0    0.0
+          spaces           Parsing.Bench.Polyparse.Base       252           0    0.0    0.0     0.0    0.0
+           pAnySym         Parsing.Bench.Polyparse.Base       253           0    0.0    0.0     0.0    0.0
+          p_string.jchar   Parsing.Bench.Polyparse.JSON       250           0    0.0    0.0     0.0    0.0
+           pSym            Parsing.Bench.Polyparse.Base       251           0    0.0    0.0     0.0    0.0
+          pSym             Parsing.Bench.Polyparse.Base       160           0    0.0    0.0     0.0    0.0
+          between          Parsing.Bench.Polyparse.Base       158           0    0.0    0.0     0.0    0.0
+       spaces              Parsing.Bench.Polyparse.Base       149           0    0.8    1.3     1.5    1.7
+        pAnySym            Parsing.Bench.Polyparse.Base       150           0    0.8    0.4     0.8    0.4
+       pSym                Parsing.Bench.Polyparse.Base       148           0    0.2    0.2     0.2    0.2
+        p_object           Parsing.Bench.Polyparse.JSON       166           0    0.0    0.0     0.0    0.0
+       between             Parsing.Bench.Polyparse.Base       146           0    0.0    0.0     0.0    0.0
+        p_object           Parsing.Bench.Polyparse.JSON       164           0    0.0    0.0     0.0    0.0
+     p_object              Parsing.Bench.Polyparse.JSON       134           0    0.0    0.0     0.0    0.0
+      p_series             Parsing.Bench.Polyparse.JSON       137           0    0.0    0.0     0.0    0.0
+       pSym                Parsing.Bench.Polyparse.Base       140           0    0.0    0.0     0.0    0.0
+       between             Parsing.Bench.Polyparse.Base       138           0    0.0    0.0     0.0    0.0
+    spaces                 Parsing.Bench.Polyparse.Base       128           0    0.0    0.0     0.0    0.0
+     pAnySym               Parsing.Bench.Polyparse.Base       130           0    0.0    0.0     0.0    0.0
+ CAF                       Main                               119           0    0.0    0.0     0.0    0.0
+  main                     Main                               120           1    0.0    0.0     0.0    0.0
+ CAF                       Parsing.Bench.Polyparse.JSON       118           0    0.0    0.0     0.0    0.0
+  p_string.jchar           Parsing.Bench.Polyparse.JSON       198           1    0.0    0.0     0.0    0.0
+  p_series                 Parsing.Bench.Polyparse.JSON       181           0    0.0    0.0     0.0    0.0
+   pSym                    Parsing.Bench.Polyparse.Base       182           1    0.0    0.0     0.0    0.0
+  p_bool                   Parsing.Bench.Polyparse.JSON       167           1    0.0    0.0     0.0    0.0
+   string                  Parsing.Bench.Polyparse.Base       169           2    0.0    0.0     0.0    0.0
+    pSym                   Parsing.Bench.Polyparse.Base       171           2    0.0    0.0     0.0    0.0
+  p_number                 Parsing.Bench.Polyparse.JSON       161           1    0.0    0.0     0.0    0.0
+  p_string                 Parsing.Bench.Polyparse.JSON       155           1    0.0    0.0     0.0    0.0
+   p_string.jchar          Parsing.Bench.Polyparse.JSON       199           0    0.0    0.0     0.0    0.0
+    pSym                   Parsing.Bench.Polyparse.Base       200           1    0.0    0.0     0.0    0.0
+   pSym                    Parsing.Bench.Polyparse.Base       159           2    0.0    0.0     0.0    0.0
+   between                 Parsing.Bench.Polyparse.Base       157           1    0.0    0.0     0.0    0.0
+  p_value                  Parsing.Bench.Polyparse.JSON       151           1    0.0    0.0     0.0    0.0
+   <?>                     Parsing.Bench.Polyparse.Base       177           1    0.0    0.0     0.0    0.0
+   p_value.value           Parsing.Bench.Polyparse.JSON       153           1    0.0    0.0     0.0    0.0
+    string                 Parsing.Bench.Polyparse.Base       173           5    0.0    0.0     0.0    0.0
+     pSym                  Parsing.Bench.Polyparse.Base       175           4    0.0    0.0     0.0    0.0
+  p_array                  Parsing.Bench.Polyparse.JSON       141           1    0.0    0.0     0.0    0.0
+   p_series                Parsing.Bench.Polyparse.JSON       143           1    0.0    0.0     0.0    0.0
+    pSym                   Parsing.Bench.Polyparse.Base       147           2    0.0    0.0     0.0    0.0
+    between                Parsing.Bench.Polyparse.Base       144           1    0.0    0.0     0.0    0.0
+  p_object                 Parsing.Bench.Polyparse.JSON       133           1    0.0    0.0     0.0    0.0
+   p_object.p_field        Parsing.Bench.Polyparse.JSON       193           1    0.0    0.0     0.0    0.0
+    pSym                   Parsing.Bench.Polyparse.Base       205           1    0.0    0.0     0.0    0.0
+   p_series                Parsing.Bench.Polyparse.JSON       135           1    0.0    0.0     0.0    0.0
+    pSym                   Parsing.Bench.Polyparse.Base       139           2    0.0    0.0     0.0    0.0
+    between                Parsing.Bench.Polyparse.Base       136           1    0.0    0.0     0.0    0.0
+  pJSON.text               Parsing.Bench.Polyparse.JSON       131           1    0.0    0.0     0.0    0.0
+  pJSON                    Parsing.Bench.Polyparse.JSON       125           1    0.0    0.0     0.0    0.0
+  run                      Parsing.Bench.Polyparse.JSON       122           1    0.0    0.0     0.0    0.0
+ CAF                       Parsing.Bench.AST.JSON             117           0    0.0    0.0     0.0    0.0
+  showsPrec                Parsing.Bench.AST.JSON             266           0    0.0    0.0     0.0    0.0
+  showList                 Parsing.Bench.AST.JSON             262           1    0.0    0.0     0.0    0.0
+  showsPrec                Parsing.Bench.AST.JSON             261           0    0.0    0.0     0.0    0.0
+  showsPrec                Parsing.Bench.AST.JSON             259           0    0.0    0.0     0.0    0.0
+ CAF                       Parsing.Bench.Polyparse.Base       116           0    0.0    0.0     0.0    0.0
+  spaces                   Parsing.Bench.Polyparse.Base       127           1    0.0    0.0     0.0    0.0
+   pAnySym                 Parsing.Bench.Polyparse.Base       129           1    0.0    0.0     0.0    0.0
+  run'                     Parsing.Bench.Polyparse.Base       123           1    0.0    0.0     0.0    0.0
+ CAF                       Text.Parse                         111           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.Handle.FD                   108           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.Conc.Signal                    105           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.Float                          102           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.Encoding                    100           0    0.0    0.0     0.0    0.0
+ CAF                       Data.Either                         93           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.Encoding.Iconv               86           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.FD                           85           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.Integer.Logarithms.Internals    68           0    0.0    0.0     0.0    0.0

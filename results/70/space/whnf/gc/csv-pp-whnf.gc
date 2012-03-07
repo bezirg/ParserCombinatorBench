@@ -1,0 +1,24 @@
+./dist/build/csv-pp-whnf/csv-pp-whnf +RTS -scsv-pp-whnf.gc 
+     324,052,728 bytes allocated in the heap
+     307,493,408 bytes copied during GC
+      77,739,816 bytes maximum residency (8 sample(s))
+       1,438,192 bytes maximum slop
+             151 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:   603 collections,     0 parallel,  0.81s,  0.81s elapsed
+  Generation 1:     8 collections,     0 parallel,  0.46s,  0.46s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    0.75s  (  0.75s elapsed)
+  GC    time    1.26s  (  1.26s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    2.02s  (  2.02s elapsed)
+
+  %GC time      62.6%  (62.7% elapsed)
+
+  Alloc rate    429,877,356 bytes per MUT second
+
+  Productivity  37.3% of total user, 37.3% of total elapsed
+

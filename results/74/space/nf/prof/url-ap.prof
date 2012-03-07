@@ -1,0 +1,58 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-ap +RTS -p -RTS
+
+	total time  =        2.11 secs   (2110 ticks @ 1000 us, 1 processor)
+	total alloc = 1,246,004,472 bytes  (excludes profiling overheads)
+
+COST CENTRE    MODULE                        %time %alloc
+
+oneOf          Parsing.Bench.Attoparsec.Base  57.5   39.9
+main           Main                           23.3   20.3
+p_char         Parsing.Bench.Attoparsec.URL    7.7   12.1
+readTextDevice Data.Text.IO.Internal           4.5   20.8
+p_pair         Parsing.Bench.Attoparsec.URL    2.4    2.1
+p_hex          Parsing.Bench.Attoparsec.URL    2.0    2.5
+pURL           Parsing.Bench.Attoparsec.URL    1.9    1.6
+
+
+                                                                       individual     inherited
+COST CENTRE          MODULE                          no.     entries  %time %alloc   %time %alloc
+
+MAIN                 MAIN                             78           0    0.0    0.0   100.0  100.0
+ main                Main                            157           0   23.3   20.3   100.0  100.0
+  run                Parsing.Bench.Attoparsec.URL    160           0    0.0    0.0    72.2   58.9
+   run'              Parsing.Bench.Attoparsec.Base   161           1    0.0    0.0    72.2   58.9
+    pURL             Parsing.Bench.Attoparsec.URL    163           0    1.9    1.6    72.2   58.9
+     p_pair          Parsing.Bench.Attoparsec.URL    165           0    2.4    2.1    70.3   57.4
+      optionMaybe    Parsing.Bench.Attoparsec.Base   175           0    0.6    0.8    24.6   20.8
+       p_char        Parsing.Bench.Attoparsec.URL    176           0    2.7    4.3    24.0   20.0
+        p_hex        Parsing.Bench.Attoparsec.URL    178           0    0.9    1.0     3.4    4.0
+         oneOf       Parsing.Bench.Attoparsec.Base   179           0    2.5    3.0     2.5    3.0
+        oneOf        Parsing.Bench.Attoparsec.Base   177           0   17.9   11.8    17.9   11.8
+      p_char         Parsing.Bench.Attoparsec.URL    167           0    5.0    7.8    43.2   34.4
+       p_hex         Parsing.Bench.Attoparsec.URL    172           0    1.1    1.5     2.8    4.8
+        oneOf        Parsing.Bench.Attoparsec.Base   173           0    1.7    3.4     1.7    3.4
+         optionMaybe Parsing.Bench.Attoparsec.Base   180           0    0.0    0.0     0.0    0.0
+       oneOf         Parsing.Bench.Attoparsec.Base   169           0   35.4   21.8    35.4   21.8
+  readTextDevice     Data.Text.IO.Internal           158         800    4.5   20.8     4.5   20.8
+ CAF                 Main                            155           0    0.0    0.0     0.0    0.0
+  main               Main                            156           1    0.0    0.0     0.0    0.0
+ CAF                 Parsing.Bench.Attoparsec.URL    154           0    0.0    0.0     0.0    0.0
+  p_hex              Parsing.Bench.Attoparsec.URL    171           1    0.0    0.0     0.0    0.0
+  urlBaseChars       Parsing.Bench.Attoparsec.URL    170           1    0.0    0.0     0.0    0.0
+  p_char             Parsing.Bench.Attoparsec.URL    166           1    0.0    0.0     0.0    0.0
+   oneOf             Parsing.Bench.Attoparsec.Base   168           1    0.0    0.0     0.0    0.0
+  p_pair             Parsing.Bench.Attoparsec.URL    164           1    0.0    0.0     0.0    0.0
+   optionMaybe       Parsing.Bench.Attoparsec.Base   174           1    0.0    0.0     0.0    0.0
+  pURL               Parsing.Bench.Attoparsec.URL    162           1    0.0    0.0     0.0    0.0
+  run                Parsing.Bench.Attoparsec.URL    159           1    0.0    0.0     0.0    0.0
+ CAF                 Data.Attoparsec.Text.FastSet    146           0    0.0    0.0     0.0    0.0
+ CAF                 Data.Text.Array                 144           0    0.0    0.0     0.0    0.0
+ CAF                 Data.Text.Internal              142           0    0.0    0.0     0.0    0.0
+ CAF                 GHC.IO.Handle.FD                124           0    0.0    0.0     0.0    0.0
+ CAF                 GHC.Show                        121           0    0.0    0.0     0.0    0.0
+ CAF                 GHC.Conc.Signal                 117           0    0.0    0.0     0.0    0.0
+ CAF                 GHC.IO.Encoding                 112           0    0.0    0.0     0.0    0.0
+ CAF                 GHC.IO.Encoding.Iconv           102           0    0.0    0.0     0.0    0.0
+ CAF                 GHC.IO.FD                       101           0    0.0    0.0     0.0    0.0

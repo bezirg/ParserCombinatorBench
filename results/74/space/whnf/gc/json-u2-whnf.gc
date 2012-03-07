@@ -1,0 +1,25 @@
+./dist/build/json-u2-whnf/json-u2-whnf +RTS -sjson-u2-whnf.gc 
+   1,433,837,624 bytes allocated in the heap
+     372,640,584 bytes copied during GC
+      53,783,656 bytes maximum residency (10 sample(s))
+       2,343,984 bytes maximum slop
+             121 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      2780 colls,     0 par    0.38s    0.51s     0.0002s    0.0007s
+  Gen  1        10 colls,     0 par    0.32s    0.43s     0.0433s    0.1630s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    3.31s  (  3.20s elapsed)
+  GC      time    0.71s  (  0.94s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    4.02s  (  4.14s elapsed)
+
+  %GC     time      17.6%  (22.7% elapsed)
+
+  Alloc rate    433,211,580 bytes per MUT second
+
+  Productivity  82.4% of total user, 79.9% of total elapsed
+

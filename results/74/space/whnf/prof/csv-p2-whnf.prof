@@ -1,0 +1,50 @@
+	Tue Mar  6 19:59 2012 Time and Allocation Profiling Report  (Final)
+
+	   csv-p2-whnf +RTS -p -RTS
+
+	total time  =        0.49 secs   (486 ticks @ 1000 us, 1 processor)
+	total alloc = 338,287,632 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                     %time %alloc
+
+cell        Parsing.Bench.Parsec2.CSV   59.3   38.8
+<*>         Parsing.Bench.Parsec2.Base  15.8   18.3
+main        Main                         8.6   30.9
+line        Parsing.Bench.Parsec2.CSV    7.2    6.1
+eol         Parsing.Bench.Parsec2.CSV    6.4    4.8
+pCSV        Parsing.Bench.Parsec2.CSV    2.7    1.0
+
+
+                                                                    individual     inherited
+COST CENTRE  MODULE                               no.     entries  %time %alloc   %time %alloc
+
+MAIN         MAIN                                  56           0    0.0    0.0   100.0  100.0
+ main        Main                                 113           0    8.6   30.9   100.0  100.0
+  run        Parsing.Bench.Parsec2.CSV            118           0    0.0    0.0    91.4   69.1
+   run'      Parsing.Bench.Parsec2.Base           119           0    0.0    0.0    91.4   69.1
+    pCSV     Parsing.Bench.Parsec2.CSV            121           0    2.7    1.0    91.4   69.1
+     eol     Parsing.Bench.Parsec2.CSV            131           0    6.4    4.8     6.4    4.8
+     line    Parsing.Bench.Parsec2.CSV            123           0    7.2    6.1    82.3   63.3
+      cell   Parsing.Bench.Parsec2.CSV            126           0   59.3   38.8    75.1   57.2
+       <*>   Parsing.Bench.Parsec2.Base           128           0   15.8   18.3    15.8   18.3
+  succeeded  Parsing.Bench.Parsec2.Base           114           1    0.0    0.0     0.0    0.0
+ CAF         Main                                 111           0    0.0    0.0     0.0    0.0
+  main       Main                                 112           1    0.0    0.0     0.0    0.0
+ CAF         Parsing.Bench.Parsec2.CSV            110           0    0.0    0.0     0.0    0.0
+  eol        Parsing.Bench.Parsec2.CSV            130           1    0.0    0.0     0.0    0.0
+  cell       Parsing.Bench.Parsec2.CSV            124           1    0.0    0.0     0.0    0.0
+  line       Parsing.Bench.Parsec2.CSV            122           1    0.0    0.0     0.0    0.0
+  pCSV       Parsing.Bench.Parsec2.CSV            120           1    0.0    0.0     0.0    0.0
+  run        Parsing.Bench.Parsec2.CSV            115           1    0.0    0.0     0.0    0.0
+ CAF         Parsing.Bench.Parsec2.Base           109           0    0.0    0.0     0.0    0.0
+  pure       Parsing.Bench.Parsec2.Base           129           1    0.0    0.0     0.0    0.0
+  <*>        Parsing.Bench.Parsec2.Base           127           1    0.0    0.0     0.0    0.0
+  <|>        Parsing.Bench.Parsec2.Base           125           1    0.0    0.0     0.0    0.0
+  run'       Parsing.Bench.Parsec2.Base           116           1    0.0    0.0     0.0    0.0
+ CAF         Text.ParserCombinators.Parsec.Prim   104           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Handle.FD                     102           0    0.0    0.0     0.0    0.0
+ CAF         GHC.Show                             101           0    0.0    0.0     0.0    0.0
+ CAF         GHC.Conc.Signal                       99           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding                       95           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.Encoding.Iconv                 86           0    0.0    0.0     0.0    0.0
+ CAF         GHC.IO.FD                             85           0    0.0    0.0     0.0    0.0

@@ -1,0 +1,24 @@
+./dist/build/expr-p3-nf/expr-p3-nf +RTS -sexpr-p3-nf.gc 
+   2,045,343,944 bytes allocated in the heap
+     375,755,368 bytes copied during GC
+      62,485,728 bytes maximum residency (12 sample(s))
+         947,384 bytes maximum slop
+             136 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3890 collections,     0 parallel,  0.56s,  0.56s elapsed
+  Generation 1:    12 collections,     0 parallel,  0.46s,  0.46s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.27s  (  2.27s elapsed)
+  GC    time    1.02s  (  1.02s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.29s  (  3.29s elapsed)
+
+  %GC time      30.9%  (30.9% elapsed)
+
+  Alloc rate    899,690,569 bytes per MUT second
+
+  Productivity  69.0% of total user, 69.1% of total elapsed
+

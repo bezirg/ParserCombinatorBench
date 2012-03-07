@@ -1,0 +1,25 @@
+./dist/build/csv-u1-whnf/csv-u1-whnf +RTS -scsv-u1-whnf.gc 
+     474,198,616 bytes allocated in the heap
+     405,118,008 bytes copied during GC
+      71,321,224 bytes maximum residency (11 sample(s))
+       1,883,448 bytes maximum slop
+             178 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0       918 colls,     0 par    0.36s    0.38s     0.0004s    0.0012s
+  Gen  1        11 colls,     0 par    0.39s    0.57s     0.0518s    0.1684s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    1.05s  (  1.07s elapsed)
+  GC      time    0.75s  (  0.95s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    1.80s  (  2.01s elapsed)
+
+  %GC     time      41.6%  (47.0% elapsed)
+
+  Alloc rate    450,217,339 bytes per MUT second
+
+  Productivity  58.4% of total user, 52.3% of total elapsed
+

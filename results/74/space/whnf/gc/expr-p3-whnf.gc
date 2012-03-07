@@ -1,0 +1,25 @@
+./dist/build/expr-p3-whnf/expr-p3-whnf +RTS -sexpr-p3-whnf.gc 
+   1,614,719,680 bytes allocated in the heap
+     270,311,048 bytes copied during GC
+      60,575,872 bytes maximum residency (8 sample(s))
+         793,192 bytes maximum slop
+             121 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      3152 colls,     0 par    0.31s    0.36s     0.0001s    0.0003s
+  Gen  1         8 colls,     0 par    0.23s    0.36s     0.0456s    0.1777s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    1.18s  (  1.16s elapsed)
+  GC      time    0.54s  (  0.72s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    1.72s  (  1.89s elapsed)
+
+  %GC     time      31.3%  (38.2% elapsed)
+
+  Alloc rate    1,364,639,871 bytes per MUT second
+
+  Productivity  68.7% of total user, 62.7% of total elapsed
+

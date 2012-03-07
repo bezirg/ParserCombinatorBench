@@ -1,0 +1,24 @@
+./dist/build/json-ap-nf/json-ap-nf +RTS -sjson-ap-nf.gc 
+     791,969,616 bytes allocated in the heap
+     143,255,448 bytes copied during GC
+      19,483,048 bytes maximum residency (11 sample(s))
+       1,469,336 bytes maximum slop
+              52 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1495 collections,     0 parallel,  0.23s,  0.23s elapsed
+  Generation 1:    11 collections,     0 parallel,  0.18s,  0.18s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.32s  (  1.32s elapsed)
+  GC    time    0.40s  (  0.40s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    1.72s  (  1.72s elapsed)
+
+  %GC time      23.4%  (23.5% elapsed)
+
+  Alloc rate    600,161,122 bytes per MUT second
+
+  Productivity  76.4% of total user, 76.5% of total elapsed
+

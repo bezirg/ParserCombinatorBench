@@ -1,0 +1,112 @@
+	Tue Mar  6 17:53 2012 Time and Allocation Profiling Report  (Final)
+
+	   csv-u1 +RTS -p -RTS
+
+	total time  =        1.05 secs   (1053 ticks @ 1000 us, 1 processor)
+	total alloc = 346,040,856 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                 %time %alloc
+
+machine          UU.Parsing.Machine      29.6   24.8
+cell             Parsing.Bench.UU1.CSV   25.8    3.3
+main             Main                    12.0   44.2
+pNoneSym         Parsing.Bench.UU1.Base   7.7   11.9
+mkParser2        UU.Parsing.Machine       7.0    4.0
+machine          UU.Parsing.Machine       6.6    5.1
+execParser.(...) Parsing.Bench.UU1.Base   3.2    3.6
+line             Parsing.Bench.UU1.CSV    2.4    0.7
+pCSV             Parsing.Bench.UU1.CSV    1.5    0.1
+eol              Parsing.Bench.UU1.CSV    1.2    0.6
+
+
+                                                                 individual     inherited
+COST CENTRE           MODULE                   no.     entries  %time %alloc   %time %alloc
+
+MAIN                  MAIN                      59           0    0.0    0.0   100.0  100.0
+ main                 Main                     119           0   12.0   44.2    99.9  100.0
+  run                 Parsing.Bench.UU1.CSV    122           0    0.0    0.0    87.9   55.7
+   execParser         Parsing.Bench.UU1.Base   123           1    0.0    0.0    87.9   55.7
+    execParser.v      Parsing.Bench.UU1.Base   194           1    0.0    0.0     0.0    0.0
+    execParser.(...)  Parsing.Bench.UU1.Base   185           1    3.2    3.6    23.6   24.9
+     cell             Parsing.Bench.UU1.CSV    189           0    0.2    0.2     0.2    0.2
+     execParser.steps Parsing.Bench.UU1.Base   186           0    0.0    0.0    20.1   21.1
+      pCSV            Parsing.Bench.UU1.CSV    187           0    0.0    0.0    20.1   21.1
+       machine        UU.Parsing.Machine       188           0   19.1   20.4    20.1   21.1
+        cell          Parsing.Bench.UU1.CSV    192           0    0.5    0.4     1.0    0.6
+         line         Parsing.Bench.UU1.CSV    193           0    0.6    0.2     0.6    0.2
+        line          Parsing.Bench.UU1.CSV    191           0    0.0    0.0     0.0    0.0
+    execParser.final  Parsing.Bench.UU1.Base   184           1    0.0    0.0     0.0    0.0
+    execParser.steps  Parsing.Bench.UU1.Base   125           1    0.0    0.0    63.9   30.9
+     pCSV             Parsing.Bench.UU1.CSV    133           0    1.4    0.1    63.9   30.9
+      machine         UU.Parsing.Machine       183           0    0.0    0.0     0.0    0.0
+      machine         UU.Parsing.Machine       140           0   10.5    4.3    61.8   30.3
+       machine        UU.Parsing.Machine       166           0    0.3    0.2     0.9    0.6
+        line          Parsing.Bench.UU1.CSV    167           0    0.6    0.4     0.6    0.4
+       cell           Parsing.Bench.UU1.CSV    147           0   25.2    2.7    49.7   24.9
+        line          Parsing.Bench.UU1.CSV    171           0    0.0    0.0     0.0    0.0
+        machine       UU.Parsing.Machine       156           0    0.8    0.7     5.3    2.6
+         line         Parsing.Bench.UU1.CSV    158           0    1.0    0.2     4.6    1.8
+          machine     UU.Parsing.Machine       176           0    0.1    0.0     1.9    0.9
+           eol        Parsing.Bench.UU1.CSV    177           0    1.2    0.6     1.8    0.9
+            machine   UU.Parsing.Machine       181           0    0.1    0.0     0.1    0.0
+            Locating  UU.Parsing.Machine       180           0    0.0    0.1     0.0    0.1
+            mkParser1 UU.Parsing.Machine       178           0    0.5    0.2     0.5    0.2
+          Locating    UU.Parsing.Machine       162           0    0.5    0.1     0.5    0.1
+          mkParser2   UU.Parsing.Machine       160           0    0.9    0.4     0.9    0.4
+          machine     UU.Parsing.Machine       159           0    0.3    0.2     0.3    0.2
+        mkParser2     UU.Parsing.Machine       152           0    6.0    3.4     6.0    3.4
+         line         Parsing.Bench.UU1.CSV    170           0    0.0    0.0     0.0    0.0
+        pNoneSym      Parsing.Bench.UU1.Base   149           0    7.7   11.9     9.7   11.9
+         line         Parsing.Bench.UU1.CSV    190           0    0.0    0.0     0.0    0.0
+         machine      UU.Parsing.Machine       151           0    2.0    0.0     2.0    0.0
+        machine       UU.Parsing.Machine       148           0    3.5    4.3     3.5    4.3
+         line         Parsing.Bench.UU1.CSV    173           0    0.0    0.0     0.0    0.0
+       line           Parsing.Bench.UU1.CSV    141           0    0.2    0.0     0.8    0.5
+        machine       UU.Parsing.Machine       144           0    0.2    0.2     0.2    0.2
+        machine       UU.Parsing.Machine       142           0    0.4    0.2     0.4    0.2
+      machine         UU.Parsing.Machine       136           0    0.5    0.2     0.5    0.2
+      mkParser2       UU.Parsing.Machine       134           0    0.2    0.2     0.2    0.2
+    execParser.msgs   Parsing.Bench.UU1.Base   124           1    0.5    0.0     0.5    0.0
+ CAF                  Main                     117           0    0.0    0.0     0.0    0.0
+  main                Main                     118           1    0.0    0.0     0.0    0.0
+ CAF                  Parsing.Bench.UU1.CSV    116           0    0.0    0.0     0.1    0.0
+  eol                 Parsing.Bench.UU1.CSV    131           1    0.0    0.0     0.0    0.0
+   Locating           UU.Parsing.Machine       179           1    0.0    0.0     0.0    0.0
+   mkParser1          UU.Parsing.Machine       175           1    0.0    0.0     0.0    0.0
+  cell                Parsing.Bench.UU1.CSV    128           1    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       155           1    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       154           2    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       153           2    0.0    0.0     0.0    0.0
+   mkParser2          UU.Parsing.Machine       150           1    0.0    0.0     0.0    0.0
+   pNoneSym           Parsing.Bench.UU1.Base   129           1    0.0    0.0     0.0    0.0
+  line                Parsing.Bench.UU1.CSV    127           1    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       174           2    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       164           2    0.0    0.0     0.0    0.0
+    cell              Parsing.Bench.UU1.CSV    168           0    0.0    0.0     0.0    0.0
+     machine          UU.Parsing.Machine       172           1    0.0    0.0     0.0    0.0
+     mkParser2        UU.Parsing.Machine       169           1    0.0    0.0     0.0    0.0
+    machine           UU.Parsing.Machine       165           1    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       163           1    0.0    0.0     0.0    0.0
+   Locating           UU.Parsing.Machine       161           2    0.0    0.0     0.0    0.0
+   mkParser2          UU.Parsing.Machine       157           2    0.0    0.0     0.0    0.0
+  pCSV                Parsing.Bench.UU1.CSV    126           1    0.1    0.0     0.1    0.0
+   machine            UU.Parsing.Machine       182           1    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       137           6    0.0    0.0     0.0    0.0
+    cell              Parsing.Bench.UU1.CSV    145           0    0.0    0.0     0.0    0.0
+     machine          UU.Parsing.Machine       146           2    0.0    0.0     0.0    0.0
+    line              Parsing.Bench.UU1.CSV    138           0    0.0    0.0     0.0    0.0
+     machine          UU.Parsing.Machine       143           2    0.0    0.0     0.0    0.0
+     machine          UU.Parsing.Machine       139           2    0.0    0.0     0.0    0.0
+   machine            UU.Parsing.Machine       135           2    0.0    0.0     0.0    0.0
+   mkParser2          UU.Parsing.Machine       132           2    0.0    0.0     0.0    0.0
+  run                 Parsing.Bench.UU1.CSV    120           1    0.0    0.0     0.0    0.0
+ CAF                  Parsing.Bench.UU1.Base   115           0    0.0    0.0     0.0    0.0
+  allChars            Parsing.Bench.UU1.Base   130           1    0.0    0.0     0.0    0.0
+  run'                Parsing.Bench.UU1.Base   121           1    0.0    0.0     0.0    0.0
+ CAF                  UU.Parsing.CharParser    114           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Handle.FD         106           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.Conc.Signal          104           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding          100           0    0.0    0.0     0.0    0.0
+ CAF                  Data.Either               93           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding.Iconv     87           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.FD                 86           0    0.0    0.0     0.0    0.0

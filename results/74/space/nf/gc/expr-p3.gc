@@ -1,0 +1,25 @@
+./dist/build/expr-p3/expr-p3 +RTS -sexpr-p3.gc 
+   2,066,426,784 bytes allocated in the heap
+     345,095,504 bytes copied during GC
+      60,575,872 bytes maximum residency (12 sample(s))
+       1,268,544 bytes maximum slop
+             128 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      4020 colls,     0 par    0.48s    0.52s     0.0001s    0.0003s
+  Gen  1        12 colls,     0 par    0.30s    0.43s     0.0362s    0.1780s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    1.91s  (  1.91s elapsed)
+  GC      time    0.79s  (  0.96s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    2.70s  (  2.87s elapsed)
+
+  %GC     time      29.2%  (33.4% elapsed)
+
+  Alloc rate    1,081,971,348 bytes per MUT second
+
+  Productivity  70.8% of total user, 66.5% of total elapsed
+

@@ -1,0 +1,73 @@
+	Tue Mar  6 19:59 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-p3-whnf +RTS -p -RTS
+
+	total time  =        2.57 secs   (2569 ticks @ 1000 us, 1 processor)
+	total alloc = 2,339,796,768 bytes  (excludes profiling overheads)
+
+COST CENTRE            MODULE                     %time %alloc
+
+p_headers.fieldChar    Parsing.Bench.Parsec3.HTTP  22.3   18.8
+notEOL                 Parsing.Bench.Parsec3.HTTP  15.8   12.3
+crlf                   Parsing.Bench.Parsec3.HTTP  14.6   12.8
+p_headers.header       Parsing.Bench.Parsec3.HTTP  14.0   12.8
+p_headers.fieldName    Parsing.Bench.Parsec3.HTTP  12.0   13.5
+p_headers.contents     Parsing.Bench.Parsec3.HTTP  11.2    9.1
+main                   Main                         5.4   17.1
+p_headers.continuation Parsing.Bench.Parsec3.HTTP   3.2    2.8
+p_headers              Parsing.Bench.Parsec3.HTTP   1.2    0.0
+
+
+                                                                                 individual     inherited
+COST CENTRE                       MODULE                       no.     entries  %time %alloc   %time %alloc
+
+MAIN                              MAIN                          78           0    0.0    0.0   100.0  100.0
+ main                             Main                         157           0    5.4   17.1   100.0  100.0
+  run                             Parsing.Bench.Parsec3.HTTP   161           0    0.0    0.0    94.6   82.9
+   run'                           Parsing.Bench.Parsec3.Base   162           0    0.0    0.0    94.6   82.9
+    pHTTP                         Parsing.Bench.Parsec3.HTTP   164           0    0.4    0.7    94.6   82.9
+     pHTTP.url                    Parsing.Bench.Parsec3.HTTP   170           0    0.0    0.0    94.2   82.2
+      notEOL                      Parsing.Bench.Parsec3.HTTP   172           0   15.8   12.3    94.2   82.2
+       crlf                       Parsing.Bench.Parsec3.HTTP   174           0   14.6   12.8    78.4   69.9
+        pHTTP.q                   Parsing.Bench.Parsec3.HTTP   175           0    0.0    0.0    63.8   57.1
+         p_headers                Parsing.Bench.Parsec3.HTTP   177           0    1.2    0.0    63.8   57.1
+          p_headers.continuation  Parsing.Bench.Parsec3.HTTP   191           0    3.2    2.8     6.8    5.9
+           p_headers.contents     Parsing.Bench.Parsec3.HTTP   192           0    0.4    0.6     3.7    3.1
+            p_headers.header      Parsing.Bench.Parsec3.HTTP   193           0    3.3    2.5     3.3    2.5
+             p_headers.fieldChar  Parsing.Bench.Parsec3.HTTP   194           0    0.0    0.0     0.0    0.0
+              p_headers.fieldName Parsing.Bench.Parsec3.HTTP   195           0    0.0    0.0     0.0    0.0
+          p_headers.contents      Parsing.Bench.Parsec3.HTTP   189           0   10.9    8.5    10.9    8.5
+          p_headers.fieldChar     Parsing.Bench.Parsec3.HTTP   183           0   22.3   18.8    29.3   30.8
+           p_headers.fieldName    Parsing.Bench.Parsec3.HTTP   184           0    5.8   10.3     7.0   12.0
+            p_headers.header      Parsing.Bench.Parsec3.HTTP   185           0    1.2    1.7     1.2    1.7
+          p_headers.fieldName     Parsing.Bench.Parsec3.HTTP   181           0    6.2    3.3     6.2    3.3
+          p_headers.header        Parsing.Bench.Parsec3.HTTP   179           0    9.5    8.6     9.5    8.6
+           p_headers.fieldChar    Parsing.Bench.Parsec3.HTTP   186           0    0.0    0.0     0.0    0.0
+            p_headers.fieldName   Parsing.Bench.Parsec3.HTTP   187           0    0.0    0.0     0.0    0.0
+     pHTTP.q                      Parsing.Bench.Parsec3.HTTP   166           0    0.0    0.0     0.0    0.0
+      pHTTP.q.req                 Parsing.Bench.Parsec3.HTTP   168           0    0.0    0.0     0.0    0.0
+  succeeded                       Parsing.Bench.Parsec3.Base   158           1    0.0    0.0     0.0    0.0
+ CAF                              Main                         155           0    0.0    0.0     0.0    0.0
+  main                            Main                         156           1    0.0    0.0     0.0    0.0
+ CAF                              Parsing.Bench.Parsec3.HTTP   154           0    0.0    0.0     0.0    0.0
+  p_headers                       Parsing.Bench.Parsec3.HTTP   176           1    0.0    0.0     0.0    0.0
+   p_headers.continuation         Parsing.Bench.Parsec3.HTTP   190           1    0.0    0.0     0.0    0.0
+   p_headers.contents             Parsing.Bench.Parsec3.HTTP   188           1    0.0    0.0     0.0    0.0
+   p_headers.fieldChar            Parsing.Bench.Parsec3.HTTP   182           1    0.0    0.0     0.0    0.0
+   p_headers.fieldName            Parsing.Bench.Parsec3.HTTP   180           1    0.0    0.0     0.0    0.0
+   p_headers.header               Parsing.Bench.Parsec3.HTTP   178           1    0.0    0.0     0.0    0.0
+  crlf                            Parsing.Bench.Parsec3.HTTP   173           1    0.0    0.0     0.0    0.0
+  notEOL                          Parsing.Bench.Parsec3.HTTP   171           1    0.0    0.0     0.0    0.0
+  pHTTP                           Parsing.Bench.Parsec3.HTTP   163           1    0.0    0.0     0.0    0.0
+   pHTTP.url                      Parsing.Bench.Parsec3.HTTP   169           1    0.0    0.0     0.0    0.0
+   pHTTP.q                        Parsing.Bench.Parsec3.HTTP   165           2    0.0    0.0     0.0    0.0
+    pHTTP.q.req                   Parsing.Bench.Parsec3.HTTP   167           2    0.0    0.0     0.0    0.0
+  run                             Parsing.Bench.Parsec3.HTTP   159           1    0.0    0.0     0.0    0.0
+ CAF                              Parsing.Bench.Parsec3.Base   153           0    0.0    0.0     0.0    0.0
+  run'                            Parsing.Bench.Parsec3.Base   160           1    0.0    0.0     0.0    0.0
+ CAF                              GHC.IO.Handle.FD             125           0    0.0    0.0     0.0    0.0
+ CAF                              GHC.Show                     124           0    0.0    0.0     0.0    0.0
+ CAF                              GHC.Conc.Signal              121           0    0.0    0.0     0.0    0.0
+ CAF                              GHC.IO.Encoding              117           0    0.0    0.0     0.0    0.0
+ CAF                              GHC.IO.Encoding.Iconv        106           0    0.0    0.0     0.0    0.0
+ CAF                              GHC.IO.FD                    105           0    0.0    0.0     0.0    0.0

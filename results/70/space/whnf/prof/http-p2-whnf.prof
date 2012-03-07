@@ -1,0 +1,46 @@
+	Tue Mar  6 21:16 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-p2-whnf +RTS -p -RTS
+
+	total time  =        3.60 secs   (180 ticks @ 20 ms)
+	total alloc = 1,223,829,696 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+p_headers                      Parsing.Bench.Parsec2.HTTP  70.0   66.1
+notEOL                         Parsing.Bench.Parsec2.HTTP  13.3   16.2
+crlf                           Parsing.Bench.Parsec2.HTTP  10.6   10.3
+main                           Main                   6.1    6.6
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 292           3   6.1    6.6     6.1    6.6
+  run                    Parsing.Bench.Parsec2.HTTP                           295           0   0.0    0.0     0.0    0.0
+   run'                  Parsing.Bench.Parsec2.Base                           296           1   0.0    0.0     0.0    0.0
+  succeeded              Parsing.Bench.Parsec2.Base                           294           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 286           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 293           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        284           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             282           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     278           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     223           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            207           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              187           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                181           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      178           1   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.Parsec.Char                   157           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Parsec2.HTTP                           156          55   0.0    0.0    93.9   93.4
+  p_headers              Parsing.Bench.Parsec2.HTTP                           304           2   0.0    0.0     0.0    0.0
+   crlf                  Parsing.Bench.Parsec2.HTTP                           306           3   0.0    0.0     0.0    0.0
+   notEOL                Parsing.Bench.Parsec2.HTTP                           305           0   0.0    0.0     0.0    0.0
+  crlf                   Parsing.Bench.Parsec2.HTTP                           301           0   0.0    0.0     0.0    0.0
+  notEOL                 Parsing.Bench.Parsec2.HTTP                           298           1   0.0    0.0     0.0    0.0
+  pHTTP                  Parsing.Bench.Parsec2.HTTP                           297           2   0.0    0.8    93.9   93.4
+   p_headers             Parsing.Bench.Parsec2.HTTP                           302      112420  70.0   66.1    93.9   92.5
+    notEOL               Parsing.Bench.Parsec2.HTTP                           307           0  13.3   16.2    13.3   16.2
+    crlf                 Parsing.Bench.Parsec2.HTTP                           303      660000  10.6   10.3    10.6   10.3
+   crlf                  Parsing.Bench.Parsec2.HTTP                           300           3   0.0    0.0     0.0    0.0
+   notEOL                Parsing.Bench.Parsec2.HTTP                           299           0   0.0    0.0     0.0    0.0

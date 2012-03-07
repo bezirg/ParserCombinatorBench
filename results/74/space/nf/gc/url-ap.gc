@@ -1,0 +1,25 @@
+./dist/build/url-ap/url-ap +RTS -surl-ap.gc 
+   1,910,018,528 bytes allocated in the heap
+     352,925,152 bytes copied during GC
+      68,013,248 bytes maximum residency (10 sample(s))
+       3,432,888 bytes maximum slop
+             168 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      3709 colls,     0 par    0.56s    0.51s     0.0001s    0.0017s
+  Gen  1        10 colls,     0 par    0.24s    0.43s     0.0429s    0.1825s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    2.24s  (  2.34s elapsed)
+  GC      time    0.79s  (  0.94s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    3.03s  (  3.28s elapsed)
+
+  %GC     time      26.2%  (28.6% elapsed)
+
+  Alloc rate    854,014,759 bytes per MUT second
+
+  Productivity  73.8% of total user, 68.3% of total elapsed
+

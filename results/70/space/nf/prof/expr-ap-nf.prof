@@ -1,0 +1,81 @@
+	Tue Mar  6 21:14 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-ap-nf +RTS -p -RTS
+
+	total time  =        1.48 secs   (74 ticks @ 20 ms)
+	total alloc = 449,123,712 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+pIdent                         Parsing.Bench.Attoparsec.Base  18.9   30.0
+pChainl                        Parsing.Bench.Attoparsec.Base  18.9   14.8
+pLet                           Parsing.Bench.Attoparsec.Expr  13.5    9.1
+e3                             Parsing.Bench.Attoparsec.Expr  10.8   10.6
+main                           Main                  10.8   14.0
+pParens                        Parsing.Bench.Attoparsec.Base   8.1    5.7
+op1                            Parsing.Bench.Attoparsec.Expr   5.4    8.5
+e2                             Parsing.Bench.Attoparsec.Expr   5.4    1.8
+op2                            Parsing.Bench.Attoparsec.Expr   4.1    4.2
+e1                             Parsing.Bench.Attoparsec.Expr   2.7    1.3
+readTextDevice                 Data.Text.IO.Internal   1.4    0.0
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 360           2  10.8   14.0    12.2   14.0
+  run                    Parsing.Bench.Attoparsec.Expr                        363           1   0.0    0.0     0.0    0.0
+   run'                  Parsing.Bench.Attoparsec.Base                        364           1   0.0    0.0     0.0    0.0
+    pExpr                Parsing.Bench.Attoparsec.Expr                        365           1   0.0    0.0     0.0    0.0
+     e1                  Parsing.Bench.Attoparsec.Expr                        366           1   0.0    0.0     0.0    0.0
+  readTextDevice         Data.Text.IO.Internal                                362         338   1.4    0.0     1.4    0.0
+ CAF                     Main                                                 354           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 361           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        352           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     346           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     291           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            275           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              255           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                249           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      246           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Attoparsec.Expr                        241          14   0.0    0.0    87.8   86.0
+  pLet                   Parsing.Bench.Attoparsec.Expr                        375      110886  13.5    9.1    87.8   85.9
+   e1                    Parsing.Bench.Attoparsec.Expr                        380       55443   2.7    1.3    70.3   67.2
+    pChainl              Parsing.Bench.Attoparsec.Base                        381           0  18.9   14.8    67.6   66.0
+     op1                 Parsing.Bench.Attoparsec.Expr                        397      222142   5.4    8.5     5.4    8.5
+     op2                 Parsing.Bench.Attoparsec.Expr                        396      177474   4.1    4.2     4.1    4.2
+     e3                  Parsing.Bench.Attoparsec.Expr                        383      177476  10.8   10.6    33.8   36.7
+      pIdent             Parsing.Bench.Attoparsec.Base                        385       89182  14.9   20.4    14.9   20.4
+      pParens            Parsing.Bench.Attoparsec.Base                        384       88738   8.1    5.7     8.1    5.7
+     e2                  Parsing.Bench.Attoparsec.Expr                        382       77703   5.4    1.8     5.4    1.8
+   pIdent                Parsing.Bench.Attoparsec.Base                        379       33380   4.1    9.6     4.1    9.6
+   e2                    Parsing.Bench.Attoparsec.Expr                        376           0   0.0    0.0     0.0    0.0
+    e1                   Parsing.Bench.Attoparsec.Expr                        404           0   0.0    0.0     0.0    0.0
+     pChainl             Parsing.Bench.Attoparsec.Base                        405           0   0.0    0.0     0.0    0.0
+      op1                Parsing.Bench.Attoparsec.Expr                        406           3   0.0    0.0     0.0    0.0
+    pChainl              Parsing.Bench.Attoparsec.Base                        377           0   0.0    0.0     0.0    0.0
+     e1                  Parsing.Bench.Attoparsec.Expr                        403           0   0.0    0.0     0.0    0.0
+     op2                 Parsing.Bench.Attoparsec.Expr                        402           2   0.0    0.0     0.0    0.0
+     e3                  Parsing.Bench.Attoparsec.Expr                        378           0   0.0    0.0     0.0    0.0
+  e2                     Parsing.Bench.Attoparsec.Expr                        370           0   0.0    0.0     0.0    0.0
+   pLet                  Parsing.Bench.Attoparsec.Expr                        389           0   0.0    0.0     0.0    0.0
+    e1                   Parsing.Bench.Attoparsec.Expr                        390           0   0.0    0.0     0.0    0.0
+     pChainl             Parsing.Bench.Attoparsec.Base                        391           0   0.0    0.0     0.0    0.0
+   pChainl               Parsing.Bench.Attoparsec.Base                        371           1   0.0    0.0     0.0    0.0
+    pLet                 Parsing.Bench.Attoparsec.Expr                        387           0   0.0    0.0     0.0    0.0
+     e1                  Parsing.Bench.Attoparsec.Expr                        388           0   0.0    0.0     0.0    0.0
+    op2                  Parsing.Bench.Attoparsec.Expr                        386           2   0.0    0.0     0.0    0.0
+    e3                   Parsing.Bench.Attoparsec.Expr                        372           2   0.0    0.0     0.0    0.0
+     pLet                Parsing.Bench.Attoparsec.Expr                        374           2   0.0    0.0     0.0    0.0
+     pParens             Parsing.Bench.Attoparsec.Base                        373           1   0.0    0.0     0.0    0.0
+  e1                     Parsing.Bench.Attoparsec.Expr                        367           0   0.0    0.0     0.0    0.0
+   pLet                  Parsing.Bench.Attoparsec.Expr                        395           0   0.0    0.0     0.0    0.0
+   pChainl               Parsing.Bench.Attoparsec.Base                        368           1   0.0    0.0     0.0    0.0
+    pLet                 Parsing.Bench.Attoparsec.Expr                        394           0   0.0    0.0     0.0    0.0
+    op1                  Parsing.Bench.Attoparsec.Expr                        392           3   0.0    0.0     0.0    0.0
+    e2                   Parsing.Bench.Attoparsec.Expr                        369           1   0.0    0.0     0.0    0.0
+     pLet                Parsing.Bench.Attoparsec.Expr                        393           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Internal                                   222           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Array                                      218           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.AST.Expr                               183           6   0.0    0.0     0.0    0.0

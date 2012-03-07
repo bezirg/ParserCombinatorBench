@@ -1,0 +1,24 @@
+./dist/build/css-pp-nf/css-pp-nf +RTS -scss-pp-nf.gc 
+   1,822,870,272 bytes allocated in the heap
+   1,095,248,432 bytes copied during GC
+     168,897,984 bytes maximum residency (12 sample(s))
+       1,991,536 bytes maximum slop
+             413 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3461 collections,     0 parallel,  3.00s,  3.00s elapsed
+  Generation 1:    12 collections,     0 parallel,  1.34s,  1.34s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    3.74s  (  3.74s elapsed)
+  GC    time    4.33s  (  4.33s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    8.08s  (  8.08s elapsed)
+
+  %GC time      53.6%  (53.6% elapsed)
+
+  Alloc rate    486,688,345 bytes per MUT second
+
+  Productivity  46.3% of total user, 46.3% of total elapsed
+

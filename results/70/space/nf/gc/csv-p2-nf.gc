@@ -1,0 +1,24 @@
+./dist/build/csv-p2-nf/csv-p2-nf +RTS -scsv-p2-nf.gc 
+     591,503,960 bytes allocated in the heap
+     154,386,064 bytes copied during GC
+      18,512,984 bytes maximum residency (11 sample(s))
+         546,880 bytes maximum slop
+              50 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1117 collections,     0 parallel,  0.17s,  0.17s elapsed
+  Generation 1:    11 collections,     0 parallel,  0.17s,  0.17s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    0.83s  (  0.83s elapsed)
+  GC    time    0.34s  (  0.34s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    1.17s  (  1.17s elapsed)
+
+  %GC time      29.4%  (29.4% elapsed)
+
+  Alloc rate    714,945,784 bytes per MUT second
+
+  Productivity  70.5% of total user, 70.6% of total elapsed
+

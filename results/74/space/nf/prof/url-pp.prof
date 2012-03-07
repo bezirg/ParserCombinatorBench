@@ -1,0 +1,66 @@
+	Tue Mar  6 17:55 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-pp +RTS -p -RTS
+
+	total time  =        2.09 secs   (2087 ticks @ 1000 us, 1 processor)
+	total alloc = 929,531,136 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                       %time %alloc
+
+pAnyOrd     Parsing.Bench.Polyparse.URL   31.7    7.5
+main        Main                          25.3   57.1
+p_pair      Parsing.Bench.Polyparse.URL   20.4   19.1
+option      Parsing.Bench.Polyparse.Base  10.3   10.6
+pURL        Parsing.Bench.Polyparse.URL    4.0    2.0
+p_char      Parsing.Bench.Polyparse.URL    4.0    0.1
+pSym        Parsing.Bench.Polyparse.Base   3.7    3.7
+
+
+                                                                  individual     inherited
+COST CENTRE      MODULE                         no.     entries  %time %alloc   %time %alloc
+
+MAIN             MAIN                            55           0    0.0    0.0   100.0  100.0
+ main            Main                           111           0   25.3   57.1   100.0  100.0
+  run            Parsing.Bench.Polyparse.URL    114           0    0.0    0.0    74.7   42.9
+   pURL          Parsing.Bench.Polyparse.URL    116           0    4.0    2.0    74.7   42.9
+    pSym         Parsing.Bench.Polyparse.Base   138           0    0.8    0.5     0.8    0.5
+    p_pair       Parsing.Bench.Polyparse.URL    118           0   20.4   19.1    70.0   40.4
+     pSym        Parsing.Bench.Polyparse.Base   136           0    0.8    0.6     0.8    0.6
+     optionMaybe Parsing.Bench.Polyparse.Base   133           0    0.3    0.0    24.7   14.2
+      option     Parsing.Bench.Polyparse.Base   134           0   10.3   10.6    24.4   14.2
+       p_char    Parsing.Bench.Polyparse.URL    139           0    1.5    0.0    14.0    3.7
+        p_hex    Parsing.Bench.Polyparse.URL    142           0    0.0    0.0     0.4    0.5
+         pSym    Parsing.Bench.Polyparse.Base   143           0    0.4    0.5     0.4    0.5
+        pSym     Parsing.Bench.Polyparse.Base   141           0    0.5    0.5     0.5    0.5
+        pAnyOrd  Parsing.Bench.Polyparse.URL    140           0   11.5    2.7    11.5    2.7
+     p_char      Parsing.Bench.Polyparse.URL    120           0    2.5    0.1    24.1    6.6
+      p_hex      Parsing.Bench.Polyparse.URL    128           0    0.2    0.0     1.0    0.8
+       pSym      Parsing.Bench.Polyparse.Base   130           0    0.8    0.8     0.8    0.8
+      pSym       Parsing.Bench.Polyparse.Base   126           0    0.4    0.9     0.4    0.9
+      pAnyOrd    Parsing.Bench.Polyparse.URL    122           0   20.2    4.9    20.2    4.9
+ CAF             Main                           109           0    0.0    0.0     0.0    0.0
+  main           Main                           110           1    0.0    0.0     0.0    0.0
+ CAF             Parsing.Bench.Polyparse.URL    108           0    0.0    0.0     0.0    0.0
+  p_hex          Parsing.Bench.Polyparse.URL    127           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   129           1    0.0    0.0     0.0    0.0
+  urlBaseChars   Parsing.Bench.Polyparse.URL    124           1    0.0    0.0     0.0    0.0
+  p_char         Parsing.Bench.Polyparse.URL    119           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   125           1    0.0    0.0     0.0    0.0
+   pAnyOrd       Parsing.Bench.Polyparse.URL    121           1    0.0    0.0     0.0    0.0
+    pAnyOrd.map  Parsing.Bench.Polyparse.URL    123           1    0.0    0.0     0.0    0.0
+  p_pair         Parsing.Bench.Polyparse.URL    117           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   135           1    0.0    0.0     0.0    0.0
+   optionMaybe   Parsing.Bench.Polyparse.Base   131           1    0.0    0.0     0.0    0.0
+    option       Parsing.Bench.Polyparse.Base   132           1    0.0    0.0     0.0    0.0
+  pURL           Parsing.Bench.Polyparse.URL    115           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   137           1    0.0    0.0     0.0    0.0
+  run            Parsing.Bench.Polyparse.URL    112           1    0.0    0.0     0.0    0.0
+ CAF             Parsing.Bench.Polyparse.Base   107           0    0.0    0.0     0.0    0.0
+  run'           Parsing.Bench.Polyparse.Base   113           1    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.Handle.FD               100           0    0.0    0.0     0.0    0.0
+ CAF             GHC.Conc.Signal                 98           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.Encoding                 94           0    0.0    0.0     0.0    0.0
+ CAF             GHC.Show                        91           0    0.0    0.0     0.0    0.0
+ CAF             Data.Either                     88           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.Encoding.Iconv           83           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.FD                       82           0    0.0    0.0     0.0    0.0

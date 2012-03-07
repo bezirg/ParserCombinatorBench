@@ -1,0 +1,190 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-p3 +RTS -p -RTS
+
+	total time  =        1.82 secs   (1817 ticks @ 1000 us, 1 processor)
+	total alloc = 1,322,178,816 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                     %time %alloc
+
+pNatural    Parsing.Bench.Parsec3.Base  35.4   21.1
+pIdent      Parsing.Bench.Parsec3.Base  20.7   23.7
+op1         Parsing.Bench.Parsec3.Expr  10.1   14.4
+op2         Parsing.Bench.Parsec3.Expr   8.7    9.8
+main        Main                         6.1   10.4
+pLet        Parsing.Bench.Parsec3.Expr   5.8    5.3
+pParens     Parsing.Bench.Parsec3.Base   5.7    7.1
+showsPrec   Parsing.Bench.AST.Expr       5.6    4.9
+e3          Parsing.Bench.Parsec3.Expr   0.8    1.4
+e2          Parsing.Bench.Parsec3.Expr   0.6    1.1
+
+
+                                                                     individual     inherited
+COST CENTRE           MODULE                       no.     entries  %time %alloc   %time %alloc
+
+MAIN                  MAIN                          79           0    0.0    0.0   100.0  100.0
+ main                 Main                         159           0    6.1   10.4   100.0  100.0
+  showsPrec           Parsing.Bench.AST.Expr       310       88739    5.6    4.9     5.6    4.9
+  run                 Parsing.Bench.Parsec3.Expr   162           0    0.0    0.0    88.3   84.7
+   run'               Parsing.Bench.Parsec3.Base   163           0    0.0    0.0    88.3   84.7
+    pExpr             Parsing.Bench.Parsec3.Expr   165           0    0.0    0.0    88.3   84.7
+     e1               Parsing.Bench.Parsec3.Expr   167           0    0.4    0.8    88.3   84.7
+      e2              Parsing.Bench.Parsec3.Expr   169           0    0.6    1.1    87.9   83.9
+       e3             Parsing.Bench.Parsec3.Expr   171           0    0.8    1.4    87.3   82.8
+        pNatural      Parsing.Bench.Parsec3.Base   182           0   35.4   21.1    42.9   28.7
+         pParens      Parsing.Bench.Parsec3.Base   239           0    0.0    0.0     0.1    0.1
+          pIdent      Parsing.Bench.Parsec3.Base   286           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   287           0    0.0    0.0     0.0    0.0
+            op1       Parsing.Bench.Parsec3.Expr   288           0    0.0    0.0     0.0    0.0
+          pLet        Parsing.Bench.Parsec3.Expr   282           0    0.0    0.0     0.0    0.0
+           pIdent     Parsing.Bench.Parsec3.Base   283           0    0.0    0.0     0.0    0.0
+            op2       Parsing.Bench.Parsec3.Expr   284           0    0.0    0.0     0.0    0.0
+             op1      Parsing.Bench.Parsec3.Expr   285           0    0.0    0.0     0.0    0.0
+          op2         Parsing.Bench.Parsec3.Expr   240           0    0.1    0.0     0.1    0.1
+           op1        Parsing.Bench.Parsec3.Expr   241           0    0.0    0.1     0.0    0.1
+            pIdent    Parsing.Bench.Parsec3.Base   275           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   242           0    0.0    0.0     0.0    0.0
+             pIdent   Parsing.Bench.Parsec3.Base   243           0    0.0    0.0     0.0    0.0
+         pIdent       Parsing.Bench.Parsec3.Base   215           0    0.0    0.0     0.2    0.4
+          op2         Parsing.Bench.Parsec3.Expr   216           0    0.1    0.2     0.2    0.4
+           op1        Parsing.Bench.Parsec3.Expr   217           0    0.1    0.2     0.1    0.2
+            pLet      Parsing.Bench.Parsec3.Expr   280           0    0.0    0.0     0.0    0.0
+            pParens   Parsing.Bench.Parsec3.Base   218           0    0.0    0.0     0.0    0.0
+             pLet     Parsing.Bench.Parsec3.Expr   274           0    0.0    0.0     0.0    0.0
+         op2          Parsing.Bench.Parsec3.Expr   184           0    3.0    2.8     7.2    7.1
+          pParens     Parsing.Bench.Parsec3.Base   233           0    0.0    0.0     0.0    0.0
+           pIdent     Parsing.Bench.Parsec3.Base   301           0    0.0    0.0     0.0    0.0
+           pLet       Parsing.Bench.Parsec3.Expr   268           0    0.0    0.0     0.0    0.0
+            pIdent    Parsing.Bench.Parsec3.Base   269           0    0.0    0.0     0.0    0.0
+             op1      Parsing.Bench.Parsec3.Expr   306           0    0.0    0.0     0.0    0.0
+          pIdent      Parsing.Bench.Parsec3.Base   192           0    0.0    0.0     0.0    0.0
+          op1         Parsing.Bench.Parsec3.Expr   186           0    2.8    3.2     4.2    4.3
+           pLet       Parsing.Bench.Parsec3.Expr   234           0    0.0    0.0     0.1    0.1
+            pIdent    Parsing.Bench.Parsec3.Base   235           0    0.1    0.1     0.1    0.1
+             pParens  Parsing.Bench.Parsec3.Base   236           0    0.0    0.0     0.0    0.0
+           pIdent     Parsing.Bench.Parsec3.Base   230           0    0.4    0.2     0.4    0.2
+            pParens   Parsing.Bench.Parsec3.Base   231           0    0.0    0.0     0.0    0.0
+             pLet     Parsing.Bench.Parsec3.Expr   251           0    0.0    0.0     0.0    0.0
+           pParens    Parsing.Bench.Parsec3.Base   187           0    0.1    0.1     1.0    0.8
+            pIdent    Parsing.Bench.Parsec3.Base   305           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   188           0    0.0    0.0     0.9    0.7
+             pIdent   Parsing.Bench.Parsec3.Base   189           0    0.9    0.7     0.9    0.7
+        pIdent        Parsing.Bench.Parsec3.Base   178           0   11.2   12.9    15.9   20.0
+         op1          Parsing.Bench.Parsec3.Expr   264           0    0.1    0.0     0.1    0.0
+          op2         Parsing.Bench.Parsec3.Expr   291           0    0.0    0.0     0.0    0.0
+           pParens    Parsing.Bench.Parsec3.Base   292           0    0.0    0.0     0.0    0.0
+          pLet        Parsing.Bench.Parsec3.Expr   279           0    0.0    0.0     0.0    0.0
+          pNatural    Parsing.Bench.Parsec3.Base   270           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   271           0    0.0    0.0     0.0    0.0
+          pParens     Parsing.Bench.Parsec3.Base   265           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   278           0    0.0    0.0     0.0    0.0
+           pLet       Parsing.Bench.Parsec3.Expr   272           0    0.0    0.0     0.0    0.0
+         pNatural     Parsing.Bench.Parsec3.Base   198           0    0.0    0.0     0.3    0.4
+          op2         Parsing.Bench.Parsec3.Expr   199           0    0.2    0.2     0.3    0.4
+           op1        Parsing.Bench.Parsec3.Expr   200           0    0.2    0.2     0.2    0.2
+            pLet      Parsing.Bench.Parsec3.Expr   281           0    0.0    0.0     0.0    0.0
+            pParens   Parsing.Bench.Parsec3.Base   201           0    0.0    0.0     0.0    0.0
+             pLet     Parsing.Bench.Parsec3.Expr   244           0    0.0    0.0     0.0    0.0
+         op2          Parsing.Bench.Parsec3.Expr   190           0    2.2    2.9     4.1    6.4
+          pParens     Parsing.Bench.Parsec3.Base   225           0    0.0    0.0     0.0    0.0
+           pNatural   Parsing.Bench.Parsec3.Base   255           0    0.0    0.0     0.0    0.0
+           pLet       Parsing.Bench.Parsec3.Expr   232           0    0.0    0.0     0.0    0.0
+          pNatural    Parsing.Bench.Parsec3.Base   209           0    0.0    0.0     0.0    0.0
+          op1         Parsing.Bench.Parsec3.Expr   191           0    1.9    3.5     1.9    3.5
+           pLet       Parsing.Bench.Parsec3.Expr   228           0    0.0    0.0     0.0    0.0
+           pNatural   Parsing.Bench.Parsec3.Base   224           0    0.0    0.0     0.0    0.0
+           pParens    Parsing.Bench.Parsec3.Base   206           0    0.0    0.1     0.0    0.1
+            pNatural  Parsing.Bench.Parsec3.Base   277           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   210           0    0.0    0.0     0.0    0.0
+         pParens      Parsing.Bench.Parsec3.Base   179           0    0.0    0.0     0.2    0.2
+          pNatural    Parsing.Bench.Parsec3.Base   295           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   296           0    0.0    0.0     0.0    0.0
+            op1       Parsing.Bench.Parsec3.Expr   297           0    0.0    0.0     0.0    0.0
+          op2         Parsing.Bench.Parsec3.Expr   252           0    0.1    0.0     0.1    0.1
+           op1        Parsing.Bench.Parsec3.Expr   253           0    0.0    0.1     0.0    0.1
+            pNatural  Parsing.Bench.Parsec3.Base   294           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   267           0    0.0    0.0     0.0    0.0
+          pLet        Parsing.Bench.Parsec3.Expr   180           0    0.1    0.1     0.1    0.1
+        pParens       Parsing.Bench.Parsec3.Base   173           0    5.6    6.9    27.7   32.7
+         pIdent       Parsing.Bench.Parsec3.Base   202           0    0.0    0.0     0.2    0.3
+          op1         Parsing.Bench.Parsec3.Expr   266           0    0.0    0.0     0.0    0.0
+           pLet       Parsing.Bench.Parsec3.Expr   302           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   293           0    0.0    0.0     0.0    0.0
+            pNatural  Parsing.Bench.Parsec3.Base   307           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   304           0    0.0    0.0     0.0    0.0
+           pNatural   Parsing.Bench.Parsec3.Base   289           0    0.0    0.0     0.0    0.0
+            op2       Parsing.Bench.Parsec3.Expr   290           0    0.0    0.0     0.0    0.0
+          pLet        Parsing.Bench.Parsec3.Expr   250           0    0.0    0.0     0.0    0.0
+          op2         Parsing.Bench.Parsec3.Expr   207           0    0.1    0.1     0.2    0.3
+           pLet       Parsing.Bench.Parsec3.Expr   308           0    0.0    0.0     0.0    0.0
+           pNatural   Parsing.Bench.Parsec3.Base   249           0    0.0    0.0     0.0    0.0
+           op1        Parsing.Bench.Parsec3.Expr   208           0    0.1    0.2     0.1    0.2
+            pNatural  Parsing.Bench.Parsec3.Base   257           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   248           0    0.0    0.0     0.0    0.0
+          pNatural    Parsing.Bench.Parsec3.Base   203           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   204           0    0.0    0.0     0.0    0.0
+            op1       Parsing.Bench.Parsec3.Expr   205           0    0.0    0.0     0.0    0.0
+         op2          Parsing.Bench.Parsec3.Expr   196           0    2.5    3.2     8.9   11.7
+          pLet        Parsing.Bench.Parsec3.Expr   262           0    0.0    0.0     0.0    0.0
+           pIdent     Parsing.Bench.Parsec3.Base   263           0    0.0    0.0     0.0    0.0
+            op1       Parsing.Bench.Parsec3.Expr   276           0    0.0    0.0     0.0    0.0
+             pNatural Parsing.Bench.Parsec3.Base   303           0    0.0    0.0     0.0    0.0
+          pIdent      Parsing.Bench.Parsec3.Base   254           0    0.0    0.0     0.0    0.0
+          pNatural    Parsing.Bench.Parsec3.Base   211           0    0.0    0.0     0.0    0.0
+          op1         Parsing.Bench.Parsec3.Expr   197           0    4.1    5.9     6.4    8.5
+           pIdent     Parsing.Bench.Parsec3.Base   226           0    0.6    0.8     0.6    0.8
+            pNatural  Parsing.Bench.Parsec3.Base   256           0    0.0    0.0     0.0    0.0
+            pLet      Parsing.Bench.Parsec3.Expr   227           0    0.0    0.0     0.0    0.0
+           pLet       Parsing.Bench.Parsec3.Expr   222           0    0.0    0.0     1.7    1.8
+            pIdent    Parsing.Bench.Parsec3.Base   223           0    1.7    1.8     1.7    1.8
+             pNatural Parsing.Bench.Parsec3.Base   247           0    0.0    0.0     0.0    0.0
+           pNatural   Parsing.Bench.Parsec3.Base   212           0    0.0    0.0     0.0    0.0
+         pNatural     Parsing.Bench.Parsec3.Base   193           0    0.0    0.0     0.3    0.3
+          pIdent      Parsing.Bench.Parsec3.Base   219           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   220           0    0.0    0.0     0.0    0.0
+            op1       Parsing.Bench.Parsec3.Expr   221           0    0.0    0.0     0.0    0.0
+          op2         Parsing.Bench.Parsec3.Expr   194           0    0.1    0.1     0.3    0.3
+           op1        Parsing.Bench.Parsec3.Expr   195           0    0.2    0.2     0.3    0.3
+            pLet      Parsing.Bench.Parsec3.Expr   237           0    0.0    0.0     0.0    0.0
+             pIdent   Parsing.Bench.Parsec3.Base   238           0    0.0    0.0     0.0    0.0
+            pIdent    Parsing.Bench.Parsec3.Base   229           0    0.1    0.0     0.1    0.0
+             pLet     Parsing.Bench.Parsec3.Expr   273           0    0.0    0.0     0.0    0.0
+         pLet         Parsing.Bench.Parsec3.Expr   175           0    5.7    5.2    12.6   13.4
+          pIdent      Parsing.Bench.Parsec3.Base   177           0    5.8    7.0     6.9    8.2
+           pNatural   Parsing.Bench.Parsec3.Base   298           0    0.0    0.0     0.0    0.0
+            op2       Parsing.Bench.Parsec3.Expr   299           0    0.0    0.0     0.0    0.0
+             op1      Parsing.Bench.Parsec3.Expr   300           0    0.0    0.0     0.0    0.0
+           op1        Parsing.Bench.Parsec3.Expr   258           0    0.0    0.0     0.1    0.1
+            pNatural  Parsing.Bench.Parsec3.Base   260           0    0.0    0.0     0.0    0.0
+             op2      Parsing.Bench.Parsec3.Expr   261           0    0.0    0.0     0.0    0.0
+            op2       Parsing.Bench.Parsec3.Expr   259           0    0.1    0.0     0.1    0.0
+             pNatural Parsing.Bench.Parsec3.Base   309           0    0.0    0.0     0.0    0.0
+           op2        Parsing.Bench.Parsec3.Expr   213           0    0.3    0.3     1.0    1.1
+            pNatural  Parsing.Bench.Parsec3.Base   246           0    0.0    0.0     0.0    0.0
+            op1       Parsing.Bench.Parsec3.Expr   214           0    0.7    0.8     0.7    0.8
+             pNatural Parsing.Bench.Parsec3.Base   245           0    0.0    0.0     0.0    0.0
+ CAF                  Main                         157           0    0.0    0.0     0.0    0.0
+  main                Main                         158           1    0.0    0.0     0.0    0.0
+ CAF                  Parsing.Bench.Parsec3.Expr   156           0    0.0    0.0     0.0    0.0
+  op1                 Parsing.Bench.Parsec3.Expr   185           1    0.0    0.0     0.0    0.0
+  op2                 Parsing.Bench.Parsec3.Expr   183           1    0.0    0.0     0.0    0.0
+  pLet                Parsing.Bench.Parsec3.Expr   174           1    0.0    0.0     0.0    0.0
+  e3                  Parsing.Bench.Parsec3.Expr   170           1    0.0    0.0     0.0    0.0
+   pParens            Parsing.Bench.Parsec3.Base   172           1    0.0    0.0     0.0    0.0
+  e2                  Parsing.Bench.Parsec3.Expr   168           1    0.0    0.0     0.0    0.0
+  e1                  Parsing.Bench.Parsec3.Expr   166           1    0.0    0.0     0.0    0.0
+  pExpr               Parsing.Bench.Parsec3.Expr   164           1    0.0    0.0     0.0    0.0
+  run                 Parsing.Bench.Parsec3.Expr   160           1    0.0    0.0     0.0    0.0
+ CAF                  Parsing.Bench.AST.Expr       155           0    0.0    0.0     0.0    0.0
+  showsPrec           Parsing.Bench.AST.Expr       311           0    0.0    0.0     0.0    0.0
+ CAF                  Parsing.Bench.Parsec3.Base   154           0    0.0    0.0     0.0    0.0
+  pNatural            Parsing.Bench.Parsec3.Base   181           1    0.0    0.0     0.0    0.0
+  pIdent              Parsing.Bench.Parsec3.Base   176           1    0.0    0.0     0.0    0.0
+  run'                Parsing.Bench.Parsec3.Base   161           1    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Handle.FD             127           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.Conc.Signal              123           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding              119           0    0.0    0.0     0.0    0.0
+ CAF                  Data.Either                  113           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding.Iconv        107           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.FD                    106           0    0.0    0.0     0.0    0.0
+ CAF                  Text.Read.Lex                104           0    0.0    0.0     0.0    0.0

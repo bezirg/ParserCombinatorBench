@@ -1,0 +1,50 @@
+	Tue Mar  6 19:59 2012 Time and Allocation Profiling Report  (Final)
+
+	   css-ap-whnf +RTS -p -RTS
+
+	total time  =        1.05 secs   (1048 ticks @ 1000 us, 1 processor)
+	total alloc = 747,180,168 bytes  (excludes profiling overheads)
+
+COST CENTRE    MODULE                       %time %alloc
+
+attrParser     Parsing.Bench.Attoparsec.CSS  42.7   22.7
+skipWS         Parsing.Bench.Attoparsec.CSS  32.3   29.1
+main           Main                          12.7    6.8
+readTextDevice Data.Text.IO.Internal          9.1   38.2
+attrsParser.go Parsing.Bench.Attoparsec.CSS   2.3    2.2
+blockParser    Parsing.Bench.Attoparsec.CSS   0.8    1.0
+
+
+                                                                        individual     inherited
+COST CENTRE           MODULE                          no.     entries  %time %alloc   %time %alloc
+
+MAIN                  MAIN                             78           0    0.0    0.0   100.0  100.0
+ main                 Main                            157           0   12.7    6.8   100.0  100.0
+  run                 Parsing.Bench.Attoparsec.CSS    161           0    0.0    0.0    78.2   55.1
+   run'               Parsing.Bench.Attoparsec.Base   162           1    0.0    0.0    78.2   55.1
+    blockParser       Parsing.Bench.Attoparsec.CSS    166           0    0.8    1.0    78.2   55.1
+     skipWS           Parsing.Bench.Attoparsec.CSS    168           0   32.3   29.1    77.5   54.1
+      attrsParser     Parsing.Bench.Attoparsec.CSS    171           0    0.3    0.0    45.2   24.9
+       attrsParser.go Parsing.Bench.Attoparsec.CSS    172       54692    2.3    2.2    44.9   24.9
+        attrParser    Parsing.Bench.Attoparsec.CSS    174           0   42.7   22.7    42.7   22.7
+  succeeded           Parsing.Bench.Attoparsec.Base   159           1    0.0    0.0     0.0    0.0
+  readTextDevice      Data.Text.IO.Internal           158         881    9.1   38.2     9.1   38.2
+ CAF                  Main                            155           0    0.0    0.0     0.0    0.0
+  main                Main                            156           1    0.0    0.0     0.0    0.0
+ CAF                  Parsing.Bench.Attoparsec.CSS    154           0    0.0    0.0     0.0    0.0
+  attrParser          Parsing.Bench.Attoparsec.CSS    173           1    0.0    0.0     0.0    0.0
+  attrsParser         Parsing.Bench.Attoparsec.CSS    169           1    0.0    0.0     0.0    0.0
+   attrsParser.go     Parsing.Bench.Attoparsec.CSS    170           1    0.0    0.0     0.0    0.0
+  skipWS              Parsing.Bench.Attoparsec.CSS    167           1    0.0    0.0     0.0    0.0
+  blockParser         Parsing.Bench.Attoparsec.CSS    165           1    0.0    0.0     0.0    0.0
+  blocksParser        Parsing.Bench.Attoparsec.CSS    164           1    0.0    0.0     0.0    0.0
+  pCSS                Parsing.Bench.Attoparsec.CSS    163           1    0.0    0.0     0.0    0.0
+  run                 Parsing.Bench.Attoparsec.CSS    160           1    0.0    0.0     0.0    0.0
+ CAF                  Data.Text.Array                 144           0    0.0    0.0     0.0    0.0
+ CAF                  Data.Text.Internal              142           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Handle.FD                124           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.Show                        121           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.Conc.Signal                 117           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding                 112           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding.Iconv           102           0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.FD                       101           0    0.0    0.0     0.0    0.0

@@ -1,0 +1,24 @@
+./dist/build/json-u1-nf/json-u1-nf +RTS -sjson-u1-nf.gc 
+     862,216,672 bytes allocated in the heap
+     521,357,696 bytes copied during GC
+      60,018,656 bytes maximum residency (14 sample(s))
+       1,687,848 bytes maximum slop
+             172 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1631 collections,     0 parallel,  0.66s,  0.66s elapsed
+  Generation 1:    14 collections,     0 parallel,  0.73s,  0.73s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.12s  (  2.12s elapsed)
+  GC    time    1.39s  (  1.39s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.51s  (  3.50s elapsed)
+
+  %GC time      39.6%  (39.6% elapsed)
+
+  Alloc rate    407,172,112 bytes per MUT second
+
+  Productivity  60.3% of total user, 60.4% of total elapsed
+

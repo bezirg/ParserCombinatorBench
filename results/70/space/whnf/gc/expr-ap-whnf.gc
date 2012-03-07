@@ -1,0 +1,24 @@
+./dist/build/expr-ap-whnf/expr-ap-whnf +RTS -sexpr-ap-whnf.gc 
+     635,937,168 bytes allocated in the heap
+     140,236,136 bytes copied during GC
+      32,239,944 bytes maximum residency (7 sample(s))
+       1,157,824 bytes maximum slop
+              64 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1201 collections,     0 parallel,  0.22s,  0.22s elapsed
+  Generation 1:     7 collections,     0 parallel,  0.18s,  0.18s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.26s  (  1.26s elapsed)
+  GC    time    0.40s  (  0.40s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    1.66s  (  1.66s elapsed)
+
+  %GC time      24.1%  (24.1% elapsed)
+
+  Alloc rate    504,703,626 bytes per MUT second
+
+  Productivity  75.8% of total user, 75.8% of total elapsed
+

@@ -1,0 +1,58 @@
+	Tue Mar  6 20:01 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-u2-whnf +RTS -p -RTS
+
+	total time  =        3.37 secs   (3365 ticks @ 1000 us, 1 processor)
+	total alloc = 2,292,944,296 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                 %time %alloc
+
+pAnyOrd     Parsing.Bench.UU2.URL   30.6   26.4
+p_char      Parsing.Bench.UU2.URL   30.3   25.2
+p_hex       Parsing.Bench.UU2.URL   17.5   26.5
+p_pair      Parsing.Bench.UU2.URL   13.0    5.3
+main        Main                     3.8   14.1
+pURL        Parsing.Bench.UU2.URL    2.8    2.0
+optionMaybe Parsing.Bench.UU2.Base   1.6    0.5
+
+
+                                                                       individual     inherited
+COST CENTRE        MODULE                            no.     entries  %time %alloc   %time %alloc
+
+MAIN               MAIN                               61           0    0.0    0.0   100.0  100.0
+ main              Main                              123           0    3.8   14.1   100.0  100.0
+  run              Parsing.Bench.UU2.URL             127           0    0.5    0.0    96.2   85.9
+   pURL            Parsing.Bench.UU2.URL             134           0    2.8    2.0    95.7   85.9
+    p_pair         Parsing.Bench.UU2.URL             135           0   12.9    5.3    93.0   83.9
+     optionMaybe   Parsing.Bench.UU2.Base            144           0    0.8    0.1     0.9    0.2
+      p_char       Parsing.Bench.UU2.URL             145           0    0.0    0.0     0.1    0.1
+       pAnyOrd     Parsing.Bench.UU2.URL             146           0    0.1    0.1     0.1    0.1
+     p_char        Parsing.Bench.UU2.URL             136           0   30.3   25.2    79.1   78.4
+      p_hex        Parsing.Bench.UU2.URL             142           0   17.5   26.5    17.5   26.5
+      pAnyOrd      Parsing.Bench.UU2.URL             137           0   30.5   26.2    31.4   26.7
+       optionMaybe Parsing.Bench.UU2.Base            147           0    0.8    0.4     0.8    0.4
+  succeeded        Parsing.Bench.UU2.Base            124           1    0.0    0.0     0.0    0.0
+ CAF               Main                              121           0    0.0    0.0     0.0    0.0
+  main             Main                              122           1    0.0    0.0     0.0    0.0
+ CAF               Parsing.Bench.UU2.URL             120           0    0.0    0.0     0.0    0.0
+  urlBaseChars     Parsing.Bench.UU2.URL             141           1    0.0    0.0     0.0    0.0
+  p_char           Parsing.Bench.UU2.URL             138           0    0.0    0.0     0.0    0.0
+   pAnyOrd         Parsing.Bench.UU2.URL             139           0    0.0    0.0     0.0    0.0
+    pAnyOrd.map    Parsing.Bench.UU2.URL             140           1    0.0    0.0     0.0    0.0
+  run              Parsing.Bench.UU2.URL             125           1    0.0    0.0     0.0    0.0
+   pURL            Parsing.Bench.UU2.URL             128           1    0.0    0.0     0.0    0.0
+    p_pair         Parsing.Bench.UU2.URL             129           1    0.0    0.0     0.0    0.0
+     optionMaybe   Parsing.Bench.UU2.Base            143           1    0.0    0.0     0.0    0.0
+     p_char        Parsing.Bench.UU2.URL             130           2    0.0    0.0     0.0    0.0
+      p_hex        Parsing.Bench.UU2.URL             132           2    0.0    0.0     0.0    0.0
+       hexDigit    Parsing.Bench.UU2.Base            133           2    0.0    0.0     0.0    0.0
+      pAnyOrd      Parsing.Bench.UU2.URL             131           2    0.0    0.0     0.0    0.0
+ CAF               Parsing.Bench.UU2.Base            119           0    0.0    0.0     0.0    0.0
+  run'             Parsing.Bench.UU2.Base            126           1    0.0    0.0     0.0    0.0
+ CAF               Text.ParserCombinators.UU.Utils   115           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Handle.FD                  109           0    0.0    0.0     0.0    0.0
+ CAF               GHC.Show                          107           0    0.0    0.0     0.0    0.0
+ CAF               GHC.Conc.Signal                   104           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Encoding                   101           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.Encoding.Iconv              89           0    0.0    0.0     0.0    0.0
+ CAF               GHC.IO.FD                          88           0    0.0    0.0     0.0    0.0

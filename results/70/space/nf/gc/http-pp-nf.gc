@@ -1,0 +1,24 @@
+./dist/build/http-pp-nf/http-pp-nf +RTS -shttp-pp-nf.gc 
+   1,990,327,984 bytes allocated in the heap
+   1,603,170,928 bytes copied during GC
+     322,433,184 bytes maximum residency (11 sample(s))
+      11,775,512 bytes maximum slop
+             633 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3749 collections,     0 parallel, 11.87s, 11.87s elapsed
+  Generation 1:    11 collections,     0 parallel,  2.05s,  2.05s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    8.97s  (  8.97s elapsed)
+  GC    time   13.92s  ( 13.92s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time   22.89s  ( 22.90s elapsed)
+
+  %GC time      60.8%  (60.8% elapsed)
+
+  Alloc rate    221,813,882 bytes per MUT second
+
+  Productivity  39.2% of total user, 39.2% of total elapsed
+

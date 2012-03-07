@@ -1,0 +1,24 @@
+./dist/build/json-pp-whnf/json-pp-whnf +RTS -sjson-pp-whnf.gc 
+     734,818,024 bytes allocated in the heap
+     410,537,936 bytes copied during GC
+      81,597,112 bytes maximum residency (8 sample(s))
+       1,205,400 bytes maximum slop
+             161 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1394 collections,     0 parallel,  0.45s,  0.45s elapsed
+  Generation 1:     8 collections,     0 parallel,  0.49s,  0.49s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.21s  (  1.21s elapsed)
+  GC    time    0.94s  (  0.94s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    2.16s  (  2.15s elapsed)
+
+  %GC time      43.8%  (43.8% elapsed)
+
+  Alloc rate    606,667,919 bytes per MUT second
+
+  Productivity  56.1% of total user, 56.1% of total elapsed
+

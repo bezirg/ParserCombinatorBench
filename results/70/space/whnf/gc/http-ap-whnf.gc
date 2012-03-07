@@ -1,0 +1,24 @@
+./dist/build/http-ap-whnf/http-ap-whnf +RTS -shttp-ap-whnf.gc 
+   1,516,658,200 bytes allocated in the heap
+     300,012,392 bytes copied during GC
+      68,972,440 bytes maximum residency (8 sample(s))
+       3,250,960 bytes maximum slop
+             132 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  2874 collections,     0 parallel,  0.44s,  0.44s elapsed
+  Generation 1:     8 collections,     0 parallel,  0.32s,  0.32s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.52s  (  2.52s elapsed)
+  GC    time    0.76s  (  0.76s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.28s  (  3.29s elapsed)
+
+  %GC time      23.2%  (23.2% elapsed)
+
+  Alloc rate    601,171,458 bytes per MUT second
+
+  Productivity  76.7% of total user, 76.7% of total elapsed
+

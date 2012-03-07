@@ -1,0 +1,80 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-p2 +RTS -p -RTS
+
+	total time  =        2.02 secs   (2017 ticks @ 1000 us, 1 processor)
+	total alloc = 922,870,480 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                     %time %alloc
+
+pNatural    Parsing.Bench.Parsec2.Base  31.7   24.1
+<*>         Parsing.Bench.Parsec2.Base  17.8   21.0
+pIdent      Parsing.Bench.Parsec2.Base  11.3   10.8
+pLet        Parsing.Bench.Parsec2.Expr   7.0    5.1
+op1         Parsing.Bench.Parsec2.Expr   5.5    4.9
+main        Main                         5.1   14.9
+showsPrec   Parsing.Bench.AST.Expr       4.8    7.1
+e3          Parsing.Bench.Parsec2.Expr   4.7    1.8
+op2         Parsing.Bench.Parsec2.Expr   3.8    2.9
+pParens     Parsing.Bench.Parsec2.Base   2.9    3.0
+e2          Parsing.Bench.Parsec2.Expr   2.9    2.4
+e1          Parsing.Bench.Parsec2.Expr   2.4    1.9
+
+
+                                                               individual     inherited
+COST CENTRE     MODULE                       no.     entries  %time %alloc   %time %alloc
+
+MAIN            MAIN                          59           0    0.0    0.0   100.0  100.0
+ main           Main                         119           0    5.1   14.9   100.0  100.0
+  showsPrec     Parsing.Bench.AST.Expr       159       88739    4.8    7.1     4.8    7.1
+  run           Parsing.Bench.Parsec2.Expr   123           0    0.0    0.0    90.1   78.1
+   run'         Parsing.Bench.Parsec2.Base   124           0    0.0    0.0    90.1   78.1
+    pExpr       Parsing.Bench.Parsec2.Expr   127           0    0.0    0.0    90.1   78.1
+     <*>        Parsing.Bench.Parsec2.Base   128           0   17.8   21.0    90.1   78.1
+      op1       Parsing.Bench.Parsec2.Expr   158           0    5.2    4.9     5.2    4.9
+      op2       Parsing.Bench.Parsec2.Expr   155           0    3.3    2.9     3.3    2.9
+      pNatural  Parsing.Bench.Parsec2.Base   152           0    3.0    3.1     3.0    3.1
+      pIdent    Parsing.Bench.Parsec2.Base   145           0    9.3    9.5     9.3    9.5
+      e3        Parsing.Bench.Parsec2.Expr   136           0    4.2    1.8    45.0   32.2
+       pNatural Parsing.Bench.Parsec2.Base   151           0   28.7   20.9    28.7   20.9
+       pIdent   Parsing.Bench.Parsec2.Base   149           0    1.6    1.0     1.6    1.0
+       pLet     Parsing.Bench.Parsec2.Expr   142           0    7.0    5.1     7.5    5.4
+        e1      Parsing.Bench.Parsec2.Expr   147           0    0.0    0.0     0.0    0.0
+        pIdent  Parsing.Bench.Parsec2.Base   144           0    0.4    0.3     0.4    0.3
+       pParens  Parsing.Bench.Parsec2.Base   139           0    2.9    3.0     2.9    3.0
+        e1      Parsing.Bench.Parsec2.Expr   148           0    0.0    0.0     0.0    0.0
+      e2        Parsing.Bench.Parsec2.Expr   133           0    2.9    2.4     3.8    2.4
+       op2      Parsing.Bench.Parsec2.Expr   154           0    0.5    0.0     0.5    0.0
+       e3       Parsing.Bench.Parsec2.Expr   135           0    0.4    0.0     0.4    0.0
+      e1        Parsing.Bench.Parsec2.Expr   130           0    2.3    1.9     2.7    1.9
+       op1      Parsing.Bench.Parsec2.Expr   157           0    0.3    0.0     0.3    0.0
+       e2       Parsing.Bench.Parsec2.Expr   132           0    0.0    0.0     0.0    0.0
+ CAF            Main                         117           0    0.0    0.0     0.0    0.0
+  main          Main                         118           1    0.0    0.0     0.0    0.0
+ CAF            Parsing.Bench.Parsec2.Expr   116           0    0.0    0.0     0.0    0.0
+  op1           Parsing.Bench.Parsec2.Expr   156           1    0.0    0.0     0.0    0.0
+  op2           Parsing.Bench.Parsec2.Expr   153           1    0.0    0.0     0.0    0.0
+  pLet          Parsing.Bench.Parsec2.Expr   141           1    0.0    0.0     0.0    0.0
+  e3            Parsing.Bench.Parsec2.Expr   134           1    0.0    0.0     0.0    0.0
+   pParens      Parsing.Bench.Parsec2.Base   138           1    0.0    0.0     0.0    0.0
+  e2            Parsing.Bench.Parsec2.Expr   131           1    0.0    0.0     0.0    0.0
+  e1            Parsing.Bench.Parsec2.Expr   129           1    0.0    0.0     0.0    0.0
+  pExpr         Parsing.Bench.Parsec2.Expr   125           1    0.0    0.0     0.0    0.0
+  run           Parsing.Bench.Parsec2.Expr   120           1    0.0    0.0     0.0    0.0
+ CAF            Parsing.Bench.AST.Expr       115           0    0.0    0.0     0.0    0.0
+  showsPrec     Parsing.Bench.AST.Expr       160           0    0.0    0.0     0.0    0.0
+ CAF            Parsing.Bench.Parsec2.Base   114           0    0.0    0.0     0.0    0.0
+  pNatural      Parsing.Bench.Parsec2.Base   150           1    0.0    0.0     0.0    0.0
+  pure          Parsing.Bench.Parsec2.Base   146           1    0.0    0.0     0.0    0.0
+  pIdent        Parsing.Bench.Parsec2.Base   143           1    0.0    0.0     0.0    0.0
+  pParens       Parsing.Bench.Parsec2.Base   140           0    0.0    0.0     0.0    0.0
+  <|>           Parsing.Bench.Parsec2.Base   137           1    0.0    0.0     0.0    0.0
+  <*>           Parsing.Bench.Parsec2.Base   126           1    0.0    0.0     0.0    0.0
+  run'          Parsing.Bench.Parsec2.Base   121           1    0.0    0.0     0.0    0.0
+ CAF            GHC.IO.Handle.FD             106           0    0.0    0.0     0.0    0.0
+ CAF            GHC.Conc.Signal              103           0    0.0    0.0     0.0    0.0
+ CAF            GHC.IO.Encoding               99           0    0.0    0.0     0.0    0.0
+ CAF            Data.Either                   94           0    0.0    0.0     0.0    0.0
+ CAF            GHC.IO.Encoding.Iconv         89           0    0.0    0.0     0.0    0.0
+ CAF            GHC.IO.FD                     88           0    0.0    0.0     0.0    0.0
+ CAF            Text.Read.Lex                 85           0    0.0    0.0     0.0    0.0

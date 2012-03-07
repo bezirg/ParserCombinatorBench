@@ -1,0 +1,25 @@
+./dist/build/json-u1/json-u1 +RTS -sjson-u1.gc 
+     980,099,296 bytes allocated in the heap
+     522,282,136 bytes copied during GC
+      69,285,168 bytes maximum residency (15 sample(s))
+       1,069,248 bytes maximum slop
+             178 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      1898 colls,     0 par    0.63s    0.66s     0.0003s    0.0014s
+  Gen  1        15 colls,     0 par    0.45s    0.72s     0.0477s    0.1752s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    2.54s  (  2.52s elapsed)
+  GC      time    1.08s  (  1.37s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    3.62s  (  3.89s elapsed)
+
+  %GC     time      29.9%  (35.2% elapsed)
+
+  Alloc rate    385,891,540 bytes per MUT second
+
+  Productivity  70.1% of total user, 65.2% of total elapsed
+

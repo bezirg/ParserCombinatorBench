@@ -1,0 +1,25 @@
+./dist/build/expr-ap/expr-ap +RTS -sexpr-ap.gc 
+     810,174,624 bytes allocated in the heap
+     169,443,592 bytes copied during GC
+      25,327,848 bytes maximum residency (11 sample(s))
+       1,776,696 bytes maximum slop
+              61 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      1569 colls,     0 par    0.29s    0.29s     0.0002s    0.0008s
+  Gen  1        11 colls,     0 par    0.13s    0.20s     0.0181s    0.0772s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    0.93s  (  0.95s elapsed)
+  GC      time    0.42s  (  0.49s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    1.35s  (  1.44s elapsed)
+
+  %GC     time      31.1%  (33.8% elapsed)
+
+  Alloc rate    871,216,401 bytes per MUT second
+
+  Productivity  68.9% of total user, 64.5% of total elapsed
+

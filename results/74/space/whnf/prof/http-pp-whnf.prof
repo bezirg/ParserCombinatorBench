@@ -1,0 +1,121 @@
+	Tue Mar  6 20:00 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-pp-whnf +RTS -p -RTS
+
+	total time  =        1.54 secs   (1545 ticks @ 1000 us, 1 processor)
+	total alloc = 961,814,160 bytes  (excludes profiling overheads)
+
+COST CENTRE            MODULE                       %time %alloc
+
+p_headers.contents     Parsing.Bench.Polyparse.HTTP  16.4   16.0
+main                   Main                          12.8   41.6
+pLetter                Parsing.Bench.Polyparse.Base  12.6    4.5
+noneOf                 Parsing.Bench.Polyparse.Base  12.0    3.8
+p_headers.fieldName    Parsing.Bench.Polyparse.HTTP  11.1   14.8
+p_headers              Parsing.Bench.Polyparse.HTTP  10.7    5.9
+pAnySym                Parsing.Bench.Polyparse.Base   7.5    2.7
+pSym                   Parsing.Bench.Polyparse.Base   3.2    1.6
+p_headers.continuation Parsing.Bench.Polyparse.HTTP   3.0    1.8
+spaces                 Parsing.Bench.Polyparse.Base   2.8    3.7
+p_headers.fieldChar    Parsing.Bench.Polyparse.HTTP   2.5    0.0
+crlf                   Parsing.Bench.Polyparse.HTTP   1.7    0.9
+string                 Parsing.Bench.Polyparse.Base   1.4    0.7
+pDigit                 Parsing.Bench.Polyparse.Base   1.2    0.7
+
+
+                                                                              individual     inherited
+COST CENTRE                  MODULE                         no.     entries  %time %alloc   %time %alloc
+
+MAIN                         MAIN                            54           0    0.0    0.0   100.0  100.0
+ main                        Main                           109           0   12.8   41.6   100.0  100.0
+  run                        Parsing.Bench.Polyparse.HTTP   113           0    0.0    0.0    87.2   58.4
+   pHTTP                     Parsing.Bench.Polyparse.HTTP   115           0    0.3    0.4    87.2   58.4
+    anyChar                  Parsing.Bench.Polyparse.Base   190           0    0.2    0.1     0.2    0.1
+    pHTTP.url                Parsing.Bench.Polyparse.HTTP   127           0    0.0    0.0     0.0    0.0
+     crlf                    Parsing.Bench.Polyparse.HTTP   141           0    0.0    0.0     0.0    0.0
+      newline                Parsing.Bench.Polyparse.Base   148           0    0.0    0.0     0.0    0.0
+       pSym                  Parsing.Bench.Polyparse.Base   149           0    0.0    0.0     0.0    0.0
+      string                 Parsing.Bench.Polyparse.Base   143           0    0.0    0.0     0.0    0.0
+       pSym                  Parsing.Bench.Polyparse.Base   145           0    0.0    0.0     0.0    0.0
+     pAnySym                 Parsing.Bench.Polyparse.Base   139           0    0.0    0.0     0.0    0.0
+     notEOL                  Parsing.Bench.Polyparse.HTTP   136           0    0.0    0.0     0.0    0.0
+      noneOf                 Parsing.Bench.Polyparse.Base   137           0    0.0    0.0     0.0    0.0
+     string                  Parsing.Bench.Polyparse.Base   131           0    0.0    0.0     0.0    0.0
+      pSym                   Parsing.Bench.Polyparse.Base   133           0    0.0    0.0     0.0    0.0
+     pSym                    Parsing.Bench.Polyparse.Base   129           0    0.0    0.0     0.0    0.0
+    pHTTP.q                  Parsing.Bench.Polyparse.HTTP   117           0    0.0    0.0    86.8   57.9
+     p_headers               Parsing.Bench.Polyparse.HTTP   151           0   10.7    5.9    86.8   57.9
+      crlf                   Parsing.Bench.Polyparse.HTTP   184           0    0.0    0.0     0.0    0.0
+       newline               Parsing.Bench.Polyparse.Base   187           0    0.0    0.0     0.0    0.0
+        pSym                 Parsing.Bench.Polyparse.Base   188           0    0.0    0.0     0.0    0.0
+       string                Parsing.Bench.Polyparse.Base   185           0    0.0    0.0     0.0    0.0
+        pSym                 Parsing.Bench.Polyparse.Base   186           0    0.0    0.0     0.0    0.0
+      p_headers.continuation Parsing.Bench.Polyparse.HTTP   181           0    3.0    1.8     5.0    2.6
+       pAnySym               Parsing.Bench.Polyparse.Base   183           0    2.1    0.7     2.1    0.7
+      p_headers.contents     Parsing.Bench.Polyparse.HTTP   172           0   16.4   16.0    34.0   22.7
+       crlf                  Parsing.Bench.Polyparse.HTTP   175           0    1.7    0.9     5.6    2.8
+        newline              Parsing.Bench.Polyparse.Base   178           0    0.0    0.0     1.0    0.5
+         pSym                Parsing.Bench.Polyparse.Base   179           0    1.0    0.5     1.0    0.5
+        string               Parsing.Bench.Polyparse.Base   176           0    1.4    0.7     2.8    1.5
+         pSym                Parsing.Bench.Polyparse.Base   177           0    1.4    0.7     1.4    0.7
+       notEOL                Parsing.Bench.Polyparse.HTTP   173           0    0.0    0.0    12.0    3.8
+        noneOf               Parsing.Bench.Polyparse.Base   174           0   12.0    3.8    12.0    3.8
+      spaces                 Parsing.Bench.Polyparse.Base   168           0    2.8    3.7     5.8    4.8
+       pAnySym               Parsing.Bench.Polyparse.Base   170           0    3.0    1.2     3.0    1.2
+      p_headers.fieldChar    Parsing.Bench.Polyparse.HTTP   159           0    2.5    0.0    16.0    5.5
+       pAnySym               Parsing.Bench.Polyparse.Base   164           0    2.5    0.7     2.5    0.7
+       pDigit                Parsing.Bench.Polyparse.Base   162           0    1.2    0.7     1.2    0.7
+       pLetter               Parsing.Bench.Polyparse.Base   160           0    9.8    4.0     9.8    4.0
+      p_headers.fieldName    Parsing.Bench.Polyparse.HTTP   155           0   11.1   14.8    13.9   15.2
+       pLetter               Parsing.Bench.Polyparse.Base   157           0    2.7    0.5     2.7    0.5
+      p_headers.header       Parsing.Bench.Polyparse.HTTP   153           0    0.6    0.6     1.4    1.1
+       pSym                  Parsing.Bench.Polyparse.Base   166           0    0.8    0.5     0.8    0.5
+     pHTTP.q.req             Parsing.Bench.Polyparse.HTTP   119           0    0.0    0.0     0.0    0.0
+      pSym                   Parsing.Bench.Polyparse.Base   125           0    0.0    0.0     0.0    0.0
+      string                 Parsing.Bench.Polyparse.Base   121           0    0.0    0.0     0.0    0.0
+       pSym                  Parsing.Bench.Polyparse.Base   123           0    0.0    0.0     0.0    0.0
+  succeeded                  Parsing.Bench.Polyparse.Base   110           1    0.0    0.0     0.0    0.0
+ CAF                         Main                           107           0    0.0    0.0     0.0    0.0
+  main                       Main                           108           1    0.0    0.0     0.0    0.0
+ CAF                         Parsing.Bench.Polyparse.HTTP   106           0    0.0    0.0     0.0    0.0
+  p_headers                  Parsing.Bench.Polyparse.HTTP   150           1    0.0    0.0     0.0    0.0
+   p_headers.continuation    Parsing.Bench.Polyparse.HTTP   180           1    0.0    0.0     0.0    0.0
+    pAnySym                  Parsing.Bench.Polyparse.Base   182           1    0.0    0.0     0.0    0.0
+   p_headers.contents        Parsing.Bench.Polyparse.HTTP   171           1    0.0    0.0     0.0    0.0
+   p_headers.fieldChar       Parsing.Bench.Polyparse.HTTP   158           1    0.0    0.0     0.0    0.0
+    pAnySym                  Parsing.Bench.Polyparse.Base   163           1    0.0    0.0     0.0    0.0
+   p_headers.fieldName       Parsing.Bench.Polyparse.HTTP   154           1    0.0    0.0     0.0    0.0
+   p_headers.header          Parsing.Bench.Polyparse.HTTP   152           1    0.0    0.0     0.0    0.0
+    pSym                     Parsing.Bench.Polyparse.Base   165           1    0.0    0.0     0.0    0.0
+  crlf                       Parsing.Bench.Polyparse.HTTP   140           1    0.0    0.0     0.0    0.0
+   string                    Parsing.Bench.Polyparse.Base   142           1    0.0    0.0     0.0    0.0
+    pSym                     Parsing.Bench.Polyparse.Base   144           1    0.0    0.0     0.0    0.0
+  notEOL                     Parsing.Bench.Polyparse.HTTP   134           1    0.0    0.0     0.0    0.0
+   noneOf                    Parsing.Bench.Polyparse.Base   135           1    0.0    0.0     0.0    0.0
+  pHTTP                      Parsing.Bench.Polyparse.HTTP   114           1    0.0    0.0     0.0    0.0
+   pHTTP.url                 Parsing.Bench.Polyparse.HTTP   126           1    0.0    0.0     0.0    0.0
+    pAnySym                  Parsing.Bench.Polyparse.Base   138           1    0.0    0.0     0.0    0.0
+    string                   Parsing.Bench.Polyparse.Base   130           9    0.0    0.0     0.0    0.0
+     pSym                    Parsing.Bench.Polyparse.Base   132           8    0.0    0.0     0.0    0.0
+    pSym                     Parsing.Bench.Polyparse.Base   128           1    0.0    0.0     0.0    0.0
+   pHTTP.q                   Parsing.Bench.Polyparse.HTTP   116           2    0.0    0.0     0.0    0.0
+    pHTTP.q.req              Parsing.Bench.Polyparse.HTTP   118           2    0.0    0.0     0.0    0.0
+     pSym                    Parsing.Bench.Polyparse.Base   124           1    0.0    0.0     0.0    0.0
+     string                  Parsing.Bench.Polyparse.Base   120           6    0.0    0.0     0.0    0.0
+      pSym                   Parsing.Bench.Polyparse.Base   122           5    0.0    0.0     0.0    0.0
+  run                        Parsing.Bench.Polyparse.HTTP   111           1    0.0    0.0     0.0    0.0
+ CAF                         Parsing.Bench.Polyparse.Base   105           0    0.0    0.0     0.0    0.0
+  anyChar                    Parsing.Bench.Polyparse.Base   189           1    0.0    0.0     0.0    0.0
+  spaces                     Parsing.Bench.Polyparse.Base   167           1    0.0    0.0     0.0    0.0
+   pAnySym                   Parsing.Bench.Polyparse.Base   169           1    0.0    0.0     0.0    0.0
+  pDigit                     Parsing.Bench.Polyparse.Base   161           1    0.0    0.0     0.0    0.0
+  pLetter                    Parsing.Bench.Polyparse.Base   156           1    0.0    0.0     0.0    0.0
+  newline                    Parsing.Bench.Polyparse.Base   146           1    0.0    0.0     0.0    0.0
+   pSym                      Parsing.Bench.Polyparse.Base   147           1    0.0    0.0     0.0    0.0
+  run'                       Parsing.Bench.Polyparse.Base   112           1    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.Handle.FD                97           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.Show                        96           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.Conc.Signal                 94           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.Encoding                 90           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.Encoding.Iconv           82           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.FD                       81           0    0.0    0.0     0.0    0.0

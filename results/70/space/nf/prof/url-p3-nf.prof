@@ -1,0 +1,47 @@
+	Tue Mar  6 21:15 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-p3-nf +RTS -p -RTS
+
+	total time  =        3.44 secs   (172 ticks @ 20 ms)
+	total alloc = 1,556,095,224 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+p_char                         Parsing.Bench.Parsec3.URL  66.3   47.0
+p_pair                         Parsing.Bench.Parsec3.URL  13.4   24.7
+CAF                            Main                   9.3   13.2
+pURL                           Parsing.Bench.Parsec3.URL   4.7    4.9
+main                           Main                   3.5    4.3
+p_hex                          Parsing.Bench.Parsec3.URL   2.9    5.9
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 348           3   3.5    4.3    90.7   86.8
+  run                    Parsing.Bench.Parsec3.URL                            350           1   0.0    0.0    87.2   82.5
+   run'                  Parsing.Bench.Parsec3.Base                           351           1   0.0    0.0    87.2   82.5
+    pURL                 Parsing.Bench.Parsec3.URL                            352           1   4.7    4.9    87.2   82.5
+     p_pair              Parsing.Bench.Parsec3.URL                            353      183909  13.4   24.7    82.6   77.5
+      p_char             Parsing.Bench.Parsec3.URL                            354     1646077  66.3   47.0    69.2   52.9
+       p_hex             Parsing.Bench.Parsec3.URL                            358      183909   2.9    5.9     2.9    5.9
+ CAF                     Main                                                 342           6   9.3   13.2     9.3   13.2
+  main                   Main                                                 349           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        340           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             338           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     334           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     279           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            263           2   0.0    0.0     0.0    0.0
+ CAF                     Data.Either                                          246           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              243           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                237           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      234           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Parsec3.URL                            229           8   0.0    0.0     0.0    0.0
+  pURL                   Parsing.Bench.Parsec3.URL                            361           0   0.0    0.0     0.0    0.0
+  p_pair                 Parsing.Bench.Parsec3.URL                            360           0   0.0    0.0     0.0    0.0
+  p_hex                  Parsing.Bench.Parsec3.URL                            359           0   0.0    0.0     0.0    0.0
+  p_char                 Parsing.Bench.Parsec3.URL                            357           0   0.0    0.0     0.0    0.0
+  urlBaseChars           Parsing.Bench.Parsec3.URL                            356           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Parsec3.Base                           228           1   0.0    0.0     0.0    0.0
+  run'                   Parsing.Bench.Parsec3.Base                           355           0   0.0    0.0     0.0    0.0

@@ -1,0 +1,127 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   json-ap +RTS -p -RTS
+
+	total time  =        1.02 secs   (1025 ticks @ 1000 us, 1 processor)
+	total alloc = 615,766,584 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                        %time %alloc
+
+noneOf           Parsing.Bench.Attoparsec.Base  17.6   10.5
+between          Parsing.Bench.Attoparsec.Base  14.7   23.9
+showsPrec        Parsing.Bench.AST.JSON         11.1   11.6
+showsPrec        Parsing.Bench.AST.JSON          9.8    4.5
+p_string.jchar   Parsing.Bench.Attoparsec.JSON   9.4    8.2
+p_number         Parsing.Bench.Attoparsec.JSON   9.0    6.8
+main             Main                            7.4    3.2
+p_string         Parsing.Bench.Attoparsec.JSON   6.1    3.9
+readTextDevice   Data.Text.IO.Internal           3.8   17.9
+p_value.value    Parsing.Bench.Attoparsec.JSON   3.2    2.4
+p_value          Parsing.Bench.Attoparsec.JSON   3.1    3.4
+p_series         Parsing.Bench.Attoparsec.JSON   2.0    1.4
+p_object.p_field Parsing.Bench.Attoparsec.JSON   1.2    1.3
+p_bool           Parsing.Bench.Attoparsec.JSON   1.1    0.5
+
+
+                                                                                individual     inherited
+COST CENTRE                   MODULE                          no.     entries  %time %alloc   %time %alloc
+
+MAIN                          MAIN                             79           0    0.0    0.0   100.0  100.0
+ main                         Main                            159           0    7.4    3.2   100.0  100.0
+  showsPrec                   Parsing.Bench.AST.JSON          234       41855    9.8    4.5    21.0   16.4
+   showsPrec                  Parsing.Bench.AST.JSON          240        3097    0.0    0.0     0.0    0.0
+   showsPrec                  Parsing.Bench.AST.JSON          236         107    0.0    0.0    11.2   11.9
+    showList                  Parsing.Bench.AST.JSON          239           0    0.1    0.3    11.2   11.9
+     showsPrec                Parsing.Bench.AST.JSON          241           0   11.1   11.6    11.1   11.6
+  run                         Parsing.Bench.Attoparsec.JSON   162           0    0.0    0.0    67.8   62.4
+   run'                       Parsing.Bench.Attoparsec.Base   163           1    0.0    0.0    67.8   62.4
+    pJSON                     Parsing.Bench.Attoparsec.JSON   165           0    0.0    0.0    67.8   62.4
+     pJSON.text               Parsing.Bench.Attoparsec.JSON   168           0    0.0    0.0    67.8   62.4
+      p_array                 Parsing.Bench.Attoparsec.JSON   176           0    0.0    0.0    67.8   62.4
+       p_series               Parsing.Bench.Attoparsec.JSON   179           0    2.0    1.4    67.8   62.4
+        p_object              Parsing.Bench.Attoparsec.JSON   199           0    0.5    0.0    60.6   57.5
+         p_value              Parsing.Bench.Attoparsec.JSON   232           0    0.3    0.1     0.4    0.3
+          between             Parsing.Bench.Attoparsec.Base   233           0    0.1    0.2     0.1    0.2
+         p_object.p_field     Parsing.Bench.Attoparsec.JSON   200           0    1.2    1.3    59.7   57.2
+          p_string            Parsing.Bench.Attoparsec.JSON   201           0    5.9    3.8    58.5   55.9
+           p_string.jchar     Parsing.Bench.Attoparsec.JSON   204           0    9.4    8.2    51.7   50.1
+            noneOf            Parsing.Bench.Attoparsec.Base   208           0   17.6   10.5    41.3   41.0
+             between          Parsing.Bench.Attoparsec.Base   209           0   11.3   19.7    23.7   30.6
+              p_value         Parsing.Bench.Attoparsec.JSON   210           0    1.8    2.8    12.4   10.9
+               p_value.value  Parsing.Bench.Attoparsec.JSON   211           0    2.2    1.8    10.6    8.1
+                p_number      Parsing.Bench.Attoparsec.JSON   212           0    8.4    6.2     8.4    6.2
+            between           Parsing.Bench.Attoparsec.Base   205           0    1.1    0.8     1.1    0.8
+           between            Parsing.Bench.Attoparsec.Base   202           0    1.0    2.0     1.0    2.0
+        p_value               Parsing.Bench.Attoparsec.JSON   182           0    0.0    0.2     0.9    0.9
+         p_value.value        Parsing.Bench.Attoparsec.JSON   184           0    0.0    0.0     0.9    0.7
+          p_object            Parsing.Bench.Attoparsec.JSON   191           0    0.0    0.0     0.0    0.0
+          p_number            Parsing.Bench.Attoparsec.JSON   190           0    0.6    0.6     0.6    0.6
+          p_string            Parsing.Bench.Attoparsec.JSON   187           0    0.3    0.1     0.3    0.1
+           between            Parsing.Bench.Attoparsec.Base   188           0    0.0    0.0     0.0    0.0
+        between               Parsing.Bench.Attoparsec.Base   180           0    1.3    1.1     4.4    2.5
+         p_value              Parsing.Bench.Attoparsec.JSON   193           0    1.1    0.3     3.1    1.5
+          p_object            Parsing.Bench.Attoparsec.JSON   217           0    0.0    0.0     0.0    0.0
+           p_object.p_field   Parsing.Bench.Attoparsec.JSON   218           0    0.0    0.0     0.0    0.0
+            p_string          Parsing.Bench.Attoparsec.JSON   219           0    0.0    0.0     0.0    0.0
+             p_string.jchar   Parsing.Bench.Attoparsec.JSON   220           0    0.0    0.0     0.0    0.0
+              noneOf          Parsing.Bench.Attoparsec.Base   221           0    0.0    0.0     0.0    0.0
+          p_value.value       Parsing.Bench.Attoparsec.JSON   194           0    1.0    0.6     2.0    1.1
+           p_object           Parsing.Bench.Attoparsec.JSON   227           0    0.0    0.0     0.0    0.0
+            p_object.p_field  Parsing.Bench.Attoparsec.JSON   228           0    0.0    0.0     0.0    0.0
+             p_string         Parsing.Bench.Attoparsec.JSON   229           0    0.0    0.0     0.0    0.0
+              p_string.jchar  Parsing.Bench.Attoparsec.JSON   230           0    0.0    0.0     0.0    0.0
+               noneOf         Parsing.Bench.Attoparsec.Base   231           0    0.0    0.0     0.0    0.0
+           p_bool             Parsing.Bench.Attoparsec.JSON   196           0    1.1    0.5     1.1    0.5
+            p_object          Parsing.Bench.Attoparsec.JSON   222           0    0.0    0.0     0.0    0.0
+             p_object.p_field Parsing.Bench.Attoparsec.JSON   223           0    0.0    0.0     0.0    0.0
+              p_string        Parsing.Bench.Attoparsec.JSON   224           0    0.0    0.0     0.0    0.0
+               p_string.jchar Parsing.Bench.Attoparsec.JSON   225           0    0.0    0.0     0.0    0.0
+                noneOf        Parsing.Bench.Attoparsec.Base   226           0    0.0    0.0     0.0    0.0
+         p_object             Parsing.Bench.Attoparsec.JSON   192           0    0.0    0.0     0.0    0.0
+          p_object.p_field    Parsing.Bench.Attoparsec.JSON   213           0    0.0    0.0     0.0    0.0
+           p_string           Parsing.Bench.Attoparsec.JSON   214           0    0.0    0.0     0.0    0.0
+            p_string.jchar    Parsing.Bench.Attoparsec.JSON   215           0    0.0    0.0     0.0    0.0
+             noneOf           Parsing.Bench.Attoparsec.Base   216           0    0.0    0.0     0.0    0.0
+      p_object                Parsing.Bench.Attoparsec.JSON   170           0    0.0    0.0     0.0    0.0
+       p_series               Parsing.Bench.Attoparsec.JSON   173           0    0.0    0.0     0.0    0.0
+        between               Parsing.Bench.Attoparsec.Base   174           0    0.0    0.0     0.0    0.0
+  readTextDevice              Data.Text.IO.Internal           160         342    3.8   17.9     3.8   17.9
+ CAF                          Main                            157           0    0.0    0.0     0.0    0.0
+  main                        Main                            158           1    0.0    0.0     0.0    0.0
+ CAF                          Parsing.Bench.Attoparsec.JSON   156           0    0.0    0.0     0.0    0.0
+  p_string.jchar              Parsing.Bench.Attoparsec.JSON   203           1    0.0    0.0     0.0    0.0
+  p_bool                      Parsing.Bench.Attoparsec.JSON   195           1    0.0    0.0     0.0    0.0
+   unstream/resize            Data.Text.Fusion                197           1    0.0    0.0     0.0    0.0
+  p_number                    Parsing.Bench.Attoparsec.JSON   189           1    0.0    0.0     0.0    0.0
+  p_string                    Parsing.Bench.Attoparsec.JSON   185           1    0.0    0.0     0.0    0.0
+   p_string.jchar             Parsing.Bench.Attoparsec.JSON   206           0    0.0    0.0     0.0    0.0
+    noneOf                    Parsing.Bench.Attoparsec.Base   207           1    0.0    0.0     0.0    0.0
+   between                    Parsing.Bench.Attoparsec.Base   186           1    0.0    0.0     0.0    0.0
+  p_value                     Parsing.Bench.Attoparsec.JSON   181           1    0.0    0.0     0.0    0.0
+   p_value.value              Parsing.Bench.Attoparsec.JSON   183           1    0.0    0.0     0.0    0.0
+  p_array                     Parsing.Bench.Attoparsec.JSON   175           1    0.0    0.0     0.0    0.0
+   p_series                   Parsing.Bench.Attoparsec.JSON   177           1    0.0    0.0     0.0    0.0
+    between                   Parsing.Bench.Attoparsec.Base   178           1    0.0    0.0     0.0    0.0
+  p_object                    Parsing.Bench.Attoparsec.JSON   169           1    0.0    0.0     0.0    0.0
+   p_object.p_field           Parsing.Bench.Attoparsec.JSON   198           1    0.0    0.0     0.0    0.0
+   p_series                   Parsing.Bench.Attoparsec.JSON   171           1    0.0    0.0     0.0    0.0
+    between                   Parsing.Bench.Attoparsec.Base   172           1    0.0    0.0     0.0    0.0
+  pJSON                       Parsing.Bench.Attoparsec.JSON   164           1    0.0    0.0     0.0    0.0
+   pJSON.text                 Parsing.Bench.Attoparsec.JSON   167           1    0.0    0.0     0.0    0.0
+  run                         Parsing.Bench.Attoparsec.JSON   161           1    0.0    0.0     0.0    0.0
+ CAF                          Parsing.Bench.AST.JSON          155           0    0.0    0.0     0.0    0.0
+  showsPrec                   Parsing.Bench.AST.JSON          242           0    0.0    0.0     0.0    0.0
+  showList                    Parsing.Bench.AST.JSON          238           1    0.0    0.0     0.0    0.0
+  showsPrec                   Parsing.Bench.AST.JSON          237           0    0.0    0.0     0.0    0.0
+  showsPrec                   Parsing.Bench.AST.JSON          235           0    0.0    0.0     0.0    0.0
+ CAF                          Parsing.Bench.Attoparsec.Base   154           0    0.0    0.0     0.0    0.0
+  spaces                      Parsing.Bench.Attoparsec.Base   166           1    0.0    0.0     0.0    0.0
+ CAF                          Data.Attoparsec.Text.FastSet    147           0    0.0    0.0     0.0    0.0
+ CAF                          Data.Text.Array                 145           0    0.0    0.0     0.0    0.0
+ CAF                          Data.Text.Internal              143           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.Handle.FD                125           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.Conc.Signal                 118           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.Float                       115           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.Encoding                 113           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.Encoding.Iconv           103           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.FD                       102           0    0.0    0.0     0.0    0.0

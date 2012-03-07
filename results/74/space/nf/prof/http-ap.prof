@@ -1,0 +1,103 @@
+	Tue Mar  6 17:53 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-ap +RTS -p -RTS
+
+	total time  =        2.15 secs   (2145 ticks @ 1000 us, 1 processor)
+	total alloc = 1,378,798,536 bytes  (excludes profiling overheads)
+
+COST CENTRE         MODULE                        %time %alloc
+
+p_headers.fieldChar Parsing.Bench.Attoparsec.HTTP  17.9   15.6
+showsPrec           Parsing.Bench.AST.HTTP         13.7   13.6
+noneOf              Parsing.Bench.Attoparsec.Base  13.6    9.4
+main                Main                            9.7    4.2
+p_headers.fieldName Parsing.Bench.Attoparsec.HTTP   7.6   10.0
+p_headers.header    Parsing.Bench.Attoparsec.HTTP   7.4    4.7
+crlf                Parsing.Bench.Attoparsec.HTTP   7.2    5.4
+p_headers.contents  Parsing.Bench.Attoparsec.HTTP   6.2    8.8
+readTextDevice      Data.Text.IO.Internal           5.1   23.2
+p_headers           Parsing.Bench.Attoparsec.HTTP   3.8    0.1
+oneOf               Parsing.Bench.Attoparsec.Base   3.6    1.7
+newline             Parsing.Bench.Attoparsec.Base   3.4    2.6
+
+
+                                                                                       individual     inherited
+COST CENTRE                          MODULE                          no.     entries  %time %alloc   %time %alloc
+
+MAIN                                 MAIN                             79           0    0.0    0.0   100.0  100.0
+ main                                Main                            159           0    9.7    4.2   100.0  100.0
+  showsPrec                          Parsing.Bench.AST.HTTP          217           1   13.7   13.6    13.7   13.6
+   showsPrec                         Parsing.Bench.AST.HTTP          219           1    0.0    0.0     0.0    0.0
+  run                                Parsing.Bench.Attoparsec.HTTP   162           0    0.0    0.0    71.5   59.0
+   run'                              Parsing.Bench.Attoparsec.Base   163           1    0.0    0.0    71.5   59.0
+    pHTTP                            Parsing.Bench.Attoparsec.HTTP   165           0    0.4    0.6    71.5   59.0
+     pHTTP.url                       Parsing.Bench.Attoparsec.HTTP   171           0    0.0    0.0    71.1   58.4
+      oneOf                          Parsing.Bench.Attoparsec.Base   178           0    3.6    1.7    71.1   58.4
+       p_headers                     Parsing.Bench.Attoparsec.HTTP   197           0    0.0    0.0     0.0    0.0
+        p_headers.continuation       Parsing.Bench.Attoparsec.HTTP   208           0    0.0    0.0     0.0    0.0
+        p_headers.fieldChar          Parsing.Bench.Attoparsec.HTTP   198           0    0.0    0.0     0.0    0.0
+       notEOL                        Parsing.Bench.Attoparsec.HTTP   179           0    0.0    0.0    67.5   56.8
+        noneOf                       Parsing.Bench.Attoparsec.Base   180           0   13.6    9.4    67.5   56.8
+         crlf                        Parsing.Bench.Attoparsec.HTTP   182           0    7.2    5.4    53.9   47.3
+          newline                    Parsing.Bench.Attoparsec.Base   184           0    3.4    2.6    46.7   42.0
+           pHTTP.q                   Parsing.Bench.Attoparsec.HTTP   185           0    0.0    0.0    43.3   39.4
+            pHTTP.q.req              Parsing.Bench.Attoparsec.HTTP   186           0    0.0    0.0    43.3   39.4
+             p_headers               Parsing.Bench.Attoparsec.HTTP   188           0    3.8    0.1    43.3   39.4
+              p_headers.continuation Parsing.Bench.Attoparsec.HTTP   206           0    0.4    0.2     0.4    0.2
+              p_headers.contents     Parsing.Bench.Attoparsec.HTTP   204           0    6.2    8.8     8.8   10.8
+               p_headers.fieldName   Parsing.Bench.Attoparsec.HTTP   214           0    0.0    0.0     0.0    0.0
+                p_headers.header     Parsing.Bench.Attoparsec.HTTP   215           0    0.0    0.0     0.0    0.0
+                 p_headers.fieldChar Parsing.Bench.Attoparsec.HTTP   216           0    0.0    0.0     0.0    0.0
+               p_headers.fieldChar   Parsing.Bench.Attoparsec.HTTP   209           0    0.0    0.0     2.6    2.0
+                p_headers.fieldName  Parsing.Bench.Attoparsec.HTTP   210           0    0.0    0.0     2.6    2.0
+                 p_headers.header    Parsing.Bench.Attoparsec.HTTP   211           0    2.6    2.0     2.6    2.0
+              p_headers.fieldChar    Parsing.Bench.Attoparsec.HTTP   194           0   17.9   15.6    22.3   23.9
+               p_headers.fieldName   Parsing.Bench.Attoparsec.HTTP   195           0    4.1    7.7     4.4    8.3
+                p_headers.header     Parsing.Bench.Attoparsec.HTTP   199           0    0.3    0.6     0.3    0.6
+              p_headers.fieldName    Parsing.Bench.Attoparsec.HTTP   192           0    3.5    2.3     3.5    2.3
+               p_headers.header      Parsing.Bench.Attoparsec.HTTP   212           0    0.0    0.0     0.0    0.0
+              p_headers.header       Parsing.Bench.Attoparsec.HTTP   190           0    4.5    2.1     4.5    2.1
+               p_headers.fieldName   Parsing.Bench.Attoparsec.HTTP   213           0    0.0    0.0     0.0    0.0
+               p_headers.fieldChar   Parsing.Bench.Attoparsec.HTTP   200           0    0.0    0.0     0.0    0.0
+                p_headers.fieldName  Parsing.Bench.Attoparsec.HTTP   201           0    0.0    0.0     0.0    0.0
+      notEOL                         Parsing.Bench.Attoparsec.HTTP   175           0    0.0    0.0     0.0    0.0
+       noneOf                        Parsing.Bench.Attoparsec.Base   176           0    0.0    0.0     0.0    0.0
+     pHTTP.q                         Parsing.Bench.Attoparsec.HTTP   167           0    0.0    0.0     0.0    0.0
+      pHTTP.q.req                    Parsing.Bench.Attoparsec.HTTP   169           0    0.0    0.0     0.0    0.0
+  readTextDevice                     Data.Text.IO.Internal           160         987    5.1   23.2     5.1   23.2
+ CAF                                 Main                            157           0    0.0    0.0     0.0    0.0
+  main                               Main                            158           1    0.0    0.0     0.0    0.0
+ CAF                                 Parsing.Bench.Attoparsec.HTTP   156           0    0.0    0.0     0.0    0.0
+  p_headers                          Parsing.Bench.Attoparsec.HTTP   187           1    0.0    0.0     0.0    0.0
+   p_headers.continuation            Parsing.Bench.Attoparsec.HTTP   205           1    0.0    0.0     0.0    0.0
+    oneOf                            Parsing.Bench.Attoparsec.Base   207           1    0.0    0.0     0.0    0.0
+   p_headers.contents                Parsing.Bench.Attoparsec.HTTP   203           1    0.0    0.0     0.0    0.0
+   p_headers.fieldChar               Parsing.Bench.Attoparsec.HTTP   193           1    0.0    0.0     0.0    0.0
+    oneOf                            Parsing.Bench.Attoparsec.Base   196           1    0.0    0.0     0.0    0.0
+   p_headers.fieldName               Parsing.Bench.Attoparsec.HTTP   191           1    0.0    0.0     0.0    0.0
+   p_headers.header                  Parsing.Bench.Attoparsec.HTTP   189           1    0.0    0.0     0.0    0.0
+  crlf                               Parsing.Bench.Attoparsec.HTTP   181           1    0.0    0.0     0.0    0.0
+  notEOL                             Parsing.Bench.Attoparsec.HTTP   173           1    0.0    0.0     0.0    0.0
+   noneOf                            Parsing.Bench.Attoparsec.Base   174           1    0.0    0.0     0.0    0.0
+  pHTTP                              Parsing.Bench.Attoparsec.HTTP   164           1    0.0    0.0     0.0    0.0
+   pHTTP.url                         Parsing.Bench.Attoparsec.HTTP   170           1    0.0    0.0     0.0    0.0
+    oneOf                            Parsing.Bench.Attoparsec.Base   177           1    0.0    0.0     0.0    0.0
+    unstream/resize                  Data.Text.Fusion                172           1    0.0    0.0     0.0    0.0
+   pHTTP.q                           Parsing.Bench.Attoparsec.HTTP   166           2    0.0    0.0     0.0    0.0
+    pHTTP.q.req                      Parsing.Bench.Attoparsec.HTTP   168           2    0.0    0.0     0.0    0.0
+  run                                Parsing.Bench.Attoparsec.HTTP   161           1    0.0    0.0     0.0    0.0
+ CAF                                 Parsing.Bench.AST.HTTP          155           0    0.0    0.0     0.0    0.0
+  showsPrec                          Parsing.Bench.AST.HTTP          220           0    0.0    0.0     0.0    0.0
+  showsPrec                          Parsing.Bench.AST.HTTP          218           0    0.0    0.0     0.0    0.0
+ CAF                                 Parsing.Bench.Attoparsec.Base   154           0    0.0    0.0     0.0    0.0
+  spaces                             Parsing.Bench.Attoparsec.Base   202           1    0.0    0.0     0.0    0.0
+  newline                            Parsing.Bench.Attoparsec.Base   183           1    0.0    0.0     0.0    0.0
+ CAF                                 Data.Attoparsec.Text.FastSet    147           0    0.0    0.0     0.0    0.0
+ CAF                                 Data.Text.Array                 145           0    0.0    0.0     0.0    0.0
+ CAF                                 Data.Text.Internal              143           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.Handle.FD                125           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.Show                        122           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.Conc.Signal                 118           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.Encoding                 113           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.Encoding.Iconv           103           0    0.0    0.0     0.0    0.0
+ CAF                                 GHC.IO.FD                       102           0    0.0    0.0     0.0    0.0

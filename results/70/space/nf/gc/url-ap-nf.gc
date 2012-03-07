@@ -1,0 +1,24 @@
+./dist/build/url-ap-nf/url-ap-nf +RTS -surl-ap-nf.gc 
+   1,659,007,696 bytes allocated in the heap
+     353,574,792 bytes copied during GC
+      68,279,880 bytes maximum residency (9 sample(s))
+       3,147,968 bytes maximum slop
+             168 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3145 collections,     0 parallel,  0.49s,  0.49s elapsed
+  Generation 1:     9 collections,     0 parallel,  0.43s,  0.43s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.64s  (  2.64s elapsed)
+  GC    time    0.92s  (  0.92s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.56s  (  3.56s elapsed)
+
+  %GC time      25.8%  (25.8% elapsed)
+
+  Alloc rate    628,187,381 bytes per MUT second
+
+  Productivity  74.1% of total user, 74.1% of total elapsed
+

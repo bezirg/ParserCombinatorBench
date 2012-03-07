@@ -1,0 +1,24 @@
+./dist/build/css-p3-nf/css-p3-nf +RTS -scss-p3-nf.gc 
+   3,366,376,240 bytes allocated in the heap
+     954,318,752 bytes copied during GC
+     115,938,128 bytes maximum residency (16 sample(s))
+       1,848,704 bytes maximum slop
+             301 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  6406 collections,     0 parallel,  1.16s,  1.16s elapsed
+  Generation 1:    16 collections,     0 parallel,  1.13s,  1.13s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    3.24s  (  3.24s elapsed)
+  GC    time    2.29s  (  2.29s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    5.53s  (  5.53s elapsed)
+
+  %GC time      41.4%  (41.4% elapsed)
+
+  Alloc rate    1,038,552,088 bytes per MUT second
+
+  Productivity  58.6% of total user, 58.6% of total elapsed
+

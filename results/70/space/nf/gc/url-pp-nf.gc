@@ -1,0 +1,24 @@
+./dist/build/url-pp-nf/url-pp-nf +RTS -surl-pp-nf.gc 
+   1,415,870,872 bytes allocated in the heap
+   1,036,636,192 bytes copied during GC
+     167,124,592 bytes maximum residency (10 sample(s))
+       9,180,840 bytes maximum slop
+             414 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  2659 collections,     0 parallel,  7.57s,  7.57s elapsed
+  Generation 1:    10 collections,     0 parallel,  1.29s,  1.29s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    6.45s  (  6.45s elapsed)
+  GC    time    8.86s  (  8.86s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time   15.31s  ( 15.31s elapsed)
+
+  %GC time      57.9%  (57.9% elapsed)
+
+  Alloc rate    219,562,248 bytes per MUT second
+
+  Productivity  42.1% of total user, 42.1% of total elapsed
+

@@ -1,0 +1,25 @@
+./dist/build/css-p3/css-p3 +RTS -scss-p3.gc 
+   3,297,630,056 bytes allocated in the heap
+     799,901,952 bytes copied during GC
+      90,261,504 bytes maximum residency (14 sample(s))
+       1,351,536 bytes maximum slop
+             255 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      6462 colls,     0 par    0.99s    0.99s     0.0002s    0.0016s
+  Gen  1        14 colls,     0 par    0.64s    0.97s     0.0696s    0.2582s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    2.28s  (  2.32s elapsed)
+  GC      time    1.63s  (  1.97s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    3.90s  (  4.29s elapsed)
+
+  %GC     time      41.7%  (45.8% elapsed)
+
+  Alloc rate    1,448,537,992 bytes per MUT second
+
+  Productivity  58.3% of total user, 53.1% of total elapsed
+

@@ -1,0 +1,24 @@
+./dist/build/expr-ap-nf/expr-ap-nf +RTS -sexpr-ap-nf.gc 
+     758,415,672 bytes allocated in the heap
+     227,076,424 bytes copied during GC
+      32,239,912 bytes maximum residency (10 sample(s))
+       1,167,880 bytes maximum slop
+              87 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1432 collections,     0 parallel,  0.37s,  0.37s elapsed
+  Generation 1:    10 collections,     0 parallel,  0.28s,  0.28s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.45s  (  1.45s elapsed)
+  GC    time    0.66s  (  0.66s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    2.11s  (  2.11s elapsed)
+
+  %GC time      31.1%  (31.1% elapsed)
+
+  Alloc rate    521,196,660 bytes per MUT second
+
+  Productivity  68.9% of total user, 68.9% of total elapsed
+

@@ -1,0 +1,24 @@
+./dist/build/css-ap-whnf/css-ap-whnf +RTS -scss-ap-whnf.gc 
+     789,070,704 bytes allocated in the heap
+      70,136,016 bytes copied during GC
+      16,559,688 bytes maximum residency (6 sample(s))
+       3,336,808 bytes maximum slop
+              31 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1489 collections,     0 parallel,  0.12s,  0.12s elapsed
+  Generation 1:     6 collections,     0 parallel,  0.06s,  0.06s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.48s  (  1.48s elapsed)
+  GC    time    0.19s  (  0.19s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    1.67s  (  1.66s elapsed)
+
+  %GC time      11.2%  (11.2% elapsed)
+
+  Alloc rate    533,863,972 bytes per MUT second
+
+  Productivity  88.6% of total user, 88.7% of total elapsed
+

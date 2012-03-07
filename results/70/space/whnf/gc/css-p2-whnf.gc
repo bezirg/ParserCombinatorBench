@@ -1,0 +1,24 @@
+./dist/build/css-p2-whnf/css-p2-whnf +RTS -scss-p2-whnf.gc 
+   1,624,913,256 bytes allocated in the heap
+     413,720,752 bytes copied during GC
+      53,599,488 bytes maximum residency (13 sample(s))
+       1,816,144 bytes maximum slop
+             123 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3080 collections,     0 parallel,  2.71s,  2.72s elapsed
+  Generation 1:    13 collections,     0 parallel,  0.41s,  0.41s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.05s  (  2.05s elapsed)
+  GC    time    3.13s  (  3.13s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    5.18s  (  5.18s elapsed)
+
+  %GC time      60.4%  (60.4% elapsed)
+
+  Alloc rate    793,112,224 bytes per MUT second
+
+  Productivity  39.5% of total user, 39.6% of total elapsed
+

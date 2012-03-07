@@ -1,0 +1,50 @@
+	Tue Mar  6 21:13 2012 Time and Allocation Profiling Report  (Final)
+
+	   csv-pp-nf +RTS -p -RTS
+
+	total time  =        0.82 secs   (41 ticks @ 20 ms)
+	total alloc = 229,650,480 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+cell                           Parsing.Bench.Polyparse.CSV  29.3   36.6
+noneOf                         Parsing.Bench.Polyparse.Base  19.5   18.1
+main                           Main                  17.1    9.4
+line                           Parsing.Bench.Polyparse.CSV   9.8    6.8
+pSym                           Parsing.Bench.Polyparse.Base   7.3    3.3
+CAF                            Main                   7.3   21.1
+string                         Parsing.Bench.Polyparse.Base   4.9    2.7
+pCSV                           Parsing.Bench.Polyparse.CSV   2.4    1.9
+eol                            Parsing.Bench.Polyparse.CSV   2.4    0.0
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 276           3  17.1    9.4    17.1    9.4
+ CAF                     Main                                                 270           5   7.3   21.1     7.3   21.1
+  main                   Main                                                 277           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        268           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     262           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     207           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            191           2   0.0    0.0     0.0    0.0
+ CAF                     Data.Either                                          174           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              171           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                165           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      162           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Polyparse.CSV                          157          11   0.0    0.0    75.6   69.6
+  eol                    Parsing.Bench.Polyparse.CSV                          287           0   0.0    0.0     0.0    0.0
+   string                Parsing.Bench.Polyparse.Base                         288           3   0.0    0.0     0.0    0.0
+    pSym                 Parsing.Bench.Polyparse.Base                         289           3   0.0    0.0     0.0    0.0
+  cell                   Parsing.Bench.Polyparse.CSV                          284           0   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.Polyparse.CSV                          278           1   0.0    0.0    75.6   69.6
+   run'                  Parsing.Bench.Polyparse.Base                         280           1   0.0    0.0     0.0    0.0
+   pCSV                  Parsing.Bench.Polyparse.CSV                          279           1   2.4    1.9    75.6   69.6
+    line                 Parsing.Bench.Polyparse.CSV                          281       26566   9.8    6.8    73.2   67.6
+     eol                 Parsing.Bench.Polyparse.CSV                          286       26566   2.4    0.0    12.2    4.2
+      string             Parsing.Bench.Polyparse.Base                         290           0   4.9    2.7     9.8    4.2
+       pSym              Parsing.Bench.Polyparse.Base                         291           0   4.9    1.5     4.9    1.5
+     pSym                Parsing.Bench.Polyparse.Base                         285       53120   2.4    1.9     2.4    1.9
+     cell                Parsing.Bench.Polyparse.CSV                          282       53120  29.3   36.6    48.8   54.8
+      noneOf             Parsing.Bench.Polyparse.Base                         283      520994  19.5   18.1    19.5   18.1

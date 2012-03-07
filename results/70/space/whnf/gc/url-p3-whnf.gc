@@ -1,0 +1,24 @@
+./dist/build/url-p3-whnf/url-p3-whnf +RTS -surl-p3-whnf.gc 
+   2,057,377,384 bytes allocated in the heap
+     400,382,856 bytes copied during GC
+      50,462,696 bytes maximum residency (12 sample(s))
+       1,303,952 bytes maximum slop
+             114 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3913 collections,     0 parallel,  0.50s,  0.50s elapsed
+  Generation 1:    12 collections,     0 parallel,  0.37s,  0.37s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    3.04s  (  3.04s elapsed)
+  GC    time    0.87s  (  0.87s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.91s  (  3.91s elapsed)
+
+  %GC time      22.2%  (22.2% elapsed)
+
+  Alloc rate    676,264,125 bytes per MUT second
+
+  Productivity  77.7% of total user, 77.8% of total elapsed
+

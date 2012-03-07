@@ -1,0 +1,103 @@
+	Tue Mar  6 20:00 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-pp-whnf +RTS -p -RTS
+
+	total time  =        0.85 secs   (846 ticks @ 1000 us, 1 processor)
+	total alloc = 505,482,664 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE                       %time %alloc
+
+pAnySym     Parsing.Bench.Polyparse.Base  13.6    4.8
+e3          Parsing.Bench.Polyparse.Expr  12.1    9.6
+pChainl     Parsing.Bench.Polyparse.Base  10.6   10.5
+pSpaces     Parsing.Bench.Polyparse.Base   9.8   10.6
+pSym        Parsing.Bench.Polyparse.Base   8.5    5.1
+pIdent      Parsing.Bench.Polyparse.Base   8.0   10.1
+main        Main                           8.0   27.0
+pLet        Parsing.Bench.Polyparse.Expr   7.9    7.2
+pLetter     Parsing.Bench.Polyparse.Base   6.7    3.2
+string      Parsing.Bench.Polyparse.Base   3.5    2.3
+op1         Parsing.Bench.Polyparse.Expr   3.2    2.2
+e1          Parsing.Bench.Polyparse.Expr   2.7    1.8
+op2         Parsing.Bench.Polyparse.Expr   2.4    1.8
+e2          Parsing.Bench.Polyparse.Expr   1.9    2.5
+pParens     Parsing.Bench.Polyparse.Base   0.6    1.0
+
+
+                                                                  individual     inherited
+COST CENTRE      MODULE                         no.     entries  %time %alloc   %time %alloc
+
+MAIN             MAIN                            57           0    0.0    0.0   100.0  100.0
+ main            Main                           115           0    8.0   27.0   100.0  100.0
+  run            Parsing.Bench.Polyparse.Expr   119           0    0.0    0.0    92.0   73.0
+   pExpr         Parsing.Bench.Polyparse.Expr   121           0    0.0    0.0    92.0   73.0
+    e1           Parsing.Bench.Polyparse.Expr   127           0    2.7    1.8    92.0   73.0
+     pSpaces     Parsing.Bench.Polyparse.Base   170           0    1.2    1.3     3.2    2.0
+      pAnySym    Parsing.Bench.Polyparse.Base   171           0    2.0    0.7     2.0    0.7
+     pChainl     Parsing.Bench.Polyparse.Base   129           0   10.6   10.5    86.1   69.2
+      op1        Parsing.Bench.Polyparse.Expr   167           0    3.2    2.2     7.9    5.5
+       pSpaces   Parsing.Bench.Polyparse.Base   175           0    1.2    1.2     2.4    1.6
+        pAnySym  Parsing.Bench.Polyparse.Base   176           0    1.2    0.5     1.2    0.5
+       pSym      Parsing.Bench.Polyparse.Base   169           0    2.4    1.7     2.4    1.7
+      op2        Parsing.Bench.Polyparse.Expr   161           0    2.4    1.8     4.6    3.7
+       pSpaces   Parsing.Bench.Polyparse.Base   173           0    0.4    0.6     0.6    0.8
+        pAnySym  Parsing.Bench.Polyparse.Base   174           0    0.2    0.2     0.2    0.2
+       pSym      Parsing.Bench.Polyparse.Base   163           0    1.7    1.1     1.7    1.1
+      e3         Parsing.Bench.Polyparse.Expr   134           0   12.1    9.6    56.4   44.2
+       pSpaces   Parsing.Bench.Polyparse.Base   158           0    2.8    3.4     7.8    4.8
+        pAnySym  Parsing.Bench.Polyparse.Base   159           0    5.0    1.5     5.0    1.5
+       pIdent    Parsing.Bench.Polyparse.Base   156           0    5.8    6.9    11.2    9.4
+        pDigit   Parsing.Bench.Polyparse.Base   172           0    0.2    0.3     0.2    0.3
+        pLetter  Parsing.Bench.Polyparse.Base   157           0    5.2    2.2     5.2    2.2
+       pLet      Parsing.Bench.Polyparse.Expr   141           0    7.9    7.2    23.3   18.2
+        pSym     Parsing.Bench.Polyparse.Base   155           0    0.1    0.1     0.1    0.1
+        pIdent   Parsing.Bench.Polyparse.Base   149           0    2.2    3.2     3.9    4.3
+         pDigit  Parsing.Bench.Polyparse.Base   153           0    0.1    0.1     0.1    0.1
+         pLetter Parsing.Bench.Polyparse.Base   151           0    1.5    1.0     1.5    1.0
+        pSpaces  Parsing.Bench.Polyparse.Base   146           0    2.5    2.3     4.8    3.2
+         pAnySym Parsing.Bench.Polyparse.Base   147           0    2.4    0.9     2.4    0.9
+        string   Parsing.Bench.Polyparse.Base   143           0    3.5    2.3     6.5    3.3
+         pSym    Parsing.Bench.Polyparse.Base   145           0    3.0    1.0     3.0    1.0
+       pParens   Parsing.Bench.Polyparse.Base   136           0    0.6    1.0     2.0    2.2
+        pSym     Parsing.Bench.Polyparse.Base   139           0    1.4    1.2     1.4    1.2
+      e2         Parsing.Bench.Polyparse.Expr   131           0    1.9    2.5     6.5    5.3
+       pSpaces   Parsing.Bench.Polyparse.Base   164           0    1.8    1.8     4.6    2.8
+        pAnySym  Parsing.Bench.Polyparse.Base   165           0    2.8    1.0     2.8    1.0
+    pSpaces      Parsing.Bench.Polyparse.Base   123           0    0.0    0.0     0.0    0.0
+     pAnySym     Parsing.Bench.Polyparse.Base   125           0    0.0    0.0     0.0    0.0
+  succeeded      Parsing.Bench.Polyparse.Base   116           1    0.0    0.0     0.0    0.0
+ CAF             Main                           113           0    0.0    0.0     0.0    0.0
+  main           Main                           114           1    0.0    0.0     0.0    0.0
+ CAF             Parsing.Bench.Polyparse.Expr   112           0    0.0    0.0     0.0    0.0
+  op1            Parsing.Bench.Polyparse.Expr   166           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   168           2    0.0    0.0     0.0    0.0
+  op2            Parsing.Bench.Polyparse.Expr   160           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   162           1    0.0    0.0     0.0    0.0
+  pLet           Parsing.Bench.Polyparse.Expr   140           1    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   154           1    0.0    0.0     0.0    0.0
+   string        Parsing.Bench.Polyparse.Base   142           7    0.0    0.0     0.0    0.0
+    pSym         Parsing.Bench.Polyparse.Base   144           5    0.0    0.0     0.0    0.0
+  e3             Parsing.Bench.Polyparse.Expr   133           1    0.0    0.0     0.0    0.0
+   pParens       Parsing.Bench.Polyparse.Base   135           1    0.0    0.0     0.0    0.0
+  e2             Parsing.Bench.Polyparse.Expr   130           1    0.0    0.0     0.0    0.0
+   pChainl       Parsing.Bench.Polyparse.Base   132           1    0.0    0.0     0.0    0.0
+  e1             Parsing.Bench.Polyparse.Expr   126           1    0.0    0.0     0.0    0.0
+   pChainl       Parsing.Bench.Polyparse.Base   128           1    0.0    0.0     0.0    0.0
+  pExpr          Parsing.Bench.Polyparse.Expr   120           1    0.0    0.0     0.0    0.0
+  run            Parsing.Bench.Polyparse.Expr   117           1    0.0    0.0     0.0    0.0
+ CAF             Parsing.Bench.Polyparse.Base   111           0    0.0    0.0     0.0    0.0
+  pDigit         Parsing.Bench.Polyparse.Base   152           1    0.0    0.0     0.0    0.0
+  pLetter        Parsing.Bench.Polyparse.Base   150           1    0.0    0.0     0.0    0.0
+  pIdent         Parsing.Bench.Polyparse.Base   148           1    0.0    0.0     0.0    0.0
+  pParens        Parsing.Bench.Polyparse.Base   137           0    0.0    0.0     0.0    0.0
+   pSym          Parsing.Bench.Polyparse.Base   138           2    0.0    0.0     0.0    0.0
+  pSpaces        Parsing.Bench.Polyparse.Base   122           1    0.0    0.0     0.0    0.0
+   pAnySym       Parsing.Bench.Polyparse.Base   124           1    0.0    0.0     0.0    0.0
+  run'           Parsing.Bench.Polyparse.Base   118           1    0.0    0.0     0.0    0.0
+ CAF             Text.Parse                     106           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.Handle.FD               102           0    0.0    0.0     0.0    0.0
+ CAF             GHC.Show                       101           0    0.0    0.0     0.0    0.0
+ CAF             GHC.Conc.Signal                 99           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.Encoding                 95           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.Encoding.Iconv           82           0    0.0    0.0     0.0    0.0
+ CAF             GHC.IO.FD                       81           0    0.0    0.0     0.0    0.0

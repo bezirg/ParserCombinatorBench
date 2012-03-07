@@ -1,0 +1,99 @@
+	Tue Mar  6 21:16 2012 Time and Allocation Profiling Report  (Final)
+
+	   css-pp-whnf +RTS -p -RTS
+
+	total time  =        3.04 secs   (152 ticks @ 20 ms)
+	total alloc = 682,242,000 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+noneOf                         Parsing.Bench.Polyparse.Base  26.3   18.6
+attrParser                     Parsing.Bench.Polyparse.CSS  21.7   23.7
+main                           Main                  11.8   10.6
+pAnySym                        Parsing.Bench.Polyparse.Base   9.2    6.2
+blockParser                    Parsing.Bench.Polyparse.CSS   8.6   11.8
+skipWS                         Parsing.Bench.Polyparse.CSS   7.2   10.0
+spaces                         Parsing.Bench.Polyparse.Base   5.3   12.0
+pSym                           Parsing.Bench.Polyparse.Base   5.3    3.2
+attrsParser                    Parsing.Bench.Polyparse.CSS   2.6    1.8
+string                         Parsing.Bench.Polyparse.Base   1.3    1.6
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 276           3  11.8   10.6    11.8   10.6
+  succeeded              Parsing.Bench.Polyparse.Base                         278           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 270           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 277           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        268           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             266           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     262           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     207           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            191           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              171           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                165           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      162           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Polyparse.Base                         157           2   0.0    0.0     0.0    0.0
+  spaces                 Parsing.Bench.Polyparse.Base                         287           0   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Polyparse.CSS                          139          15   0.0    0.0    88.2   89.4
+  attrParser             Parsing.Bench.Polyparse.CSS                          301           1   0.0    0.0     0.0    0.0
+   pSym                  Parsing.Bench.Polyparse.Base                         304           1   0.0    0.0     0.0    0.0
+   <?>                   Parsing.Bench.Polyparse.Base                         303           1   0.0    0.0     0.0    0.0
+   noneOf                Parsing.Bench.Polyparse.Base                         302          20   0.0    0.0     0.0    0.0
+  attrsParser            Parsing.Bench.Polyparse.CSS                          294           4   0.0    0.0     0.0    0.0
+   skipWS                Parsing.Bench.Polyparse.CSS                          306           3   0.0    0.0     0.0    0.0
+    string               Parsing.Bench.Polyparse.Base                         309           0   0.0    0.0     0.0    0.0
+     pSym                Parsing.Bench.Polyparse.Base                         310           0   0.0    0.0     0.0    0.0
+    spaces               Parsing.Bench.Polyparse.Base                         307          12   0.0    0.0     0.0    0.0
+     pAnySym             Parsing.Bench.Polyparse.Base                         308          13   0.0    0.0     0.0    0.0
+   pSym                  Parsing.Bench.Polyparse.Base                         305           1   0.0    0.0     0.0    0.0
+   attrParser            Parsing.Bench.Polyparse.CSS                          295           6   0.0    0.0     0.0    0.0
+    pSym                 Parsing.Bench.Polyparse.Base                         313           2   0.0    0.0     0.0    0.0
+    <?>                  Parsing.Bench.Polyparse.Base                         312           2   0.0    0.0     0.0    0.0
+    noneOf               Parsing.Bench.Polyparse.Base                         311          34   0.0    0.0     0.0    0.0
+    skipWS               Parsing.Bench.Polyparse.CSS                          296           4   0.0    0.0     0.0    0.0
+     string              Parsing.Bench.Polyparse.Base                         299           0   0.0    0.0     0.0    0.0
+      pSym               Parsing.Bench.Polyparse.Base                         300           0   0.0    0.0     0.0    0.0
+     spaces              Parsing.Bench.Polyparse.Base                         297          16   0.0    0.0     0.0    0.0
+      pAnySym            Parsing.Bench.Polyparse.Base                         298          11   0.0    0.0     0.0    0.0
+  blockParser            Parsing.Bench.Polyparse.CSS                          291           1   0.0    0.0     0.0    0.0
+   skipWS                Parsing.Bench.Polyparse.CSS                          314           1   0.0    0.0     0.0    0.0
+    string               Parsing.Bench.Polyparse.Base                         317           0   0.0    0.0     0.0    0.0
+     pSym                Parsing.Bench.Polyparse.Base                         318           0   0.0    0.0     0.0    0.0
+    spaces               Parsing.Bench.Polyparse.Base                         315           4   0.0    0.0     0.0    0.0
+     pAnySym             Parsing.Bench.Polyparse.Base                         316           2   0.0    0.0     0.0    0.0
+   pSym                  Parsing.Bench.Polyparse.Base                         293           2   0.0    0.0     0.0    0.0
+   noneOf                Parsing.Bench.Polyparse.Base                         292           7   0.0    0.0     0.0    0.0
+  skipWS                 Parsing.Bench.Polyparse.CSS                          288           0   0.0    0.0     0.0    0.0
+   string                Parsing.Bench.Polyparse.Base                         289           1   0.0    0.0     0.0    0.0
+    pSym                 Parsing.Bench.Polyparse.Base                         290           1   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.Polyparse.CSS                          279           1   0.0    0.0    88.2   89.4
+   run'                  Parsing.Bench.Polyparse.Base                         282           1   0.0    0.0     0.0    0.0
+   pCSS                  Parsing.Bench.Polyparse.CSS                          280           0   0.0    0.0    88.2   89.4
+    blocksParser         Parsing.Bench.Polyparse.CSS                          281           1   0.7    0.4    88.2   89.4
+     blockParser         Parsing.Bench.Polyparse.CSS                          283       20395   8.6   11.8    87.5   89.0
+      attrsParser        Parsing.Bench.Polyparse.CSS                          323       54689   2.6    1.8    67.8   63.3
+       skipWS            Parsing.Bench.Polyparse.CSS                          334       54689   2.6    3.2     9.9   11.6
+        string           Parsing.Bench.Polyparse.Base                         337           0   0.7    0.5     1.3    1.0
+         pSym            Parsing.Bench.Polyparse.Base                         338           0   0.7    0.5     0.7    0.5
+        spaces           Parsing.Bench.Polyparse.Base                         335      218756   2.6    4.8     5.9    7.4
+         pAnySym         Parsing.Bench.Polyparse.Base                         336      216929   3.3    2.5     3.3    2.5
+       pSym              Parsing.Bench.Polyparse.Base                         333           0   0.7    0.5     0.7    0.5
+       attrParser        Parsing.Bench.Polyparse.CSS                          324      129771  21.7   23.7    54.6   49.4
+        pSym             Parsing.Bench.Polyparse.Base                         332       54689   0.7    0.6     0.7    0.6
+        <?>              Parsing.Bench.Polyparse.Base                         331       54689   0.0    0.0     0.0    0.0
+        noneOf           Parsing.Bench.Polyparse.Base                         330     1056969  19.1   12.4    19.1   12.4
+        skipWS           Parsing.Bench.Polyparse.CSS                          325       75082   3.3    4.4    13.2   12.6
+         string          Parsing.Bench.Polyparse.Base                         328           0   0.7    0.7     2.0    1.4
+          pSym           Parsing.Bench.Polyparse.Base                         329           0   1.3    0.7     1.3    0.7
+         spaces          Parsing.Bench.Polyparse.Base                         326      300328   2.6    4.5     7.9    6.8
+          pAnySym        Parsing.Bench.Polyparse.Base                         327      196878   5.3    2.3     5.3    2.3
+      pSym               Parsing.Bench.Polyparse.Base                         322       20393   0.7    0.4     0.7    0.4
+      noneOf             Parsing.Bench.Polyparse.Base                         321      532823   7.2    6.2     7.2    6.2
+      skipWS             Parsing.Bench.Polyparse.CSS                          284       40788   1.3    2.4     3.3    7.2
+       string            Parsing.Bench.Polyparse.Base                         319           0   0.0    0.4     1.3    0.8
+        pSym             Parsing.Bench.Polyparse.Base                         320           0   1.3    0.4     1.3    0.4
+       spaces            Parsing.Bench.Polyparse.Base                         285      163152   0.0    2.7     0.7    4.1
+        pAnySym          Parsing.Bench.Polyparse.Base                         286      118415   0.7    1.4     0.7    1.4

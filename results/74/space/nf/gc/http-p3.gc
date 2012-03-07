@@ -1,0 +1,25 @@
+./dist/build/http-p3/http-p3 +RTS -shttp-p3.gc 
+   4,016,186,952 bytes allocated in the heap
+     960,321,976 bytes copied during GC
+     112,687,312 bytes maximum residency (13 sample(s))
+       1,736,080 bytes maximum slop
+             324 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      7845 colls,     0 par    1.30s    1.27s     0.0002s    0.0017s
+  Gen  1        13 colls,     0 par    0.78s    1.17s     0.0902s    0.3317s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    3.48s  (  3.56s elapsed)
+  GC      time    2.08s  (  2.44s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    5.57s  (  6.00s elapsed)
+
+  %GC     time      37.4%  (40.7% elapsed)
+
+  Alloc rate    1,153,047,913 bytes per MUT second
+
+  Productivity  62.6% of total user, 58.0% of total elapsed
+

@@ -1,0 +1,25 @@
+./dist/build/expr-u1-whnf/expr-u1-whnf +RTS -sexpr-u1-whnf.gc 
+     735,061,664 bytes allocated in the heap
+     422,969,776 bytes copied during GC
+      68,979,176 bytes maximum residency (11 sample(s))
+       1,158,744 bytes maximum slop
+             172 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      1427 colls,     0 par    0.54s    0.52s     0.0004s    0.0012s
+  Gen  1        11 colls,     0 par    0.43s    0.64s     0.0583s    0.2029s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    2.44s  (  2.47s elapsed)
+  GC      time    0.97s  (  1.16s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    3.41s  (  3.64s elapsed)
+
+  %GC     time      28.4%  (32.0% elapsed)
+
+  Alloc rate    300,863,903 bytes per MUT second
+
+  Productivity  71.6% of total user, 67.2% of total elapsed
+

@@ -1,0 +1,150 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   json-u2 +RTS -p -RTS
+
+	total time  =        2.36 secs   (2362 ticks @ 1000 us, 1 processor)
+	total alloc = 1,154,561,688 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                 %time %alloc
+
+p_number         Parsing.Bench.UU2.JSON  22.8   16.4
+pNoneSym         Parsing.Bench.UU2.Base  17.0   20.2
+p_string         Parsing.Bench.UU2.JSON  16.0   15.6
+p_string.jchar   Parsing.Bench.UU2.JSON   8.8   12.8
+spaces           Parsing.Bench.UU2.Base   7.5    4.4
+showsPrec        Parsing.Bench.AST.JSON   5.4    6.2
+showsPrec        Parsing.Bench.AST.JSON   5.0    2.4
+main             Main                     4.9   12.0
+p_series         Parsing.Bench.UU2.JSON   4.4    4.7
+p_value.value    Parsing.Bench.UU2.JSON   4.1    1.4
+p_bool           Parsing.Bench.UU2.JSON   1.7    2.2
+p_object.p_field Parsing.Bench.UU2.JSON   1.3    1.4
+
+
+                                                                                 individual     inherited
+COST CENTRE                  MODULE                            no.     entries  %time %alloc   %time %alloc
+
+MAIN                         MAIN                               62           0    0.0    0.0   100.0  100.0
+ main                        Main                              125           0    4.9   12.0   100.0  100.0
+  showsPrec                  Parsing.Bench.AST.JSON            226       41855    5.0    2.4    10.5    8.8
+   showsPrec                 Parsing.Bench.AST.JSON            232        3097    0.0    0.0     0.0    0.0
+   showsPrec                 Parsing.Bench.AST.JSON            228         107    0.0    0.0     5.5    6.4
+    showList                 Parsing.Bench.AST.JSON            231           0    0.1    0.2     5.5    6.4
+     showsPrec               Parsing.Bench.AST.JSON            233           0    5.4    6.2     5.4    6.2
+  run                        Parsing.Bench.UU2.JSON            128           0    0.5    0.0    84.6   79.2
+   pJSON                     Parsing.Bench.UU2.JSON            131           0    0.0    0.0    84.1   79.2
+    pJSON.text               Parsing.Bench.UU2.JSON            152           0    0.0    0.0    84.1   79.2
+     p_array                 Parsing.Bench.UU2.JSON            155           0    0.1    0.1    84.1   79.2
+      p_series               Parsing.Bench.UU2.JSON            156           0    4.4    4.7    84.0   79.2
+       p_object.p_field      Parsing.Bench.UU2.JSON            171           0    1.3    1.4    74.7   71.4
+        p_value              Parsing.Bench.UU2.JSON            194           0    0.3    0.1    36.9   26.6
+         spaces              Parsing.Bench.UU2.Base            202           0    1.5    0.6     1.5    0.6
+         p_value.value       Parsing.Bench.UU2.JSON            196           0    3.9    1.3    35.1   25.9
+          spaces             Parsing.Bench.UU2.Base            203           0    0.0    0.0     0.0    0.0
+          p_bool             Parsing.Bench.UU2.JSON            200           0    1.6    2.1     1.6    2.1
+          p_object           Parsing.Bench.UU2.JSON            199           0    0.1    0.1     0.1    0.1
+          p_string           Parsing.Bench.UU2.JSON            198           0    3.1    2.8     6.8    6.4
+           spaces            Parsing.Bench.UU2.Base            225           0    0.0    0.0     0.0    0.0
+           p_string.jchar    Parsing.Bench.UU2.JSON            204           0    1.1    1.6     3.7    3.6
+            pNoneSym         Parsing.Bench.UU2.Base            205           0    2.6    2.0     2.6    2.0
+          p_number           Parsing.Bench.UU2.JSON            197           0   22.3   15.9    22.9   16.2
+           p_string          Parsing.Bench.UU2.JSON            214           0    0.0    0.0     0.6    0.2
+            p_string.jchar   Parsing.Bench.UU2.JSON            215           0    0.0    0.0     0.6    0.2
+             pNoneSym        Parsing.Bench.UU2.Base            216           0    0.6    0.2     0.6    0.2
+           spaces            Parsing.Bench.UU2.Base            213           0    0.0    0.0     0.0    0.0
+        spaces               Parsing.Bench.UU2.Base            185           0    2.3    1.6     2.3    1.6
+         p_value             Parsing.Bench.UU2.JSON            195           0    0.0    0.0     0.0    0.0
+        p_string             Parsing.Bench.UU2.JSON            172           0   12.7   12.7    34.1   41.8
+         p_string.jchar      Parsing.Bench.UU2.JSON            180           0    7.7   11.2    21.4   29.1
+          pNoneSym           Parsing.Bench.UU2.Base            181           0   13.6   17.9    13.6   17.9
+       p_value               Parsing.Bench.UU2.JSON            162           0    0.0    0.0     1.0    0.9
+        spaces               Parsing.Bench.UU2.Base            169           0    0.2    0.0     0.2    0.0
+        p_value.value        Parsing.Bench.UU2.JSON            163           0    0.2    0.1     0.8    0.8
+         p_bool              Parsing.Bench.UU2.JSON            167           0    0.1    0.2     0.1    0.2
+         p_object            Parsing.Bench.UU2.JSON            166           0    0.0    0.0     0.0    0.0
+         p_string            Parsing.Bench.UU2.JSON            165           0    0.1    0.1     0.1    0.1
+         p_number            Parsing.Bench.UU2.JSON            164           0    0.5    0.5     0.5    0.5
+       spaces                Parsing.Bench.UU2.Base            157           0    3.6    2.2     3.9    2.2
+        p_object.p_field     Parsing.Bench.UU2.JSON            206           0    0.0    0.0     0.3    0.0
+         p_string            Parsing.Bench.UU2.JSON            212           0    0.1    0.0     0.1    0.0
+         p_value             Parsing.Bench.UU2.JSON            207           0    0.0    0.0     0.2    0.0
+          p_value.value      Parsing.Bench.UU2.JSON            208           0    0.0    0.0     0.2    0.0
+           p_number          Parsing.Bench.UU2.JSON            217           0    0.0    0.0     0.0    0.0
+            p_string         Parsing.Bench.UU2.JSON            218           0    0.0    0.0     0.0    0.0
+             p_string.jchar  Parsing.Bench.UU2.JSON            219           0    0.0    0.0     0.0    0.0
+              pNoneSym       Parsing.Bench.UU2.Base            220           0    0.0    0.0     0.0    0.0
+           p_string          Parsing.Bench.UU2.JSON            209           0    0.0    0.0     0.2    0.0
+            p_string.jchar   Parsing.Bench.UU2.JSON            210           0    0.0    0.0     0.2    0.0
+             pNoneSym        Parsing.Bench.UU2.Base            211           0    0.2    0.0     0.2    0.0
+        p_value              Parsing.Bench.UU2.JSON            170           0    0.0    0.0     0.0    0.0
+     p_object                Parsing.Bench.UU2.JSON            153           0    0.0    0.0     0.0    0.0
+      p_series               Parsing.Bench.UU2.JSON            154           0    0.0    0.0     0.0    0.0
+    spaces                   Parsing.Bench.UU2.Base            132           0    0.0    0.0     0.0    0.0
+ CAF                         Main                              123           0    0.0    0.0     0.0    0.0
+  main                       Main                              124           1    0.0    0.0     0.0    0.0
+ CAF                         Parsing.Bench.UU2.JSON            122           0    0.0    0.0     0.0    0.0
+  p_string                   Parsing.Bench.UU2.JSON            182           0    0.0    0.0     0.0    0.0
+   p_string.jchar            Parsing.Bench.UU2.JSON            183           0    0.0    0.0     0.0    0.0
+  p_escape                   Parsing.Bench.UU2.JSON            176           0    0.0    0.0     0.0    0.0
+  p_value                    Parsing.Bench.UU2.JSON            150           0    0.0    0.0     0.0    0.0
+   p_value.value             Parsing.Bench.UU2.JSON            151           0    0.0    0.0     0.0    0.0
+  p_bool                     Parsing.Bench.UU2.JSON            149           0    0.0    0.0     0.0    0.0
+  run                        Parsing.Bench.UU2.JSON            126           1    0.0    0.0     0.0    0.0
+   pJSON                     Parsing.Bench.UU2.JSON            129           1    0.0    0.0     0.0    0.0
+    pJSON.text               Parsing.Bench.UU2.JSON            134           1    0.0    0.0     0.0    0.0
+     p_array                 Parsing.Bench.UU2.JSON            137           6    0.0    0.0     0.0    0.0
+      p_series               Parsing.Bench.UU2.JSON            138          11    0.0    0.0     0.0    0.0
+       p_object.p_field      Parsing.Bench.UU2.JSON            160           3    0.0    0.0     0.0    0.0
+        p_value              Parsing.Bench.UU2.JSON            186           1    0.0    0.0     0.0    0.0
+         spaces              Parsing.Bench.UU2.Base            201           1    0.0    0.0     0.0    0.0
+         p_value.value       Parsing.Bench.UU2.JSON            187           1    0.0    0.0     0.0    0.0
+          p_bool             Parsing.Bench.UU2.JSON            191           1    0.0    0.0     0.0    0.0
+          p_object           Parsing.Bench.UU2.JSON            190           1    0.0    0.0     0.0    0.0
+          p_number           Parsing.Bench.UU2.JSON            189           1    0.0    0.0     0.0    0.0
+          p_string           Parsing.Bench.UU2.JSON            188           1    0.0    0.0     0.0    0.0
+           p_string.jchar    Parsing.Bench.UU2.JSON            192           1    0.0    0.0     0.0    0.0
+            p_unicode        Parsing.Bench.UU2.JSON            224           1    0.0    0.0     0.0    0.0
+            p_escape         Parsing.Bench.UU2.JSON            221           1    0.0    0.0     0.0    0.0
+             p_escape.decode Parsing.Bench.UU2.JSON            223           8    0.0    0.0     0.0    0.0
+             choice          Parsing.Bench.UU2.Base            222           9    0.0    0.0     0.0    0.0
+            pNoneSym         Parsing.Bench.UU2.Base            193           1    0.0    0.0     0.0    0.0
+        spaces               Parsing.Bench.UU2.Base            184           1    0.0    0.0     0.0    0.0
+        p_string             Parsing.Bench.UU2.JSON            161           3    0.0    0.0     0.0    0.0
+         p_string.jchar      Parsing.Bench.UU2.JSON            173           1    0.0    0.0     0.0    0.0
+          p_unicode          Parsing.Bench.UU2.JSON            179           1    0.0    0.0     0.0    0.0
+          p_escape           Parsing.Bench.UU2.JSON            175           1    0.0    0.0     0.0    0.0
+           p_escape.decode   Parsing.Bench.UU2.JSON            178           8    0.0    0.0     0.0    0.0
+           choice            Parsing.Bench.UU2.Base            177           9    0.0    0.0     0.0    0.0
+          pNoneSym           Parsing.Bench.UU2.Base            174           1    0.0    0.0     0.0    0.0
+       p_value               Parsing.Bench.UU2.JSON            143           4    0.0    0.0     0.0    0.0
+        spaces               Parsing.Bench.UU2.Base            168           2    0.0    0.0     0.0    0.0
+        p_value.value        Parsing.Bench.UU2.JSON            144           4    0.0    0.0     0.0    0.0
+         p_bool              Parsing.Bench.UU2.JSON            148           4    0.0    0.0     0.0    0.0
+         p_object            Parsing.Bench.UU2.JSON            147           4    0.0    0.0     0.0    0.0
+         p_number            Parsing.Bench.UU2.JSON            146           4    0.0    0.0     0.0    0.0
+         p_string            Parsing.Bench.UU2.JSON            145           4    0.0    0.0     0.0    0.0
+          p_string.jchar     Parsing.Bench.UU2.JSON            158           2    0.0    0.0     0.0    0.0
+           pNoneSym          Parsing.Bench.UU2.Base            159           2    0.0    0.0     0.0    0.0
+       spaces                Parsing.Bench.UU2.Base            142          13    0.0    0.0     0.0    0.0
+     p_object                Parsing.Bench.UU2.JSON            135           1    0.0    0.0     0.0    0.0
+      p_series               Parsing.Bench.UU2.JSON            136           1    0.0    0.0     0.0    0.0
+       p_object.p_field      Parsing.Bench.UU2.JSON            140           1    0.0    0.0     0.0    0.0
+        p_string             Parsing.Bench.UU2.JSON            141           1    0.0    0.0     0.0    0.0
+       spaces                Parsing.Bench.UU2.Base            139           1    0.0    0.0     0.0    0.0
+    spaces                   Parsing.Bench.UU2.Base            130           1    0.0    0.0     0.0    0.0
+ CAF                         Parsing.Bench.AST.JSON            121           0    0.0    0.0     0.0    0.0
+  showsPrec                  Parsing.Bench.AST.JSON            234           0    0.0    0.0     0.0    0.0
+  showList                   Parsing.Bench.AST.JSON            230           1    0.0    0.0     0.0    0.0
+  showsPrec                  Parsing.Bench.AST.JSON            229           0    0.0    0.0     0.0    0.0
+  showsPrec                  Parsing.Bench.AST.JSON            227           0    0.0    0.0     0.0    0.0
+ CAF                         Parsing.Bench.UU2.Base            120           0    0.0    0.0     0.0    0.0
+  spaces                     Parsing.Bench.UU2.Base            133           0    0.0    0.0     0.0    0.0
+  run'                       Parsing.Bench.UU2.Base            127           1    0.0    0.0     0.0    0.0
+ CAF                         Text.ParserCombinators.UU.Utils   116           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.Handle.FD                  110           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.Conc.Signal                   105           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.Float                         103           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.Encoding                   101           0    0.0    0.0     0.0    0.0
+ CAF                         Text.Read.Lex                      92           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.Encoding.Iconv              89           0    0.0    0.0     0.0    0.0
+ CAF                         GHC.IO.FD                          88           0    0.0    0.0     0.0    0.0

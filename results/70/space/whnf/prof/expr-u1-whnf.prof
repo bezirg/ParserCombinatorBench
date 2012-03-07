@@ -1,0 +1,177 @@
+	Tue Mar  6 21:17 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-u1-whnf +RTS -p -RTS
+
+	total time  =        2.08 secs   (104 ticks @ 20 ms)
+	total alloc = 328,410,728 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+machine                        UU.Parsing.Machine    44.2   66.6
+pSpaces                        Parsing.Bench.UU1.Base  26.0    7.4
+pIdent                         Parsing.Bench.UU1.Base  10.6    2.5
+e1                             Parsing.Bench.UU1.Expr   6.7    3.1
+pParens                        Parsing.Bench.UU1.Base   3.8    2.0
+pLet                           Parsing.Bench.UU1.Expr   2.9    2.8
+e2                             Parsing.Bench.UU1.Expr   2.9    0.8
+execParser                     Parsing.Bench.UU1.Base   1.0    4.0
+main                           Main                   0.0    8.4
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 282           2   0.0    8.4     0.0    8.4
+  succeeded              Parsing.Bench.UU1.Base                               284           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 276           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 283           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        274           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             272           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     268           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     213           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            197           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              177           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                171           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      168           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.Base                               163          24   0.0    0.0     0.0    0.2
+  pSpaces                Parsing.Bench.UU1.Base                               302           3   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   320           0   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   319           0   0.0    0.0     0.0    0.0
+  pDigit                 Parsing.Bench.UU1.Base                               301           1   0.0    0.0     0.0    0.0
+  pNatural               Parsing.Bench.UU1.Base                               300           2   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   340           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   338          49   0.0    0.0     0.0    0.0
+  pUpper                 Parsing.Bench.UU1.Base                               299           1   0.0    0.0     0.0    0.0
+  pLower                 Parsing.Bench.UU1.Base                               298           1   0.0    0.0     0.0    0.0
+  pLetter                Parsing.Bench.UU1.Base                               297           1   0.0    0.0     0.0    0.0
+  pIdent                 Parsing.Bench.UU1.Base                               296           5   0.0    0.2     0.0    0.2
+   mkParser1             UU.Parsing.Machine                                   322           1   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   316           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   307         516   0.0    0.0     0.0    0.0
+  pParens                Parsing.Bench.UU1.Base                               294           2   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   336           1   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   335           0   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.Expr                               151          40   0.0    0.0   100.0   91.3
+  Locating               UU.Parsing.Machine                                   324           1   0.0    0.0     0.0    0.0
+  mkParser2              UU.Parsing.Machine                                   323           0   0.0    0.0     0.0    0.0
+  machine                UU.Parsing.Machine                                   306           1   0.0    0.0     0.0    0.0
+  pLet                   Parsing.Bench.UU1.Expr                               295           6   0.0    0.0     0.0    0.0
+   e1                    Parsing.Bench.UU1.Expr                               317           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   318           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   315           5   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   314           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   304           0   0.0    0.0     0.0    0.0
+  e3                     Parsing.Bench.UU1.Expr                               293           2   0.0    0.1     1.9    1.8
+   pLet                  Parsing.Bench.UU1.Expr                               350         430   1.0    0.0     1.9    0.5
+    e1                   Parsing.Bench.UU1.Expr                               420           0   0.0    0.0     0.0    0.0
+     machine             UU.Parsing.Machine                                   421           0   0.0    0.0     0.0    0.0
+    e2                   Parsing.Bench.UU1.Expr                               418           0   0.0    0.0     0.0    0.0
+     machine             UU.Parsing.Machine                                   419           0   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   353         530   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   351       15023   1.0    0.4     1.0    0.5
+     op1                 Parsing.Bench.UU1.Expr                               397           0   0.0    0.0     0.0    0.0
+     op2                 Parsing.Bench.UU1.Expr                               382           0   0.0    0.0     0.0    0.0
+     e2                  Parsing.Bench.UU1.Expr                               381           0   0.0    0.0     0.0    0.0
+      e1                 Parsing.Bench.UU1.Expr                               417           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   385          88   0.0    0.0     0.0    0.0
+     pParens             Parsing.Bench.UU1.Base                               366           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   380         242   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   364         513   0.0    0.0     0.0    0.0
+     pNatural            Parsing.Bench.UU1.Base                               363           0   0.0    0.0     0.0    0.0
+     e1                  Parsing.Bench.UU1.Expr                               362           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   365         532   0.0    0.0     0.0    0.0
+     pIdent              Parsing.Bench.UU1.Base                               356           0   0.0    0.0     0.0    0.0
+      mkParser1          UU.Parsing.Machine                                   357         100   0.0    0.0     0.0    0.0
+     pSpaces             Parsing.Bench.UU1.Base                               354         901   0.0    0.0     0.0    0.0
+   pParens               Parsing.Bench.UU1.Base                               344           0   0.0    0.0     0.0    0.9
+    Locating             UU.Parsing.Machine                                   361         437   0.0    0.0     0.0    0.0
+    e1                   Parsing.Bench.UU1.Expr                               346           9   0.0    0.3     0.0    0.9
+     e2                  Parsing.Bench.UU1.Expr                               389           0   0.0    0.0     0.0    0.0
+      machine            UU.Parsing.Machine                                   390           0   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   360         979   0.0    0.0     0.0    0.0
+     machine             UU.Parsing.Machine                                   348       20907   0.0    0.5     0.0    0.6
+      pIdent             Parsing.Bench.UU1.Base                               404           0   0.0    0.0     0.0    0.0
+       mkParser1         UU.Parsing.Machine                                   405          73   0.0    0.0     0.0    0.0
+      pLet               Parsing.Bench.UU1.Expr                               402         315   0.0    0.0     0.0    0.0
+       Locating          UU.Parsing.Machine                                   403         388   0.0    0.0     0.0    0.0
+      pNatural           Parsing.Bench.UU1.Base                               391           0   0.0    0.0     0.0    0.0
+      op1                Parsing.Bench.UU1.Expr                               387           0   0.0    0.0     0.0    0.0
+      op2                Parsing.Bench.UU1.Expr                               383           0   0.0    0.0     0.0    0.0
+      pSpaces            Parsing.Bench.UU1.Base                               359        1000   0.0    0.1     0.0    0.1
+      Locating           UU.Parsing.Machine                                   358         955   0.0    0.0     0.0    0.0
+      e2                 Parsing.Bench.UU1.Expr                               349           0   0.0    0.0     0.0    0.0
+       Locating          UU.Parsing.Machine                                   384         149   0.0    0.0     0.0    0.0
+     mkParser2           UU.Parsing.Machine                                   347           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   345         618   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   343           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   308        6817   0.0    0.2     0.0    0.3
+    pNatural             Parsing.Bench.UU1.Base                               386           0   0.0    0.0     0.0    0.0
+    pSpaces              Parsing.Bench.UU1.Base                               355         311   0.0    0.0     0.0    0.0
+    pIdent               Parsing.Bench.UU1.Base                               352           0   0.0    0.0     0.0    0.0
+  op2                    Parsing.Bench.UU1.Expr                               292           1   0.0    0.0     0.0    0.0
+  e2                     Parsing.Bench.UU1.Expr                               291           3   0.0    0.1     1.9    1.1
+   e1                    Parsing.Bench.UU1.Expr                               416           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   376         111   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   368           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   305       22888   0.0    0.6     1.9    1.0
+    pLet                 Parsing.Bench.UU1.Expr                               399         212   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   400         262   0.0    0.0     0.0    0.0
+    op1                  Parsing.Bench.UU1.Expr                               392           0   0.0    0.0     0.0    0.0
+    pIdent               Parsing.Bench.UU1.Base                               388           0   0.0    0.0     0.0    0.0
+     mkParser1           UU.Parsing.Machine                                   401          50   0.0    0.0     0.0    0.0
+    e1                   Parsing.Bench.UU1.Expr                               377           0   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   378         724   0.0    0.0     0.0    0.0
+    pParens              Parsing.Bench.UU1.Base                               373           0   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   379         191   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   371         747   0.0    0.0     0.0    0.0
+    pNatural             Parsing.Bench.UU1.Base                               370           0   1.0    0.0     1.0    0.0
+    e3                   Parsing.Bench.UU1.Expr                               369           0   0.0    0.0     1.0    0.3
+     pLet                Parsing.Bench.UU1.Expr                               398           0   0.0    0.0     0.0    0.0
+      e1                 Parsing.Bench.UU1.Expr                               423           0   0.0    0.0     0.0    0.0
+     pParens             Parsing.Bench.UU1.Base                               372           0   0.0    0.0     1.0    0.3
+      e1                 Parsing.Bench.UU1.Expr                               374           9   1.0    0.3     1.0    0.3
+       mkParser2         UU.Parsing.Machine                                   375           0   0.0    0.0     0.0    0.0
+    pSpaces              Parsing.Bench.UU1.Base                               342         971   0.0    0.1     0.0    0.1
+    op2                  Parsing.Bench.UU1.Expr                               341           0   0.0    0.0     0.0    0.0
+  op1                    Parsing.Bench.UU1.Expr                               290           1   0.0    0.0     0.0    0.0
+  e1                     Parsing.Bench.UU1.Expr                               289          14   5.8    2.2    95.2   82.4
+   e2                    Parsing.Bench.UU1.Expr                               406           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   407           0   0.0    0.0     0.0    0.0
+     e3                  Parsing.Bench.UU1.Expr                               408           0   0.0    0.0     0.0    0.0
+      pParens            Parsing.Bench.UU1.Base                               409           0   0.0    0.0     0.0    0.0
+   e3                    Parsing.Bench.UU1.Expr                               394           0   0.0    0.0     0.0    0.0
+    pParens              Parsing.Bench.UU1.Base                               395           0   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   325       89315   0.0    0.1     0.0    0.1
+   machine               UU.Parsing.Machine                                   309     2443086  43.3   63.7    89.4   80.1
+    op2                  Parsing.Bench.UU1.Expr                               393           0   0.0    0.2     0.0    0.2
+    op1                  Parsing.Bench.UU1.Expr                               367           0   0.0    0.5     0.0    0.5
+    pNatural             Parsing.Bench.UU1.Base                               339           0   0.0    0.7     0.0    0.7
+    Locating             UU.Parsing.Machine                                   334       87706   0.0    0.1     0.0    0.1
+    pLet                 Parsing.Bench.UU1.Expr                               331       45829   1.0    2.1     1.0    2.4
+     Locating            UU.Parsing.Machine                                   332       56680   0.0    0.3     0.0    0.3
+    pParens              Parsing.Bench.UU1.Base                               330           1   3.8    1.9     4.8    2.1
+     Locating            UU.Parsing.Machine                                   337       41936   1.0    0.2     1.0    0.2
+    run                  Parsing.Bench.UU1.Expr                               326           0   0.0    0.0     0.0    0.0
+     run'                Parsing.Bench.UU1.Base                               327           0   0.0    0.0     0.0    0.0
+      execParser         Parsing.Bench.UU1.Base                               328           0   0.0    0.0     0.0    0.0
+    pSpaces              Parsing.Bench.UU1.Base                               321      129854  26.0    7.2    26.0    7.2
+    pIdent               Parsing.Bench.UU1.Base                               313           0  10.6    2.1    10.6    2.1
+     mkParser1           UU.Parsing.Machine                                   333       10851   0.0    0.1     0.0    0.1
+    e3                   Parsing.Bench.UU1.Expr                               311           0   0.0    0.1     1.0    0.7
+     pParens             Parsing.Bench.UU1.Base                               329           0   0.0    0.0     0.0    0.0
+     pLet                Parsing.Bench.UU1.Expr                               312           0   1.0    0.6     1.0    0.6
+      e2                 Parsing.Bench.UU1.Expr                               422           0   0.0    0.0     0.0    0.0
+    e2                   Parsing.Bench.UU1.Expr                               310           0   2.9    0.5     2.9    0.5
+     Locating            UU.Parsing.Machine                                   396       12315   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   303           1   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU1.Expr                               285           1   0.0    0.0     1.0    6.0
+   run'                  Parsing.Bench.UU1.Base                               287           1   0.0    0.0     1.0    6.0
+    execParser           Parsing.Bench.UU1.Base                               288           1   1.0    4.0     1.0    6.0
+     e2                  Parsing.Bench.UU1.Expr                               414           0   0.0    0.2     0.0    0.6
+      machine            UU.Parsing.Machine                                   415           0   0.0    0.4     0.0    0.4
+     e1                  Parsing.Bench.UU1.Expr                               412           0   0.0    0.4     0.0    1.1
+      machine            UU.Parsing.Machine                                   413           0   0.0    0.8     0.0    0.8
+     pNatural            Parsing.Bench.UU1.Base                               411           0   0.0    0.1     0.0    0.1
+     pIdent              Parsing.Bench.UU1.Base                               410           0   0.0    0.2     0.0    0.2
+   pExpr                 Parsing.Bench.UU1.Expr                               286           1   0.0    0.0     0.0    0.0

@@ -1,0 +1,24 @@
+./dist/build/http-u1-whnf/http-u1-whnf +RTS -shttp-u1-whnf.gc 
+   1,724,443,712 bytes allocated in the heap
+   1,338,239,656 bytes copied during GC
+     221,641,064 bytes maximum residency (13 sample(s))
+       5,705,040 bytes maximum slop
+             554 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3276 collections,     0 parallel,  1.45s,  1.45s elapsed
+  Generation 1:    13 collections,     0 parallel,  1.90s,  1.90s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    3.86s  (  3.86s elapsed)
+  GC    time    3.34s  (  3.34s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    7.20s  (  7.20s elapsed)
+
+  %GC time      46.4%  (46.4% elapsed)
+
+  Alloc rate    447,073,926 bytes per MUT second
+
+  Productivity  53.5% of total user, 53.6% of total elapsed
+

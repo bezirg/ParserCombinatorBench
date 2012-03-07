@@ -1,0 +1,25 @@
+./dist/build/http-u2-whnf/http-u2-whnf +RTS -shttp-u2-whnf.gc 
+   4,218,874,256 bytes allocated in the heap
+   1,503,046,832 bytes copied during GC
+     224,353,528 bytes maximum residency (14 sample(s))
+       6,587,784 bytes maximum slop
+             505 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      8211 colls,     0 par    1.95s    1.85s     0.0002s    0.0019s
+  Gen  1        14 colls,     0 par    1.24s    1.70s     0.1213s    0.6086s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    8.46s  (  8.62s elapsed)
+  GC      time    3.19s  (  3.55s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time   11.66s  ( 12.17s elapsed)
+
+  %GC     time      27.4%  (29.2% elapsed)
+
+  Alloc rate    498,324,763 bytes per MUT second
+
+  Productivity  72.6% of total user, 69.6% of total elapsed
+

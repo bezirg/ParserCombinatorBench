@@ -1,0 +1,24 @@
+./dist/build/css-u2-whnf/css-u2-whnf +RTS -scss-u2-whnf.gc 
+     869,977,008 bytes allocated in the heap
+     591,346,352 bytes copied during GC
+     101,457,736 bytes maximum residency (12 sample(s))
+       2,063,824 bytes maximum slop
+             225 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  1648 collections,     0 parallel,  0.69s,  0.69s elapsed
+  Generation 1:    12 collections,     0 parallel,  0.85s,  0.85s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.62s  (  1.62s elapsed)
+  GC    time    1.54s  (  1.54s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.16s  (  3.15s elapsed)
+
+  %GC time      48.8%  (48.8% elapsed)
+
+  Alloc rate    538,024,499 bytes per MUT second
+
+  Productivity  51.2% of total user, 51.2% of total elapsed
+

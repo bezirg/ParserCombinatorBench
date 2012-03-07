@@ -1,0 +1,49 @@
+	Tue Mar  6 19:59 2012 Time and Allocation Profiling Report  (Final)
+
+	   css-p3-whnf +RTS -p -RTS
+
+	total time  =        1.71 secs   (1708 ticks @ 1000 us, 1 processor)
+	total alloc = 1,904,203,688 bytes  (excludes profiling overheads)
+
+COST CENTRE    MODULE                    %time %alloc
+
+attrParser     Parsing.Bench.Parsec3.CSS  47.2   36.5
+skipWS         Parsing.Bench.Parsec3.CSS  40.7   42.4
+main           Main                        8.7   18.7
+attrsParser.go Parsing.Bench.Parsec3.CSS   1.9    1.5
+blockParser    Parsing.Bench.Parsec3.CSS   1.4    0.9
+
+
+                                                                      individual     inherited
+COST CENTRE            MODULE                       no.     entries  %time %alloc   %time %alloc
+
+MAIN                   MAIN                          76           0    0.0    0.0   100.0  100.0
+ main                  Main                         153           0    8.7   18.7   100.0  100.0
+  run                  Parsing.Bench.Parsec3.CSS    157           0    0.0    0.0    91.3   81.3
+   run'                Parsing.Bench.Parsec3.Base   158           0    0.0    0.0    91.3   81.3
+    blocksParser       Parsing.Bench.Parsec3.CSS    161           0    0.0    0.0    91.3   81.3
+     blockParser       Parsing.Bench.Parsec3.CSS    163           0    1.4    0.9    91.3   81.3
+      skipWS           Parsing.Bench.Parsec3.CSS    165           0   40.7   42.4    89.9   80.4
+       attrsParser     Parsing.Bench.Parsec3.CSS    168           0    0.0    0.0    49.1   38.0
+        attrsParser.go Parsing.Bench.Parsec3.CSS    169       54692    1.9    1.5    49.1   38.0
+         attrParser    Parsing.Bench.Parsec3.CSS    171           0   47.2   36.5    47.2   36.5
+  succeeded            Parsing.Bench.Parsec3.Base   154           1    0.0    0.0     0.0    0.0
+ CAF                   Main                         151           0    0.0    0.0     0.0    0.0
+  main                 Main                         152           1    0.0    0.0     0.0    0.0
+ CAF                   Parsing.Bench.Parsec3.CSS    150           0    0.0    0.0     0.0    0.0
+  attrParser           Parsing.Bench.Parsec3.CSS    170           1    0.0    0.0     0.0    0.0
+  attrsParser          Parsing.Bench.Parsec3.CSS    166           1    0.0    0.0     0.0    0.0
+   attrsParser.go      Parsing.Bench.Parsec3.CSS    167           1    0.0    0.0     0.0    0.0
+  skipWS               Parsing.Bench.Parsec3.CSS    164           1    0.0    0.0     0.0    0.0
+  blockParser          Parsing.Bench.Parsec3.CSS    162           1    0.0    0.0     0.0    0.0
+  blocksParser         Parsing.Bench.Parsec3.CSS    160           1    0.0    0.0     0.0    0.0
+  pCSS                 Parsing.Bench.Parsec3.CSS    159           1    0.0    0.0     0.0    0.0
+  run                  Parsing.Bench.Parsec3.CSS    155           1    0.0    0.0     0.0    0.0
+ CAF                   Parsing.Bench.Parsec3.Base   149           0    0.0    0.0     0.0    0.0
+  run'                 Parsing.Bench.Parsec3.Base   156           1    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Handle.FD             123           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.Show                     122           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.Conc.Signal              119           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding              115           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding.Iconv        104           0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.FD                    103           0    0.0    0.0     0.0    0.0

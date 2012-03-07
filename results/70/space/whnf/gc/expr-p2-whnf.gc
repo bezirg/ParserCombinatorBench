@@ -1,0 +1,24 @@
+./dist/build/expr-p2-whnf/expr-p2-whnf +RTS -sexpr-p2-whnf.gc 
+   1,257,871,976 bytes allocated in the heap
+     171,114,744 bytes copied during GC
+      38,517,296 bytes maximum residency (8 sample(s))
+         524,256 bytes maximum slop
+              80 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  2392 collections,     0 parallel,  0.24s,  0.24s elapsed
+  Generation 1:     8 collections,     0 parallel,  0.22s,  0.22s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.88s  (  1.88s elapsed)
+  GC    time    0.46s  (  0.46s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    2.35s  (  2.35s elapsed)
+
+  %GC time      19.6%  (19.6% elapsed)
+
+  Alloc rate    666,995,059 bytes per MUT second
+
+  Productivity  80.3% of total user, 80.3% of total elapsed
+

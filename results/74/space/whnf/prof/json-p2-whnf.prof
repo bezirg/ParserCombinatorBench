@@ -1,0 +1,92 @@
+	Tue Mar  6 20:00 2012 Time and Allocation Profiling Report  (Final)
+
+	   json-p2-whnf +RTS -p -RTS
+
+	total time  =        1.99 secs   (1992 ticks @ 1000 us, 1 processor)
+	total alloc = 824,102,704 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                     %time %alloc
+
+p_number         Parsing.Bench.Parsec2.JSON  42.3   23.9
+p_string.jchar   Parsing.Bench.Parsec2.JSON  17.3   22.4
+<*>              Parsing.Bench.Parsec2.Base  15.3   20.6
+p_string         Parsing.Bench.Parsec2.JSON  10.1    9.0
+p_series         Parsing.Bench.Parsec2.JSON   3.7    2.9
+main             Main                         3.5   16.7
+p_value.value    Parsing.Bench.Parsec2.JSON   3.0    1.4
+p_object.p_field Parsing.Bench.Parsec2.JSON   2.4    2.0
+p_value          Parsing.Bench.Parsec2.JSON   1.3    0.7
+
+
+                                                                                  individual     inherited
+COST CENTRE                MODULE                               no.     entries  %time %alloc   %time %alloc
+
+MAIN                       MAIN                                  61           0    0.0    0.0   100.0  100.0
+ main                      Main                                 123           0    3.5   16.7   100.0  100.0
+  run                      Parsing.Bench.Parsec2.JSON           128           0    0.0    0.0    96.5   83.3
+   run'                    Parsing.Bench.Parsec2.Base           129           0    0.0    0.0    96.5   83.3
+    pJSON                  Parsing.Bench.Parsec2.JSON           131           0    0.0    0.0    96.5   83.3
+     pJSON.text            Parsing.Bench.Parsec2.JSON           136           0    0.0    0.0    96.5   83.3
+      p_array              Parsing.Bench.Parsec2.JSON           143           0    0.2    0.0    96.5   83.3
+       p_series            Parsing.Bench.Parsec2.JSON           145           0    3.7    2.9    96.4   83.2
+        p_object           Parsing.Bench.Parsec2.JSON           158           0    0.1    0.0    81.0   71.4
+         p_object.p_field  Parsing.Bench.Parsec2.JSON           164           0    2.4    2.0    80.9   71.3
+          p_string         Parsing.Bench.Parsec2.JSON           166           0    8.0    6.3    26.8   32.9
+           p_string.jchar  Parsing.Bench.Parsec2.JSON           169           0   15.5   19.7    16.0   21.2
+            <*>            Parsing.Bench.Parsec2.Base           170           0    0.5    1.5     0.5    1.5
+           <*>             Parsing.Bench.Parsec2.Base           167           0    2.8    5.4     2.8    5.4
+          <*>              Parsing.Bench.Parsec2.Base           165           0    6.6    7.4    51.8   36.5
+           p_string        Parsing.Bench.Parsec2.JSON           177           0    0.8    0.8     2.6    3.5
+            p_string.jchar Parsing.Bench.Parsec2.JSON           178           0    1.9    2.7     1.9    2.7
+           p_value         Parsing.Bench.Parsec2.JSON           172           0    1.2    0.6    42.5   25.6
+            p_value.value  Parsing.Bench.Parsec2.JSON           173           0    2.6    1.3    41.4   25.0
+             p_bool        Parsing.Bench.Parsec2.JSON           176           0    0.6    0.4     0.6    0.4
+             p_number      Parsing.Bench.Parsec2.JSON           175           0   36.8   21.5    36.8   21.5
+             p_string      Parsing.Bench.Parsec2.JSON           174           0    1.4    1.7     1.4    1.7
+        p_value            Parsing.Bench.Parsec2.JSON           148           0    0.1    0.0     6.4    2.8
+         p_value.value     Parsing.Bench.Parsec2.JSON           151           0    0.4    0.1     6.2    2.6
+          p_bool           Parsing.Bench.Parsec2.JSON           161           0    0.0    0.0     0.0    0.0
+          p_object         Parsing.Bench.Parsec2.JSON           157           0    0.3    0.0     0.3    0.0
+          p_number         Parsing.Bench.Parsec2.JSON           155           0    5.5    2.3     5.5    2.3
+          p_string         Parsing.Bench.Parsec2.JSON           153           0    0.1    0.1     0.1    0.1
+         <*>               Parsing.Bench.Parsec2.Base           149           0    0.2    0.2     0.2    0.2
+        <*>                Parsing.Bench.Parsec2.Base           146           0    5.2    6.2     5.2    6.2
+         p_object          Parsing.Bench.Parsec2.JSON           159           0    0.0    0.0     0.0    0.0
+      p_object             Parsing.Bench.Parsec2.JSON           138           0    0.0    0.0     0.0    0.0
+       p_series            Parsing.Bench.Parsec2.JSON           140           0    0.0    0.0     0.0    0.0
+        <*>                Parsing.Bench.Parsec2.Base           141           0    0.0    0.0     0.0    0.0
+     <*>                   Parsing.Bench.Parsec2.Base           133           0    0.0    0.0     0.0    0.0
+  succeeded                Parsing.Bench.Parsec2.Base           124           1    0.0    0.0     0.0    0.0
+ CAF                       Main                                 121           0    0.0    0.0     0.0    0.0
+  main                     Main                                 122           1    0.0    0.0     0.0    0.0
+ CAF                       Parsing.Bench.Parsec2.JSON           120           0    0.0    0.0     0.0    0.0
+  p_series                 Parsing.Bench.Parsec2.JSON           162           0    0.0    0.0     0.0    0.0
+  p_bool                   Parsing.Bench.Parsec2.JSON           160           1    0.0    0.0     0.0    0.0
+  p_number                 Parsing.Bench.Parsec2.JSON           154           1    0.0    0.0     0.0    0.0
+  p_string                 Parsing.Bench.Parsec2.JSON           152           1    0.0    0.0     0.0    0.0
+   p_string.jchar          Parsing.Bench.Parsec2.JSON           168           1    0.0    0.0     0.0    0.0
+  p_value                  Parsing.Bench.Parsec2.JSON           147           1    0.0    0.0     0.0    0.0
+   p_value.value           Parsing.Bench.Parsec2.JSON           150           1    0.0    0.0     0.0    0.0
+  p_array                  Parsing.Bench.Parsec2.JSON           142           1    0.0    0.0     0.0    0.0
+   p_series                Parsing.Bench.Parsec2.JSON           144           1    0.0    0.0     0.0    0.0
+  p_object                 Parsing.Bench.Parsec2.JSON           137           1    0.0    0.0     0.0    0.0
+   p_object.p_field        Parsing.Bench.Parsec2.JSON           163           1    0.0    0.0     0.0    0.0
+   p_series                Parsing.Bench.Parsec2.JSON           139           1    0.0    0.0     0.0    0.0
+  pJSON                    Parsing.Bench.Parsec2.JSON           130           1    0.0    0.0     0.0    0.0
+   pJSON.text              Parsing.Bench.Parsec2.JSON           134           1    0.0    0.0     0.0    0.0
+  run                      Parsing.Bench.Parsec2.JSON           125           1    0.0    0.0     0.0    0.0
+ CAF                       Parsing.Bench.Parsec2.Base           119           0    0.0    0.0     0.0    0.0
+  pure                     Parsing.Bench.Parsec2.Base           171           1    0.0    0.0     0.0    0.0
+  empty                    Parsing.Bench.Parsec2.Base           156           1    0.0    0.0     0.0    0.0
+  <|>                      Parsing.Bench.Parsec2.Base           135           1    0.0    0.0     0.0    0.0
+  <*>                      Parsing.Bench.Parsec2.Base           132           1    0.0    0.0     0.0    0.0
+  run'                     Parsing.Bench.Parsec2.Base           126           1    0.0    0.0     0.0    0.0
+ CAF                       Text.ParserCombinators.Parsec.Prim   113           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.Handle.FD                     110           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.Show                             109           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.Conc.Signal                      107           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.Encoding                      102           0    0.0    0.0     0.0    0.0
+ CAF                       Text.Read.Lex                         93           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.Encoding.Iconv                 90           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.IO.FD                             89           0    0.0    0.0     0.0    0.0
+ CAF                       GHC.Read                              88           0    0.0    0.0     0.0    0.0

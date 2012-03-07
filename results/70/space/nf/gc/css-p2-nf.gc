@@ -1,0 +1,24 @@
+./dist/build/css-p2-nf/css-p2-nf +RTS -scss-p2-nf.gc 
+   2,005,292,864 bytes allocated in the heap
+     539,050,192 bytes copied during GC
+      61,515,432 bytes maximum residency (14 sample(s))
+       2,071,128 bytes maximum slop
+             165 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  3804 collections,     0 parallel,  2.83s,  2.83s elapsed
+  Generation 1:    14 collections,     0 parallel,  0.58s,  0.58s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.54s  (  2.54s elapsed)
+  GC    time    3.41s  (  3.41s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    5.95s  (  5.95s elapsed)
+
+  %GC time      57.3%  (57.3% elapsed)
+
+  Alloc rate    788,246,838 bytes per MUT second
+
+  Productivity  42.7% of total user, 42.7% of total elapsed
+

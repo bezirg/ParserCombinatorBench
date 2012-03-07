@@ -1,0 +1,25 @@
+./dist/build/url-p2/url-p2 +RTS -surl-p2.gc 
+   1,818,087,656 bytes allocated in the heap
+     541,801,888 bytes copied during GC
+      68,518,464 bytes maximum residency (14 sample(s))
+       1,964,672 bytes maximum slop
+             163 MB total memory in use (0 MB lost due to fragmentation)
+
+                                    Tot time (elapsed)  Avg pause  Max pause
+  Gen  0      3558 colls,     0 par    0.57s    0.61s     0.0002s    0.0018s
+  Gen  1        14 colls,     0 par    0.46s    0.61s     0.0436s    0.1948s
+
+  INIT    time    0.00s  (  0.00s elapsed)
+  MUT     time    3.32s  (  3.32s elapsed)
+  GC      time    1.03s  (  1.22s elapsed)
+  RP      time    0.00s  (  0.00s elapsed)
+  PROF    time    0.00s  (  0.00s elapsed)
+  EXIT    time    0.00s  (  0.00s elapsed)
+  Total   time    4.36s  (  4.54s elapsed)
+
+  %GC     time      23.7%  (26.9% elapsed)
+
+  Alloc rate    547,102,948 bytes per MUT second
+
+  Productivity  76.3% of total user, 73.1% of total elapsed
+

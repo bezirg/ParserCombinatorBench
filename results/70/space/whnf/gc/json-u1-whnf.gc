@@ -1,0 +1,24 @@
+./dist/build/json-u1-whnf/json-u1-whnf +RTS -sjson-u1-whnf.gc 
+     459,921,272 bytes allocated in the heap
+     366,720,528 bytes copied during GC
+      60,018,688 bytes maximum residency (11 sample(s))
+       1,687,816 bytes maximum slop
+             152 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:   867 collections,     0 parallel,  0.41s,  0.41s elapsed
+  Generation 1:    11 collections,     0 parallel,  0.51s,  0.51s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    1.36s  (  1.36s elapsed)
+  GC    time    0.92s  (  0.92s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    2.28s  (  2.28s elapsed)
+
+  %GC time      40.2%  (40.2% elapsed)
+
+  Alloc rate    337,295,724 bytes per MUT second
+
+  Productivity  59.7% of total user, 59.7% of total elapsed
+

@@ -1,0 +1,229 @@
+	Tue Mar  6 17:54 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-ap +RTS -p -RTS
+
+	total time  =        0.90 secs   (895 ticks @ 1000 us, 1 processor)
+	total alloc = 527,337,848 bytes  (excludes profiling overheads)
+
+COST CENTRE    MODULE                        %time %alloc
+
+pIdent         Parsing.Bench.Attoparsec.Base  25.4   25.6
+showsPrec      Parsing.Bench.AST.Expr         11.1   12.4
+op1            Parsing.Bench.Attoparsec.Expr  10.9    8.8
+main           Main                            9.2    3.8
+pLet           Parsing.Bench.Attoparsec.Expr   9.1    5.2
+pParens        Parsing.Bench.Attoparsec.Base   8.6    8.3
+e3             Parsing.Bench.Attoparsec.Expr   6.1    7.5
+e2             Parsing.Bench.Attoparsec.Expr   5.4    2.8
+op2            Parsing.Bench.Attoparsec.Expr   4.8    4.1
+readTextDevice Data.Text.IO.Internal           4.5   20.7
+pChainl        Parsing.Bench.Attoparsec.Base   2.0    0.4
+pChainl.h      Parsing.Bench.Attoparsec.Base   1.5    0.2
+pChainl.j      Parsing.Bench.Attoparsec.Base   1.2    0.2
+
+
+                                                                           individual     inherited
+COST CENTRE              MODULE                          no.     entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                             79           0    0.0    0.0   100.0  100.0
+ main                    Main                            159           0    9.2    3.8   100.0  100.0
+  showsPrec              Parsing.Bench.AST.Expr          240       88739   11.1   12.4    11.1   12.4
+  run                    Parsing.Bench.Attoparsec.Expr   162           0    0.0    0.0    75.3   63.1
+   run'                  Parsing.Bench.Attoparsec.Base   163           1    0.0    0.0    75.3   63.1
+    pExpr                Parsing.Bench.Attoparsec.Expr   165           0    0.0    0.0    75.3   63.1
+     e1                  Parsing.Bench.Attoparsec.Expr   167           0    0.3    0.2    75.3   63.1
+      pChainl            Parsing.Bench.Attoparsec.Base   169           0    2.0    0.4    75.0   63.0
+       e3                Parsing.Bench.Attoparsec.Expr   174           0    6.1    7.5    72.4   62.4
+        op2              Parsing.Bench.Attoparsec.Expr   183           0    2.1    1.8    13.9    9.4
+         pChainl.j       Parsing.Bench.Attoparsec.Base   284        1541    0.0    0.0     0.0    0.0
+         pChainl.h       Parsing.Bench.Attoparsec.Base   255       17418    0.1    0.0     0.2    0.0
+          pChainl.j      Parsing.Bench.Attoparsec.Base   285           0    0.1    0.0     0.1    0.0
+         pIdent          Parsing.Bench.Attoparsec.Base   193           0    0.1    0.0     0.1    0.2
+          pChainl.j      Parsing.Bench.Attoparsec.Base   347           1    0.0    0.0     0.0    0.0
+          pChainl.h      Parsing.Bench.Attoparsec.Base   297         558    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   302           0    0.0    0.0     0.0    0.0
+          pParens        Parsing.Bench.Attoparsec.Base   234           0    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   335           2    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   334           2    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   336           0    0.0    0.0     0.0    0.0
+           e2            Parsing.Bench.Attoparsec.Expr   235           0    0.0    0.0     0.0    0.0
+            op1          Parsing.Bench.Attoparsec.Expr   236           0    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   333           2    0.0    0.0     0.0    0.0
+          pLet           Parsing.Bench.Attoparsec.Expr   210           0    0.0    0.0     0.0    0.0
+          e2             Parsing.Bench.Attoparsec.Expr   206           0    0.0    0.0     0.0    0.2
+           pChainl.h     Parsing.Bench.Attoparsec.Base   298          68    0.0    0.0     0.0    0.0
+            op1          Parsing.Bench.Attoparsec.Expr   300           0    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   301           0    0.0    0.0     0.0    0.0
+           pParens       Parsing.Bench.Attoparsec.Base   217           0    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   339           3    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   303          53    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   325           0    0.0    0.0     0.0    0.0
+           op1           Parsing.Bench.Attoparsec.Expr   207           0    0.0    0.1     0.0    0.1
+            pChainl.j    Parsing.Bench.Attoparsec.Base   299          75    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   295         679    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   332           0    0.0    0.0     0.0    0.0
+            pParens      Parsing.Bench.Attoparsec.Base   208           0    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   326          20    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   296         304    0.0    0.0     0.0    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   324           0    0.0    0.0     0.0    0.0
+             pLet        Parsing.Bench.Attoparsec.Expr   209           0    0.0    0.0     0.0    0.0
+         e2              Parsing.Bench.Attoparsec.Expr   184           0    2.2    1.1    11.4    7.4
+          pChainl.h      Parsing.Bench.Attoparsec.Base   266        5455    0.1    0.0     0.4    0.1
+           op1           Parsing.Bench.Attoparsec.Expr   268           0    0.1    0.0     0.3    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   269           0    0.2    0.0     0.2    0.0
+          pParens        Parsing.Bench.Attoparsec.Base   196           0    0.4    0.5     0.4    0.6
+           pChainl.j     Parsing.Bench.Attoparsec.Base   264         544    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   263        4340    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   265           0    0.0    0.0     0.0    0.0
+           pLet          Parsing.Bench.Attoparsec.Expr   220           0    0.0    0.0     0.0    0.0
+            pIdent       Parsing.Bench.Attoparsec.Base   221           0    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   304          51    0.0    0.0     0.0    0.0
+           op1           Parsing.Bench.Attoparsec.Expr   204           0    0.0    0.1     0.0    0.1
+            pChainl.j    Parsing.Bench.Attoparsec.Base   282         486    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   281         486    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   283           0    0.0    0.0     0.0    0.0
+            pIdent       Parsing.Bench.Attoparsec.Base   222           0    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   306          86    0.0    0.0     0.0    0.0
+           pIdent        Parsing.Bench.Attoparsec.Base   200           0    0.0    0.0     0.0    0.0
+          pIdent         Parsing.Bench.Attoparsec.Base   194           0    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   286         363    0.0    0.0     0.0    0.0
+           pParens       Parsing.Bench.Attoparsec.Base   232           0    0.0    0.0     0.0    0.0
+          op1            Parsing.Bench.Attoparsec.Expr   186           0    5.7    3.6     8.3    5.6
+           pChainl.j     Parsing.Bench.Attoparsec.Base   267        8178    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   241       15970    0.2    0.0     0.6    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   276           0    0.3    0.0     0.3    0.0
+           pIdent        Parsing.Bench.Attoparsec.Base   195           0    0.2    0.1     0.3    0.2
+            pChainl.j    Parsing.Bench.Attoparsec.Base   292         363    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   242        1972    0.1    0.0     0.1    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   293           0    0.0    0.0     0.0    0.0
+            pParens      Parsing.Bench.Attoparsec.Base   205           0    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   307         155    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   291         359    0.0    0.0     0.0    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   308           0    0.0    0.0     0.0    0.0
+             pLet        Parsing.Bench.Attoparsec.Expr   223           0    0.0    0.0     0.0    0.0
+           pParens       Parsing.Bench.Attoparsec.Base   187           0    0.4    0.9     1.7    1.7
+            pChainl.j    Parsing.Bench.Attoparsec.Base   253        2387    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   250        8421    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   254           0    0.0    0.0     0.0    0.0
+            pIdent       Parsing.Bench.Attoparsec.Base   199           0    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   305          61    0.0    0.0     0.0    0.0
+            pLet         Parsing.Bench.Attoparsec.Expr   188           0    1.0    0.4     1.2    0.7
+             pIdent      Parsing.Bench.Attoparsec.Base   189           0    0.1    0.3     0.2    0.3
+              pChainl.j  Parsing.Bench.Attoparsec.Base   279         354    0.0    0.0     0.0    0.0
+              pChainl.h  Parsing.Bench.Attoparsec.Base   278        2279    0.1    0.0     0.1    0.0
+               pChainl.j Parsing.Bench.Attoparsec.Base   280           0    0.0    0.0     0.0    0.0
+        pIdent           Parsing.Bench.Attoparsec.Base   181           0   17.2   17.2    31.6   28.8
+         pParens         Parsing.Bench.Attoparsec.Base   225           0    0.0    0.0     0.0    0.0
+          pChainl.j      Parsing.Bench.Attoparsec.Base   317          19    0.0    0.0     0.0    0.0
+          pChainl.h      Parsing.Bench.Attoparsec.Base   316          19    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   318           0    0.0    0.0     0.0    0.0
+          pLet           Parsing.Bench.Attoparsec.Expr   231           0    0.0    0.0     0.0    0.0
+          e2             Parsing.Bench.Attoparsec.Expr   229           0    0.0    0.0     0.0    0.0
+           op1           Parsing.Bench.Attoparsec.Expr   230           0    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   315          19    0.0    0.0     0.0    0.0
+            op2          Parsing.Bench.Attoparsec.Expr   233           0    0.0    0.0     0.0    0.0
+          op2            Parsing.Bench.Attoparsec.Expr   226           0    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   320           2    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   310          22    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   321           0    0.0    0.0     0.0    0.0
+           e2            Parsing.Bench.Attoparsec.Expr   227           0    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   311          10    0.0    0.0     0.0    0.0
+             op1         Parsing.Bench.Attoparsec.Expr   313           0    0.0    0.0     0.0    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   314           0    0.0    0.0     0.0    0.0
+            op1          Parsing.Bench.Attoparsec.Expr   228           0    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   319          18    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   312           9    0.0    0.0     0.0    0.0
+         e2              Parsing.Bench.Attoparsec.Expr   211           0    0.0    0.0     0.0    0.1
+          pChainl.h      Parsing.Bench.Attoparsec.Base   287          99    0.0    0.0     0.0    0.0
+           op1           Parsing.Bench.Attoparsec.Expr   289           0    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   290           0    0.0    0.0     0.0    0.0
+          pParens        Parsing.Bench.Attoparsec.Base   215           0    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   328           8    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   327           8    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   329           0    0.0    0.0     0.0    0.0
+           op2           Parsing.Bench.Attoparsec.Expr   216           0    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   330           3    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   294          64    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   331           0    0.0    0.0     0.0    0.0
+          op1            Parsing.Bench.Attoparsec.Expr   213           0    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   288          99    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   259          88    0.0    0.0     0.0    0.0
+           pParens       Parsing.Bench.Attoparsec.Base   218           0    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   261          42    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   260          42    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   262           0    0.0    0.0     0.0    0.0
+            pLet         Parsing.Bench.Attoparsec.Expr   224           0    0.0    0.0     0.0    0.0
+            op2          Parsing.Bench.Attoparsec.Expr   219           0    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   337           2    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   309          40    0.0    0.0     0.0    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   338           0    0.0    0.0     0.0    0.0
+           op2           Parsing.Bench.Attoparsec.Expr   214           0    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   323           6    0.0    0.0     0.0    0.0
+          op2            Parsing.Bench.Attoparsec.Expr   212           0    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   322           7    0.0    0.0     0.0    0.0
+         pLet            Parsing.Bench.Attoparsec.Expr   202           0    0.7    0.6     0.7    0.6
+         op2             Parsing.Bench.Attoparsec.Expr   190           0    2.7    2.3    13.7   11.0
+          pChainl.j      Parsing.Bench.Attoparsec.Base   258        4119    0.0    0.0     0.0    0.0
+          pChainl.h      Parsing.Bench.Attoparsec.Base   252       22900    0.0    0.0     0.0    0.0
+           pChainl.j     Parsing.Bench.Attoparsec.Base   270           0    0.0    0.0     0.0    0.0
+          pParens        Parsing.Bench.Attoparsec.Base   237           0    0.0    0.0     0.0    0.0
+           pChainl.h     Parsing.Bench.Attoparsec.Base   340           3    0.0    0.0     0.0    0.0
+            pChainl.j    Parsing.Bench.Attoparsec.Base   346           0    0.0    0.0     0.0    0.0
+           e2            Parsing.Bench.Attoparsec.Expr   238           0    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   341           1    0.0    0.0     0.0    0.0
+             op1         Parsing.Bench.Attoparsec.Expr   343           0    0.0    0.0     0.0    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   344           0    0.0    0.0     0.0    0.0
+            op1          Parsing.Bench.Attoparsec.Expr   239           0    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   345           1    0.0    0.0     0.0    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   342           1    0.0    0.0     0.0    0.0
+          e2             Parsing.Bench.Attoparsec.Expr   191           0    2.6    1.5    11.1    8.7
+           pChainl.h     Parsing.Bench.Attoparsec.Base   246        5749    0.0    0.0     0.2    0.1
+            op1          Parsing.Bench.Attoparsec.Expr   248           0    0.0    0.0     0.2    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   249           0    0.2    0.0     0.2    0.0
+           pParens       Parsing.Bench.Attoparsec.Base   198           0    0.6    0.5     0.7    0.6
+            pChainl.j    Parsing.Bench.Attoparsec.Base   271         815    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   245        4556    0.0    0.0     0.1    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   272           0    0.1    0.0     0.1    0.0
+            op1          Parsing.Bench.Attoparsec.Expr   203           0    0.0    0.1     0.0    0.1
+             pChainl.j   Parsing.Bench.Attoparsec.Base   274         622    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   273         684    0.0    0.0     0.0    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   275           0    0.0    0.0     0.0    0.0
+           op1           Parsing.Bench.Attoparsec.Expr   192           0    5.1    4.8     7.6    6.5
+            pChainl.j    Parsing.Bench.Attoparsec.Base   247        9187    0.0    0.0     0.0    0.0
+            pChainl.h    Parsing.Bench.Attoparsec.Base   244       25187    0.4    0.0     0.7    0.0
+             pChainl.j   Parsing.Bench.Attoparsec.Base   277           0    0.2    0.0     0.2    0.0
+            pParens      Parsing.Bench.Attoparsec.Base   197           0    1.5    1.6     1.8    1.7
+             pChainl.j   Parsing.Bench.Attoparsec.Base   256        4258    0.0    0.0     0.0    0.0
+             pChainl.h   Parsing.Bench.Attoparsec.Base   251       14698    0.3    0.0     0.3    0.0
+              pChainl.j  Parsing.Bench.Attoparsec.Base   257           0    0.0    0.0     0.0    0.0
+             pLet        Parsing.Bench.Attoparsec.Expr   201           0    0.0    0.0     0.0    0.0
+        pParens          Parsing.Bench.Attoparsec.Base   176           0    5.7    4.6    20.8   16.7
+         pLet            Parsing.Bench.Attoparsec.Expr   178           0    7.4    4.2    15.1   12.2
+          pIdent         Parsing.Bench.Attoparsec.Base   180           0    7.7    8.0     7.7    8.0
+       e2                Parsing.Bench.Attoparsec.Expr   171           0    0.6    0.2     0.6    0.2
+  readTextDevice         Data.Text.IO.Internal           160         338    4.5   20.7     4.5   20.7
+ CAF                     Main                            157           0    0.0    0.0     0.0    0.0
+  main                   Main                            158           1    0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Attoparsec.Expr   156           0    0.0    0.0     0.0    0.0
+  op1                    Parsing.Bench.Attoparsec.Expr   185           1    0.0    0.0     0.0    0.0
+  op2                    Parsing.Bench.Attoparsec.Expr   182           1    0.0    0.0     0.0    0.0
+  pLet                   Parsing.Bench.Attoparsec.Expr   177           1    0.0    0.0     0.0    0.0
+  e3                     Parsing.Bench.Attoparsec.Expr   173           1    0.0    0.0     0.0    0.0
+   pParens               Parsing.Bench.Attoparsec.Base   175           1    0.0    0.0     0.0    0.0
+  e2                     Parsing.Bench.Attoparsec.Expr   170           1    0.0    0.0     0.0    0.0
+   pChainl               Parsing.Bench.Attoparsec.Base   172           1    0.0    0.0     0.0    0.0
+  e1                     Parsing.Bench.Attoparsec.Expr   166           1    0.0    0.0     0.0    0.0
+   pChainl               Parsing.Bench.Attoparsec.Base   168           1    0.0    0.0     0.0    0.0
+  pExpr                  Parsing.Bench.Attoparsec.Expr   164           1    0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.Attoparsec.Expr   161           1    0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.AST.Expr          155           0    0.0    0.0     0.0    0.0
+  showsPrec              Parsing.Bench.AST.Expr          243           0    0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.Attoparsec.Base   154           0    0.0    0.0     0.0    0.0
+  pIdent                 Parsing.Bench.Attoparsec.Base   179           1    0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Array                 145           0    0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Internal              143           0    0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                125           0    0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                 118           0    0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding                 113           0    0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv           103           0    0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                       102           0    0.0    0.0     0.0    0.0

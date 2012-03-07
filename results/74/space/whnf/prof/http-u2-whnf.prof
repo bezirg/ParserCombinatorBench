@@ -1,0 +1,117 @@
+	Tue Mar  6 20:00 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-u2-whnf +RTS -p -RTS
+
+	total time  =        5.01 secs   (5012 ticks @ 1000 us, 1 processor)
+	total alloc = 2,817,545,040 bytes  (excludes profiling overheads)
+
+COST CENTRE            MODULE                 %time %alloc
+
+p_headers.fieldChar    Parsing.Bench.UU2.HTTP  43.6   46.7
+pNoneSym               Parsing.Bench.UU2.Base  12.7   11.5
+p_headers.fieldName    Parsing.Bench.UU2.HTTP  11.3    6.6
+pManyTill              Parsing.Bench.UU2.Base   8.5    6.4
+p_headers.contents     Parsing.Bench.UU2.HTTP   5.1    1.7
+spaces                 Parsing.Bench.UU2.Base   4.7    1.8
+crlf                   Parsing.Bench.UU2.HTTP   4.3    5.5
+main                   Main                     3.3   14.2
+p_headers.continuation Parsing.Bench.UU2.HTTP   3.0    3.0
+p_headers.header       Parsing.Bench.UU2.HTTP   2.4    2.2
+
+
+                                                                                  individual     inherited
+COST CENTRE                   MODULE                            no.     entries  %time %alloc   %time %alloc
+
+MAIN                          MAIN                               62           0    0.0    0.0   100.0  100.0
+ main                         Main                              125           0    3.3   14.2    93.6   94.1
+  run                         Parsing.Bench.UU2.HTTP            129           0    0.6    0.0    90.3   80.0
+   pHTTP                      Parsing.Bench.UU2.HTTP            149           0    0.2    0.0    89.7   80.0
+    anyChar                   Parsing.Bench.UU2.Base            204           0    0.3    0.4     0.3    0.4
+     pHTTP.q                  Parsing.Bench.UU2.HTTP            205           0    0.0    0.0     0.0    0.0
+    pHTTP.url                 Parsing.Bench.UU2.HTTP            152           0    0.0    0.0     0.0    0.0
+     crlf                     Parsing.Bench.UU2.HTTP            161           0    0.0    0.0     0.0    0.0
+      pManyTill               Parsing.Bench.UU2.Base            164           0    0.0    0.0     0.0    0.0
+       pHTTP.q                Parsing.Bench.UU2.HTTP            165           0    0.0    0.0     0.0    0.0
+     notEOL                   Parsing.Bench.UU2.HTTP            155           0    0.0    0.0     0.0    0.0
+      pNoneSym                Parsing.Bench.UU2.Base            156           0    0.0    0.0     0.0    0.0
+       pManyTill              Parsing.Bench.UU2.Base            158           0    0.0    0.0     0.0    0.0
+     pManyTill                Parsing.Bench.UU2.Base            154           0    0.0    0.0     0.0    0.0
+      pHTTP.q                 Parsing.Bench.UU2.HTTP            162           0    0.0    0.0     0.0    0.0
+       pHTTP.q.req            Parsing.Bench.UU2.HTTP            163           0    0.0    0.0     0.0    0.0
+      notEOL                  Parsing.Bench.UU2.HTTP            159           0    0.0    0.0     0.0    0.0
+       pNoneSym               Parsing.Bench.UU2.Base            160           0    0.0    0.0     0.0    0.0
+    pHTTP.q                   Parsing.Bench.UU2.HTTP            150           0    0.0    0.0    89.2   79.5
+     p_headers                Parsing.Bench.UU2.HTTP            166           0    0.0    0.0    89.2   79.5
+      p_headers.continuation  Parsing.Bench.UU2.HTTP            195           0    2.9    3.0     2.9    3.0
+      p_headers.contents      Parsing.Bench.UU2.HTTP            182           0    5.0    1.7    20.8   16.1
+       p_headers.continuation Parsing.Bench.UU2.HTTP            196           0    0.1    0.0     0.1    0.0
+       crlf                   Parsing.Bench.UU2.HTTP            187           0    2.6    2.6     2.6    2.6
+        notEOL                Parsing.Bench.UU2.HTTP            190           0    0.0    0.0     0.1    0.0
+         pNoneSym             Parsing.Bench.UU2.Base            191           0    0.1    0.0     0.1    0.0
+       notEOL                 Parsing.Bench.UU2.HTTP            184           0    0.0    0.0    13.1   11.8
+        pNoneSym              Parsing.Bench.UU2.Base            185           0   12.6   11.5    13.1   11.8
+         p_headers.fieldName  Parsing.Bench.UU2.HTTP            192           0    0.0    0.0     0.5    0.3
+          p_headers.header    Parsing.Bench.UU2.HTTP            193           0    0.2    0.1     0.5    0.3
+           pManyTill          Parsing.Bench.UU2.Base            194           0    0.3    0.2     0.3    0.2
+      p_headers.fieldChar     Parsing.Bench.UU2.HTTP            172           0   43.6   46.7    45.3   48.2
+       p_headers.fieldName    Parsing.Bench.UU2.HTTP            173           0    1.7    1.6     1.7    1.6
+      p_headers.fieldName     Parsing.Bench.UU2.HTTP            170           0    9.6    5.0    10.3    5.4
+       p_headers.header       Parsing.Bench.UU2.HTTP            175           0    0.8    0.4     0.8    0.4
+       p_headers.fieldChar    Parsing.Bench.UU2.HTTP            174           0    0.0    0.0     0.0    0.0
+      p_headers.header        Parsing.Bench.UU2.HTTP            169           0    1.4    1.7     6.3    3.5
+       spaces                 Parsing.Bench.UU2.Base            177           0    4.7    1.8     4.8    1.8
+        p_headers.contents    Parsing.Bench.UU2.HTTP            183           0    0.1    0.0     0.1    0.0
+      crlf                    Parsing.Bench.UU2.HTTP            168           0    1.8    2.8     1.8    2.8
+      pManyTill               Parsing.Bench.UU2.Base            167           0    1.8    0.4     1.8    0.4
+       pHTTP.url              Parsing.Bench.UU2.HTTP            202           0    0.0    0.0     0.0    0.0
+       p_headers.contents     Parsing.Bench.UU2.HTTP            197           0    0.0    0.0     0.0    0.0
+        notEOL                Parsing.Bench.UU2.HTTP            198           0    0.0    0.0     0.0    0.0
+         pNoneSym             Parsing.Bench.UU2.Base            199           0    0.0    0.0     0.0    0.0
+          p_headers.fieldName Parsing.Bench.UU2.HTTP            200           0    0.0    0.0     0.0    0.0
+           p_headers.header   Parsing.Bench.UU2.HTTP            201           0    0.0    0.0     0.0    0.0
+       p_headers.fieldName    Parsing.Bench.UU2.HTTP            171           0    0.1    0.0     0.1    0.0
+     pHTTP.q.req              Parsing.Bench.UU2.HTTP            151           0    0.0    0.0     0.0    0.0
+      pHTTP.url               Parsing.Bench.UU2.HTTP            153           0    0.0    0.0     0.0    0.0
+  succeeded                   Parsing.Bench.UU2.Base            126           1    0.0    0.0     0.0    0.0
+ CAF                          Main                              123           0    0.0    0.0     0.0    0.0
+  main                        Main                              124           1    0.0    0.0     0.0    0.0
+ CAF                          Parsing.Bench.UU2.HTTP            122           0    0.0    0.0     6.4    5.8
+  notEOL                      Parsing.Bench.UU2.HTTP            157           0    0.0    0.0     0.0    0.0
+  p_headers                   Parsing.Bench.UU2.HTTP            147           0    0.0    0.0     0.0    0.0
+   p_headers.continuation     Parsing.Bench.UU2.HTTP            189           0    0.0    0.0     0.0    0.0
+   p_headers.fieldChar        Parsing.Bench.UU2.HTTP            148           0    0.0    0.0     0.0    0.0
+  pHTTP                       Parsing.Bench.UU2.HTTP            133           0    0.0    0.0     0.0    0.0
+   pHTTP.url                  Parsing.Bench.UU2.HTTP            137           0    0.0    0.0     0.0    0.0
+  run                         Parsing.Bench.UU2.HTTP            127           1    0.0    0.0     6.4    5.8
+   pHTTP                      Parsing.Bench.UU2.HTTP            130           1    0.0    0.0     6.4    5.8
+    anyChar                   Parsing.Bench.UU2.Base            203           1    0.0    0.0     0.0    0.0
+    pHTTP.url                 Parsing.Bench.UU2.HTTP            134           1    0.0    0.0     0.0    0.0
+     crlf                     Parsing.Bench.UU2.HTTP            139           1    0.0    0.0     0.0    0.0
+     pManyTill                Parsing.Bench.UU2.Base            138          72    0.0    0.0     0.0    0.0
+     notEOL                   Parsing.Bench.UU2.HTTP            135           1    0.0    0.0     0.0    0.0
+      pNoneSym                Parsing.Bench.UU2.Base            136           1    0.0    0.0     0.0    0.0
+    pHTTP.q                   Parsing.Bench.UU2.HTTP            131           2    0.0    0.0     6.4    5.8
+     p_headers                Parsing.Bench.UU2.HTTP            141           1    0.0    0.0     6.4    5.8
+      p_headers.continuation  Parsing.Bench.UU2.HTTP            188           1    0.0    0.0     0.0    0.0
+      p_headers.contents      Parsing.Bench.UU2.HTTP            179           1    0.0    0.0     0.0    0.0
+       crlf                   Parsing.Bench.UU2.HTTP            186           1    0.0    0.0     0.0    0.0
+       notEOL                 Parsing.Bench.UU2.HTTP            180           1    0.0    0.0     0.0    0.0
+        pNoneSym              Parsing.Bench.UU2.Base            181           1    0.0    0.0     0.0    0.0
+      p_headers.fieldChar     Parsing.Bench.UU2.HTTP            146           1    0.0    0.0     0.0    0.0
+      pManyTill               Parsing.Bench.UU2.Base            145      110001    6.4    5.8     6.4    5.8
+      crlf                    Parsing.Bench.UU2.HTTP            144           1    0.0    0.0     0.0    0.0
+      p_headers.header        Parsing.Bench.UU2.HTTP            143           0    0.0    0.0     0.0    0.0
+       spaces                 Parsing.Bench.UU2.Base            176           1    0.0    0.0     0.0    0.0
+      p_headers.fieldName     Parsing.Bench.UU2.HTTP            142           1    0.0    0.0     0.0    0.0
+     p_headers.header         Parsing.Bench.UU2.HTTP            140           1    0.0    0.0     0.0    0.0
+     pHTTP.q.req              Parsing.Bench.UU2.HTTP            132           2    0.0    0.0     0.0    0.0
+ CAF                          Parsing.Bench.UU2.Base            121           0    0.0    0.0     0.0    0.0
+  spaces                      Parsing.Bench.UU2.Base            178           0    0.0    0.0     0.0    0.0
+  run'                        Parsing.Bench.UU2.Base            128           1    0.0    0.0     0.0    0.0
+ CAF                          Text.ParserCombinators.UU.Utils   116           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.Handle.FD                  110           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.Show                          108           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.Conc.Signal                   105           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.Encoding                   102           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.Encoding.Iconv              91           0    0.0    0.0     0.0    0.0
+ CAF                          GHC.IO.FD                          90           0    0.0    0.0     0.0    0.0

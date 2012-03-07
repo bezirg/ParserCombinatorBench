@@ -1,0 +1,70 @@
+	Tue Mar  6 21:18 2012 Time and Allocation Profiling Report  (Final)
+
+	   url-u1-whnf +RTS -p -RTS
+
+	total time  =        3.34 secs   (167 ticks @ 20 ms)
+	total alloc = 582,223,792 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+p_pair                         Parsing.Bench.UU1.URL  47.9    7.1
+machine                        UU.Parsing.Machine    41.9   72.1
+execParser                     Parsing.Bench.UU1.Base   4.2    6.5
+main                           Main                   3.0   11.2
+mkParser1                      UU.Parsing.Machine     1.2    0.5
+Locating                       UU.Parsing.Machine     1.2    0.5
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 264           2   3.0   11.2     3.0   11.2
+  succeeded              Parsing.Bench.UU1.Base                               266           1   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 258           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 265           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        256           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             254           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     250           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     195           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            179           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              159           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                153           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      150           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.Base                               145           5   0.0    0.0     0.0    0.0
+  hexDigit               Parsing.Bench.UU1.Base                               275           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.URL                                133          24   0.0    0.0    97.0   88.7
+  machine                UU.Parsing.Machine                                   278           0   0.0    0.0     0.0    0.0
+  mkParser2              UU.Parsing.Machine                                   276           1   0.0    0.0     0.0    0.0
+  p_hex                  Parsing.Bench.UU1.URL                                274           1   0.0    0.0     0.0    0.0
+  urlBaseChars           Parsing.Bench.UU1.URL                                273           1   0.0    0.0     0.0    0.0
+  p_char                 Parsing.Bench.UU1.URL                                272           1   0.0    0.0     0.0    0.0
+  p_pair                 Parsing.Bench.UU1.URL                                271           5   0.0    0.2     0.0    0.2
+   optionMaybe           Parsing.Bench.UU1.Base                               282           2   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   285           2   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   284           1   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   283           0   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   281           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   277        1107   0.0    0.0     0.0    0.0
+    p_char               Parsing.Bench.UU1.URL                                295           2   0.0    0.0     0.0    0.0
+  pURL                   Parsing.Bench.UU1.URL                                270           3   0.6    0.9    92.8   81.3
+   p_pair                Parsing.Bench.UU1.URL                                288           4  28.1    4.0    55.1   48.6
+    optionMaybe          Parsing.Bench.UU1.Base                               291           0   0.0    0.2     0.0    0.2
+     machine             UU.Parsing.Machine                                   297         519   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   292        1613   0.0    0.0     0.0    0.0
+    mkParser1            UU.Parsing.Machine                                   290      109988   1.2    0.5     1.2    0.5
+    machine              UU.Parsing.Machine                                   289     2066402  25.7   43.3    25.7   44.0
+     p_char              Parsing.Bench.UU1.URL                                296           0   0.0    0.7     0.0    0.7
+   Locating              UU.Parsing.Machine                                   287      109988   0.6    0.3     0.6    0.3
+   mkParser2             UU.Parsing.Machine                                   286           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   279     1797023  16.2   28.8    36.5   31.4
+    run                  Parsing.Bench.UU1.URL                                298           0   0.0    0.0     0.0    0.0
+     run'                Parsing.Bench.UU1.Base                               299           0   0.0    0.0     0.0    0.0
+      execParser         Parsing.Bench.UU1.Base                               300           0   0.0    0.0     0.0    0.0
+    p_pair               Parsing.Bench.UU1.URL                                280           0  19.8    2.2    20.4    2.6
+     optionMaybe         Parsing.Bench.UU1.Base                               293           0   0.0    0.1     0.6    0.3
+      Locating           UU.Parsing.Machine                                   294      108375   0.6    0.2     0.6    0.2
+  run                    Parsing.Bench.UU1.URL                                267           1   0.0    0.0     4.2    7.1
+   run'                  Parsing.Bench.UU1.Base                               268           1   0.0    0.0     4.2    7.1
+    execParser           Parsing.Bench.UU1.Base                               269           1   4.2    6.5     4.2    7.1
+     p_pair              Parsing.Bench.UU1.URL                                301           0   0.0    0.6     0.0    0.6

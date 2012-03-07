@@ -1,0 +1,176 @@
+	Tue Mar  6 21:15 2012 Time and Allocation Profiling Report  (Final)
+
+	   json-u1-nf +RTS -p -RTS
+
+	total time  =        2.26 secs   (113 ticks @ 20 ms)
+	total alloc = 453,364,872 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+machine                        UU.Parsing.Machine    44.2   37.4
+main                           Main                  15.0   22.8
+pDoubleRaw                     Parsing.Bench.UU1.Base  11.5   20.7
+p_string                       Parsing.Bench.UU1.JSON   8.0    3.2
+spaces                         Parsing.Bench.UU1.Base   5.3    0.8
+pSpaces                        Parsing.Bench.UU1.Base   5.3    2.5
+p_series                       Parsing.Bench.UU1.JSON   2.7    1.1
+mkParser1                      UU.Parsing.Machine     1.8    0.4
+pDoubleStr                     Parsing.Bench.UU1.Base   1.8    0.8
+execParser                     Parsing.Bench.UU1.Base   1.8    2.4
+CAF                            Parsing.Bench.AST.JSON   0.9    6.0
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 282           3  15.0   22.8    15.0   22.8
+ CAF                     Main                                                 276           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 283           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        274           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     268           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.Float                                            254           1   0.0    0.0     0.0    0.0
+ CAF                     Text.Read.Lex                                        243           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     213           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            197           2   0.0    0.0     0.0    0.0
+ CAF                     Data.Either                                          180           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              177           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                171           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      168           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU1.JSON                               163          61   0.0    0.0    84.1   71.2
+  p_unicode              Parsing.Bench.UU1.JSON                               339           1   0.0    0.0     0.0    0.0
+  p_escape               Parsing.Bench.UU1.JSON                               337           1   0.0    0.0     0.0    0.0
+   choice                Parsing.Bench.UU1.Base                               338           1   0.0    0.0     0.0    0.0
+  mkParser1              UU.Parsing.Machine                                   304           1   0.0    0.0     0.0    0.0
+  p_bool                 Parsing.Bench.UU1.JSON                               303           1   0.0    0.0     0.0    0.0
+  p_value                Parsing.Bench.UU1.JSON                               296           6   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   350           3   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   349           1   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   313         158   0.0    0.0     0.0    0.0
+    p_string             Parsing.Bench.UU1.JSON                               401           1   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   403           1   0.0    0.0     0.0    0.0
+     mkParser2           UU.Parsing.Machine                                   402           0   0.0    0.0     0.0    0.0
+    pDoubleStr           Parsing.Bench.UU1.Base                               370           0   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   373          16   0.0    0.0     0.0    0.0
+    pDouble              Parsing.Bench.UU1.Base                               367           0   0.0    0.0     0.0    0.0
+     pDoubleRaw          Parsing.Bench.UU1.Base                               369           0   0.0    0.0     0.0    0.0
+     lexeme              Parsing.Bench.UU1.Base                               368           0   0.0    0.0     0.0    0.0
+   p_number              Parsing.Bench.UU1.JSON                               297           1   0.0    0.0     0.0    0.0
+  p_string               Parsing.Bench.UU1.JSON                               295           3   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   344           1   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   343           0   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   342           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   341          38   0.0    0.0     0.0    0.0
+   pNoneSym              Parsing.Bench.UU1.Base                               310           1   0.0    0.0     0.0    0.0
+  p_series               Parsing.Bench.UU1.JSON                               294           1   0.0    0.0     0.0    0.0
+   spaces                Parsing.Bench.UU1.Base                               321           0   0.0    0.0     0.0    0.0
+  p_array                Parsing.Bench.UU1.JSON                               292           1   0.0    0.0    82.3   68.3
+   machine               UU.Parsing.Machine                                   305           2   0.0    0.0     0.0    0.0
+   p_series              Parsing.Bench.UU1.JSON                               293       41860   2.7    1.1    82.3   68.3
+    p_object             Parsing.Bench.UU1.JSON                               330           0   0.0    0.0     7.1    2.6
+     Locating            UU.Parsing.Machine                                   383        3096   0.0    0.0     0.0    0.0
+     p_string            Parsing.Bench.UU1.JSON                               335           4   0.0    0.2     2.7    1.8
+      Locating           UU.Parsing.Machine                                   382        3096   0.0    0.0     0.0    0.0
+      mkParser2          UU.Parsing.Machine                                   340           0   0.0    0.0     0.0    0.0
+      machine            UU.Parsing.Machine                                   336       60174   2.7    1.6     2.7    1.6
+     machine             UU.Parsing.Machine                                   334       25201   1.8    0.3     4.4    0.8
+      p_string           Parsing.Bench.UU1.JSON                               405           0   0.0    0.0     0.0    0.0
+       Locating          UU.Parsing.Machine                                   407          60   0.0    0.0     0.0    0.0
+       p_value           Parsing.Bench.UU1.JSON                               406           0   0.0    0.0     0.0    0.0
+      p_value            Parsing.Bench.UU1.JSON                               385        9105   0.0    0.3     0.9    0.3
+       Locating          UU.Parsing.Machine                                   387        9105   0.0    0.0     0.0    0.0
+       mkParser1         UU.Parsing.Machine                                   386        3096   0.9    0.0     0.9    0.0
+      spaces             Parsing.Bench.UU1.Base                               347           0   0.9    0.0     1.8    0.1
+       pSpaces           Parsing.Bench.UU1.Base                               384        3096   0.9    0.1     0.9    0.1
+    spaces               Parsing.Bench.UU1.Base                               327           0   1.8    0.4     4.4    1.6
+     pSpaces             Parsing.Bench.UU1.Base                               381       38749   2.7    1.2     2.7    1.2
+    p_value              Parsing.Bench.UU1.JSON                               324           0   0.0    0.0     0.0    0.2
+     mkParser1           UU.Parsing.Machine                                   326        3097   0.0    0.0     0.0    0.0
+     machine             UU.Parsing.Machine                                   325        6414   0.0    0.1     0.0    0.1
+      spaces             Parsing.Bench.UU1.Base                               380           0   0.0    0.0     0.0    0.0
+       pSpaces           Parsing.Bench.UU1.Base                               408           2   0.0    0.0     0.0    0.0
+      p_object           Parsing.Bench.UU1.JSON                               329           0   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   320           0   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   318       48147   0.9    0.2     0.9    0.2
+     p_object            Parsing.Bench.UU1.JSON                               388           0   0.0    0.0     0.0    0.0
+    mkParser1            UU.Parsing.Machine                                   317           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   314     1596788  39.8   35.4    67.3   62.7
+     pDouble             Parsing.Bench.UU1.Base                               422           0   0.0    0.0    11.5   20.6
+      pDoubleRaw         Parsing.Bench.UU1.Base                               423           0  11.5   20.6    11.5   20.6
+     pDoubleStr          Parsing.Bench.UU1.Base                               398           0   1.8    0.8     1.8    0.8
+      p_object           Parsing.Bench.UU1.JSON                               415           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   399       24268   0.0    0.0     0.0    0.0
+     p_value             Parsing.Bench.UU1.JSON                               395        9105   0.9    0.4     0.9    0.6
+      Locating           UU.Parsing.Machine                                   397        9105   0.0    0.0     0.0    0.0
+      mkParser1          UU.Parsing.Machine                                   396       35549   0.0    0.2     0.0    0.2
+     p_string            Parsing.Bench.UU1.JSON                               392           0   8.0    2.6     8.0    2.8
+      p_value            Parsing.Bench.UU1.JSON                               404           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   393       55923   0.0    0.2     0.0    0.2
+     spaces              Parsing.Bench.UU1.Base                               352           0   2.7    0.4     4.4    1.5
+      pSpaces            Parsing.Bench.UU1.Base                               394       35549   1.8    1.1     1.8    1.1
+     p_object            Parsing.Bench.UU1.JSON                               333           0   0.0    0.4     0.9    0.9
+      p_string           Parsing.Bench.UU1.JSON                               391           0   0.0    0.1     0.0    0.1
+      Locating           UU.Parsing.Machine                                   390       71098   0.0    0.3     0.0    0.3
+      mkParser1          UU.Parsing.Machine                                   389       35549   0.9    0.2     0.9    0.2
+  p_object               Parsing.Bench.UU1.JSON                               290           2   0.0    0.0     0.0    0.0
+   p_string              Parsing.Bench.UU1.JSON                               356           2   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   359           5   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   358           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   357         123   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   346          11   0.0    0.0     0.0    0.0
+   mkParser1             UU.Parsing.Machine                                   345           5   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   328          49   0.0    0.0     0.0    0.0
+    pDouble              Parsing.Bench.UU1.Base                               420           0   0.0    0.0     0.0    0.0
+     pDoubleRaw          Parsing.Bench.UU1.Base                               421           0   0.0    0.0     0.0    0.0
+    pDoubleStr           Parsing.Bench.UU1.Base                               376           0   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   377           2   0.0    0.0     0.0    0.0
+    p_value              Parsing.Bench.UU1.JSON                               362           3   0.0    0.0     0.0    0.0
+     Locating            UU.Parsing.Machine                                   364           3   0.0    0.0     0.0    0.0
+     mkParser1           UU.Parsing.Machine                                   363           5   0.0    0.0     0.0    0.0
+    spaces               Parsing.Bench.UU1.Base                               360           0   0.0    0.0     0.0    0.0
+     pSpaces             Parsing.Bench.UU1.Base                               361           5   0.0    0.0     0.0    0.0
+   p_series              Parsing.Bench.UU1.JSON                               291          14   0.0    0.0     0.0    0.0
+    mkParser1            UU.Parsing.Machine                                   379           0   0.0    0.0     0.0    0.0
+    Locating             UU.Parsing.Machine                                   354           7   0.0    0.0     0.0    0.0
+    mkParser2            UU.Parsing.Machine                                   353           0   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   332          23   0.0    0.0     0.0    0.0
+    spaces               Parsing.Bench.UU1.Base                               331           0   0.0    0.0     0.0    0.0
+     pSpaces             Parsing.Bench.UU1.Base                               355           5   0.0    0.0     0.0    0.0
+  pJSON                  Parsing.Bench.UU1.JSON                               287           1   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   306          16   0.0    0.0     0.0    0.0
+    p_array              Parsing.Bench.UU1.JSON                               307           0   0.0    0.0     0.0    0.0
+     p_series            Parsing.Bench.UU1.JSON                               308           3   0.0    0.0     0.0    0.0
+      run                Parsing.Bench.UU1.JSON                               410           0   0.0    0.0     0.0    0.0
+       run'              Parsing.Bench.UU1.Base                               411           0   0.0    0.0     0.0    0.0
+        execParser       Parsing.Bench.UU1.Base                               412           0   0.0    0.0     0.0    0.0
+      Locating           UU.Parsing.Machine                                   409           1   0.0    0.0     0.0    0.0
+      p_value            Parsing.Bench.UU1.JSON                               315           0   0.0    0.0     0.0    0.0
+      mkParser2          UU.Parsing.Machine                                   312           0   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU1.JSON                               284           1   0.0    0.0     1.8    2.8
+   run'                  Parsing.Bench.UU1.Base                               285           1   0.0    0.0     1.8    2.8
+    execParser           Parsing.Bench.UU1.Base                               286           1   1.8    2.4     1.8    2.8
+     p_object            Parsing.Bench.UU1.JSON                               418           0   0.0    0.0     0.0    0.0
+      p_series           Parsing.Bench.UU1.JSON                               419           0   0.0    0.0     0.0    0.0
+     p_array             Parsing.Bench.UU1.JSON                               416           0   0.0    0.0     0.0    0.0
+      p_series           Parsing.Bench.UU1.JSON                               417           0   0.0    0.0     0.0    0.0
+     p_value             Parsing.Bench.UU1.JSON                               414           0   0.0    0.0     0.0    0.0
+     p_string            Parsing.Bench.UU1.JSON                               413           0   0.0    0.3     0.0    0.3
+ CAF                     Parsing.Bench.UU1.Base                               162          45   0.0    0.0     0.0    0.0
+  machine                UU.Parsing.Machine                                   322           0   0.0    0.0     0.0    0.0
+  allChars               Parsing.Bench.UU1.Base                               311           1   0.0    0.0     0.0    0.0
+  pDigit                 Parsing.Bench.UU1.Base                               302           1   0.0    0.0     0.0    0.0
+  pDoubleStr             Parsing.Bench.UU1.Base                               301           5   0.0    0.0     0.0    0.0
+   Locating              UU.Parsing.Machine                                   372           2   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   371           0   0.0    0.0     0.0    0.0
+   machine               UU.Parsing.Machine                                   365          64   0.0    0.0     0.0    0.0
+  pDouble                Parsing.Bench.UU1.Base                               298           1   0.0    0.0     0.0    0.0
+   pDoubleRaw            Parsing.Bench.UU1.Base                               300           1   0.0    0.0     0.0    0.0
+    machine              UU.Parsing.Machine                                   366           0   0.0    0.0     0.0    0.0
+   lexeme                Parsing.Bench.UU1.Base                               299           1   0.0    0.0     0.0    0.0
+  pSpaces                Parsing.Bench.UU1.Base                               289           4   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   323           0   0.0    0.0     0.0    0.0
+  spaces                 Parsing.Bench.UU1.Base                               288           2   0.0    0.0     0.0    0.0
+   pSpaces               Parsing.Bench.UU1.Base                               348           1   0.0    0.0     0.0    0.0
+   mkParser2             UU.Parsing.Machine                                   309           0   0.0    0.0     0.0    0.0
+ CAF                     UU.Parsing.CharParser                                152           2   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.AST.JSON                               150          10   0.9    6.0     0.9    6.0
