@@ -1,0 +1,24 @@
+./dist/build/csv-u2-nf/csv-u2-nf +RTS -scsv-u2-nf.gc 
+     425,002,952 bytes allocated in the heap
+     143,216,216 bytes copied during GC
+      18,461,048 bytes maximum residency (12 sample(s))
+         947,376 bytes maximum slop
+              46 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:   799 collections,     0 parallel,  0.20s,  0.20s elapsed
+  Generation 1:    12 collections,     0 parallel,  0.20s,  0.20s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    0.71s  (  0.71s elapsed)
+  GC    time    0.39s  (  0.39s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    1.10s  (  1.10s elapsed)
+
+  %GC time      35.6%  (35.7% elapsed)
+
+  Alloc rate    597,790,794 bytes per MUT second
+
+  Productivity  64.2% of total user, 64.3% of total elapsed
+

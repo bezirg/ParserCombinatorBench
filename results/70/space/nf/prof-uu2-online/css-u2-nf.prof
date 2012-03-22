@@ -1,0 +1,71 @@
+	Wed Mar 21 22:12 2012 Time and Allocation Profiling Report  (Final)
+
+	   css-u2-nf +RTS -p -RTS
+
+	total time  =        2.86 secs   (143 ticks @ 20 ms)
+	total alloc = 888,681,376 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+pUpto                          Parsing.Bench.UU2.CSS  24.5   26.5
+strip                          Parsing.Bench.UU2.Base   9.8    7.9
+skipWS                         Parsing.Bench.UU2.CSS   9.8    6.4
+pSemi                          Parsing.Bench.UU2.CSS   9.8    6.0
+pBlock                         Parsing.Bench.UU2.CSS   9.8    5.5
+CAF                            Main                   9.1   15.3
+main                           Main                   7.7    9.3
+pProps                         Parsing.Bench.UU2.CSS   6.3    8.8
+pProp                          Parsing.Bench.UU2.CSS   5.6    5.6
+run'                           Parsing.Bench.UU2.Base   2.8    0.8
+pKey                           Parsing.Bench.UU2.CSS   2.8    2.5
+pNoneSym                       Parsing.Bench.UU2.Base   0.7    3.7
+pBlocks                        Parsing.Bench.UU2.CSS   0.7    1.4
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 380           3   7.7    9.3     7.7    9.3
+ CAF                     Main                                                 374           5   9.1   15.3     9.1   15.3
+  main                   Main                                                 381           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        372           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             370           3   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     366           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     311           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            295           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              275           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                269           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      266           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU2.CSS                                261          16   0.0    0.0    83.2   75.4
+  pProp                  Parsing.Bench.UU2.CSS                                408           0   0.0    0.0     0.0    0.0
+  pValue                 Parsing.Bench.UU2.CSS                                407           0   0.0    0.0     0.0    0.0
+  pProps                 Parsing.Bench.UU2.CSS                                398           0   0.0    0.0     0.0    0.0
+  skipWS                 Parsing.Bench.UU2.CSS                                388           1   0.0    0.0     0.0    0.0
+  pBlocks                Parsing.Bench.UU2.CSS                                386           0   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU2.CSS                                382           1   0.0    0.0    83.2   75.4
+   run'                  Parsing.Bench.UU2.Base                               383           2   2.8    0.8    83.2   75.4
+    pCSS                 Parsing.Bench.UU2.CSS                                384           1   0.0    0.0    80.4   74.6
+     pBlocks             Parsing.Bench.UU2.CSS                                385           1   0.7    1.4    80.4   74.6
+      pBlock             Parsing.Bench.UU2.CSS                                389           1   9.1    5.3    76.2   68.2
+       pProps            Parsing.Bench.UU2.CSS                                396           1   6.3    8.8    62.2   54.3
+        pKey             Parsing.Bench.UU2.CSS                                403           0   0.0    0.4     0.0    0.4
+        pProp            Parsing.Bench.UU2.CSS                                399           1   5.6    5.6    47.6   40.6
+         pSemi           Parsing.Bench.UU2.CSS                                409           1   9.8    6.0     9.8    6.0
+         pValue          Parsing.Bench.UU2.CSS                                405           1   0.7    0.0    10.5    9.3
+          pUpto          Parsing.Bench.UU2.CSS                                406           1   9.8    9.3     9.8    9.3
+         strip           Parsing.Bench.UU2.Base                               404      328152   8.4    5.1     8.4    5.1
+         pKey            Parsing.Bench.UU2.CSS                                400           1   2.8    2.1    13.3   14.5
+          pUpto          Parsing.Bench.UU2.CSS                                402           1   9.8    8.8     9.8    8.8
+          pNoneSym       Parsing.Bench.UU2.Base                               401           1   0.7    3.7     0.7    3.7
+        skipWS           Parsing.Bench.UU2.CSS                                397           2   8.4    4.5     8.4    4.5
+       pSelectors        Parsing.Bench.UU2.CSS                                390           1   0.0    0.2     4.9    8.6
+        pUpto            Parsing.Bench.UU2.CSS                                391           1   4.9    8.4     4.9    8.4
+      skipWS             Parsing.Bench.UU2.CSS                                387           1   1.4    1.9     3.5    5.0
+       pSelectors        Parsing.Bench.UU2.CSS                                394           0   0.0    0.1     1.4    2.9
+        strip            Parsing.Bench.UU2.Base                               395       61182   1.4    2.8     1.4    2.8
+       pBlock            Parsing.Bench.UU2.CSS                                393           0   0.7    0.1     0.7    0.1
+ CAF                     Parsing.Bench.UU2.Base                               260           3   0.0    0.0     0.0    0.0
+  run'                   Parsing.Bench.UU2.Base                               392           0   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.Utils                      256           1   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.BasicInstances             219           1   0.0    0.0     0.0    0.0

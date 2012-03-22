@@ -1,0 +1,60 @@
+	Wed Mar 21 23:21 2012 Time and Allocation Profiling Report  (Final)
+
+	   http-u2-nf +RTS -p -RTS
+
+	total time  =        6.34 secs   (317 ticks @ 20 ms)
+	total alloc = 3,213,306,416 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+p_headers                      Parsing.Bench.UU2.HTTP  66.6   69.4
+pNoneSym                       Parsing.Bench.UU2.Base  10.1    9.8
+pManyTill                      Parsing.Bench.UU2.Base   8.8    6.2
+spaces                         Parsing.Bench.UU2.Base   4.4    2.9
+main                           Main                   4.4    1.7
+CAF                            Parsing.Bench.AST.HTTP   2.2    4.2
+crlf                           Parsing.Bench.UU2.HTTP   2.2    5.3
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 452           3   4.4    1.7     5.0    1.7
+  readTextDevice         Data.Text.IO.Internal                                454         987   0.6    0.0     0.6    0.0
+ CAF                     Main                                                 446           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 453           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        444           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Show                                             442           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     438           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     383           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            367           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              347           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                341           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      338           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU2.HTTP                               333          31   0.0    0.0    92.7   94.1
+  notEOL                 Parsing.Bench.UU2.HTTP                               468           0   0.0    0.0     0.0    0.0
+  p_headers              Parsing.Bench.UU2.HTTP                               467           0   0.0    0.0     0.0    0.0
+  crlf                   Parsing.Bench.UU2.HTTP                               463           0   0.0    0.0     0.0    0.0
+  pHTTP                  Parsing.Bench.UU2.HTTP                               458           0   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU2.HTTP                               455           1   0.0    0.0    92.7   94.1
+   run'                  Parsing.Bench.UU2.Base                               456           2   0.3    0.0    92.7   94.1
+    pHTTP                Parsing.Bench.UU2.HTTP                               457           1   0.3    0.1    92.4   94.1
+     anyChar             Parsing.Bench.UU2.Base                               473           1   0.0    0.3     0.0    0.3
+     p_headers           Parsing.Bench.UU2.HTTP                               464           1  66.6   69.4    92.1   93.6
+      notEOL             Parsing.Bench.UU2.HTTP                               471           1   0.0    0.0    10.1    9.8
+       pNoneSym          Parsing.Bench.UU2.Base                               472           1  10.1    9.8    10.1    9.8
+      spaces             Parsing.Bench.UU2.Base                               469           1   4.4    2.9     4.4    2.9
+      pManyTill          Parsing.Bench.UU2.Base                               466      110001   8.8    6.2     8.8    6.2
+      crlf               Parsing.Bench.UU2.HTTP                               465           2   2.2    5.3     2.2    5.3
+     crlf                Parsing.Bench.UU2.HTTP                               462           1   0.0    0.0     0.0    0.0
+     pManyTill           Parsing.Bench.UU2.Base                               461          72   0.0    0.0     0.0    0.0
+     notEOL              Parsing.Bench.UU2.HTTP                               459           1   0.0    0.0     0.0    0.0
+      pNoneSym           Parsing.Bench.UU2.Base                               460           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU2.Base                               332           4   0.0    0.0     0.0    0.0
+  run'                   Parsing.Bench.UU2.Base                               474           0   0.0    0.0     0.0    0.0
+  spaces                 Parsing.Bench.UU2.Base                               470           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Internal                                   321           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Array                                      314           1   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.BasicInstances             270           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.AST.HTTP                               227           8   2.2    4.2     2.2    4.2

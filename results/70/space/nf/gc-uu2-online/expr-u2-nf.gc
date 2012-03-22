@@ -1,0 +1,24 @@
+./dist/build/expr-u2-nf/expr-u2-nf +RTS -sexpr-u2-nf.gc 
+   4,785,091,504 bytes allocated in the heap
+   2,489,844,128 bytes copied during GC
+     607,697,424 bytes maximum residency (12 sample(s))
+       6,537,392 bytes maximum slop
+            1230 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  9116 collections,     0 parallel,  3.76s,  3.75s elapsed
+  Generation 1:    12 collections,     0 parallel,  5.69s,  5.69s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    7.31s  (  7.32s elapsed)
+  GC    time    9.45s  (  9.44s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time   16.76s  ( 16.76s elapsed)
+
+  %GC time      56.3%  (56.3% elapsed)
+
+  Alloc rate    653,996,038 bytes per MUT second
+
+  Productivity  43.6% of total user, 43.6% of total elapsed
+

@@ -1,0 +1,66 @@
+	Wed Mar 21 23:22 2012 Time and Allocation Profiling Report  (Final)
+
+	   expr-u2-nf +RTS -p -RTS
+
+	total time  =        5.68 secs   (284 ticks @ 20 ms)
+	total alloc = 2,444,313,304 bytes  (excludes profiling overheads)
+
+COST CENTRE                    MODULE               %time %alloc
+
+pIdent                         Parsing.Bench.UU2.Base  29.2   28.4
+e3                             Parsing.Bench.UU2.Expr  20.8   24.0
+pLet                           Parsing.Bench.UU2.Expr  11.3   12.5
+e2                             Parsing.Bench.UU2.Expr   9.9    6.8
+spaces                         Parsing.Bench.UU2.Base   9.2    9.2
+e1                             Parsing.Bench.UU2.Expr   8.5    6.7
+op1                            Parsing.Bench.UU2.Expr   6.3    6.6
+main                           Main                   3.2    2.6
+op2                            Parsing.Bench.UU2.Expr   1.4    3.2
+
+
+                                                                                               individual    inherited
+COST CENTRE              MODULE                                               no.    entries  %time %alloc   %time %alloc
+
+MAIN                     MAIN                                                   1           0   0.0    0.0   100.0  100.0
+ main                    Main                                                 452           3   3.2    2.6     3.2    2.6
+  readTextDevice         Data.Text.IO.Internal                                454         338   0.0    0.0     0.0    0.0
+ CAF                     Main                                                 446           2   0.0    0.0     0.0    0.0
+  main                   Main                                                 453           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Typeable                                        444           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Exception                                     438           4   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.FD                                     383           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.FD                                            367           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Handle.Internals                              347           1   0.0    0.0     0.0    0.0
+ CAF                     GHC.IO.Encoding.Iconv                                341           2   0.0    0.0     0.0    0.0
+ CAF                     GHC.Conc.Signal                                      338           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU2.Expr                               333          13   0.0    0.0    96.8   97.4
+  pLet                   Parsing.Bench.UU2.Expr                               469           0   0.0    0.0     0.0    0.0
+  e2                     Parsing.Bench.UU2.Expr                               464           0   0.0    0.0     0.0    0.0
+  e1                     Parsing.Bench.UU2.Expr                               461           0   0.0    0.0     0.0    0.0
+  run                    Parsing.Bench.UU2.Expr                               455           1   0.0    0.0    96.8   97.4
+   run'                  Parsing.Bench.UU2.Base                               456           2   0.4    0.0    96.8   97.4
+    pExpr                Parsing.Bench.UU2.Expr                               457           1   0.0    0.0    96.5   97.4
+     e1                  Parsing.Bench.UU2.Expr                               460       48716   8.5    6.7    96.5   97.4
+      spaces             Parsing.Bench.UU2.Base                               475       32185   2.1    1.5     2.1    1.5
+      e2                 Parsing.Bench.UU2.Expr                               463       48716   9.9    6.8    78.9   81.7
+       spaces            Parsing.Bench.UU2.Base                               474       32185   3.5    1.9     3.5    1.9
+       e3                Parsing.Bench.UU2.Expr                               466       48716  20.8   24.0    63.7   69.3
+        spaces           Parsing.Bench.UU2.Base                               472       32185   0.7    2.5     0.7    2.5
+        pLet             Parsing.Bench.UU2.Expr                               468       48716  11.3   12.5    23.9   21.3
+         pIdent          Parsing.Bench.UU2.Base                               473        8266  10.9    7.0    10.9    7.0
+         spaces          Parsing.Bench.UU2.Base                               471       33062   1.8    1.9     1.8    1.9
+        pIdent           Parsing.Bench.UU2.Base                               467       48716  18.3   21.4    18.3   21.4
+       op2               Parsing.Bench.UU2.Expr                               465       48716   1.4    3.2     1.8    3.7
+        spaces           Parsing.Bench.UU2.Base                               476        8308   0.4    0.5     0.4    0.5
+      op1                Parsing.Bench.UU2.Expr                               462       48716   6.3    6.6     7.0    7.5
+       spaces            Parsing.Bench.UU2.Base                               477       13910   0.7    0.9     0.7    0.9
+     spaces              Parsing.Bench.UU2.Base                               458           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.UU2.Base                               332           8   0.0    0.0     0.0    0.0
+  run'                   Parsing.Bench.UU2.Base                               478           0   0.0    0.0     0.0    0.0
+  pIdent                 Parsing.Bench.UU2.Base                               470           0   0.0    0.0     0.0    0.0
+  spaces                 Parsing.Bench.UU2.Base                               459           0   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Internal                                   321           1   0.0    0.0     0.0    0.0
+ CAF                     Data.Text.Array                                      314           1   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.Utils                      298           4   0.0    0.0     0.0    0.0
+ CAF                     Text.ParserCombinators.UU.BasicInstances             270           1   0.0    0.0     0.0    0.0
+ CAF                     Parsing.Bench.AST.Expr                               227           6   0.0    0.0     0.0    0.0

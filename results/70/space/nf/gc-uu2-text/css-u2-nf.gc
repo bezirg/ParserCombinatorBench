@@ -1,0 +1,24 @@
+./dist/build/css-u2-nf/css-u2-nf +RTS -scss-u2-nf.gc 
+   1,466,257,440 bytes allocated in the heap
+     472,201,192 bytes copied during GC
+      69,513,672 bytes maximum residency (9 sample(s))
+       3,355,072 bytes maximum slop
+             196 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0:  2777 collections,     0 parallel,  0.73s,  0.72s elapsed
+  Generation 1:     9 collections,     0 parallel,  0.58s,  0.58s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    2.29s  (  2.29s elapsed)
+  GC    time    1.30s  (  1.30s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time    3.59s  (  3.59s elapsed)
+
+  %GC time      36.3%  (36.3% elapsed)
+
+  Alloc rate    640,772,007 bytes per MUT second
+
+  Productivity  63.7% of total user, 63.7% of total elapsed
+

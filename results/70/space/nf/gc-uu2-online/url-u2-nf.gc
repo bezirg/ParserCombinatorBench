@@ -1,0 +1,24 @@
+./dist/build/url-u2-nf/url-u2-nf +RTS -surl-u2-nf.gc 
+   7,043,431,032 bytes allocated in the heap
+   1,308,500,096 bytes copied during GC
+      85,727,504 bytes maximum residency (33 sample(s))
+       2,464,520 bytes maximum slop
+             232 MB total memory in use (0 MB lost due to fragmentation)
+
+  Generation 0: 13403 collections,     0 parallel,  1.84s,  1.83s elapsed
+  Generation 1:    33 collections,     0 parallel,  1.50s,  1.50s elapsed
+
+  INIT  time    0.00s  (  0.00s elapsed)
+  MUT   time    9.97s  (  9.98s elapsed)
+  GC    time    3.34s  (  3.34s elapsed)
+  RP    time    0.00s  (  0.00s elapsed)
+  PROF  time    0.00s  (  0.00s elapsed)
+  EXIT  time    0.00s  (  0.00s elapsed)
+  Total time   13.31s  ( 13.31s elapsed)
+
+  %GC time      25.1%  (25.1% elapsed)
+
+  Alloc rate    705,958,618 bytes per MUT second
+
+  Productivity  74.9% of total user, 74.9% of total elapsed
+
