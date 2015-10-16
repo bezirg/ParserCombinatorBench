@@ -1,9 +1,9 @@
-name:                  ParsingBench
+name:                  ParserCombinatorBench
 version:               0.0.0.1
 synopsis:              Benchmarking Haskell Parsing Libraries
 description:           Benchmarking Haskell Parsing Libraries
-author:                Nikolaos Bezirgiannis <n.bezirgiannis@students.uu.nl>
-maintainer:            NikolaosBezirgiannis <n.bezirgiannis@students.uu.nl>
+author:                Nikolaos Bezirgiannis <bezirgia@cwi.nl>
+maintainer:            Nikolaos Bezirgiannis <bezirgia@cwi.nl>
 stability:             provisional
 build-type:            Simple
 cabal-version:         >= 1.9.2
